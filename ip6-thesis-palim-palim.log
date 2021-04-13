@@ -1,0 +1,121 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.13)  13 APR 2021 17:33
+entering extended mode
+**./ip6-thesis-palim-palim.tex
+(ip6-thesis-palim-palim.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18> xparse <2020-03-03>
+(C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+Document Class: report 2020/04/10 v1.4m Standard LaTeX document class
+(C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count179
+\c@chapter=\count180
+\c@section=\count181
+\c@subsection=\count182
+\c@subsubsection=\count183
+\c@paragraph=\count184
+\c@subparagraph=\count185
+\c@figure=\count186
+\c@table=\count187
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count188
+\l__pdf_internal_box=\box47
+)
+No file ip6-thesis-palim-palim.aux.
+\openout1 = `ip6-thesis-palim-palim.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+[1
+
+{C:/Users/sever/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [1]
+No file ip6-thesis-palim-palim.toc.
+\tf@toc=\write3
+\openout3 = `ip6-thesis-palim-palim.toc'.
+
+[1
+
+]
+Chapter 1.
+[2
+
+]
+Chapter 2.
+
+Overfull \hbox (5.40141pt too wide) in paragraph at lines 55--56
+[]\OT1/cmr/m/n/12 Forschungsstand (Welche Meth-o-den/Ansatze wer-den angewen-d
+et?) 
+ []
+
+
+Overfull \hbox (5.40141pt too wide) in paragraph at lines 60--61
+[]\OT1/cmr/m/n/12 Forschungsstand (Welche Meth-o-den/Ansatze wer-den angewen-d
+et?) 
+ []
+
+[3
+
+]
+Chapter 3.
+
+Overfull \hbox (3.87369pt too wide) in paragraph at lines 93--94
+[]\OT1/cmr/m/n/12 Organisation der Spieletests (Auf-bau, Ablauf, Test-per-so-ne
+n, Test-szenar-
+ []
+
+[4
+
+] [5]
+Chapter 4.
+[6
+
+]
+Chapter 5.
+[7
+
+]
+Appendix A.
+[8
+
+]
+Appendix B.
+[9
+
+] (ip6-thesis-palim-palim.aux) ) 
+Here is how much of TeX's memory you used:
+ 417 strings out of 479334
+ 7473 string characters out of 2857084
+ 293824 words of memory out of 3000000
+ 17951 multiletter control sequences out of 15000+200000
+ 406189 words of font info for 36 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 44i,4n,50p,181b,170s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\sever\AppData\Local\MiKTeX\fonts/pk/
+ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/sever/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/sever/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+Output written on ip6-thesis-palim-palim.pdf (11 pages, 43348 bytes).
+PDF statistics:
+ 51 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
