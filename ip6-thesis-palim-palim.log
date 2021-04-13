@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.13)  13 APR 2021 17:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.13)  13 APR 2021 17:39
 entering extended mode
 **./ip6-thesis-palim-palim.tex
 (ip6-thesis-palim-palim.tex
@@ -27,8 +27,7 @@ tex.def
 File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count188
 \l__pdf_internal_box=\box47
-)
-No file ip6-thesis-palim-palim.aux.
+) (ip6-thesis-palim-palim.aux)
 \openout1 = `ip6-thesis-palim-palim.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -45,14 +44,21 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
-[1
+ [1
 
-{C:/Users/sever/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [1]
-No file ip6-thesis-palim-palim.toc.
+{C:/Users/sever/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [1] (ip6-thesis
+-palim-palim.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 9.
+)
 \tf@toc=\write3
 \openout3 = `ip6-thesis-palim-palim.toc'.
 
-[1
+ [1
 
 ]
 Chapter 1.
@@ -102,18 +108,18 @@ Appendix B.
 
 ] (ip6-thesis-palim-palim.aux) ) 
 Here is how much of TeX's memory you used:
- 417 strings out of 479334
- 7473 string characters out of 2857084
+ 439 strings out of 479334
+ 7840 string characters out of 2857084
  293824 words of memory out of 3000000
- 17951 multiletter control sequences out of 15000+200000
- 406189 words of font info for 36 fonts, out of 3000000 for 9000
+ 17962 multiletter control sequences out of 15000+200000
+ 408627 words of font info for 44 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,4n,50p,181b,170s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\sever\AppData\Local\MiKTeX\fonts/pk/
 ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/sever/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/sever/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on ip6-thesis-palim-palim.pdf (11 pages, 43348 bytes).
+Output written on ip6-thesis-palim-palim.pdf (11 pages, 44443 bytes).
 PDF statistics:
  51 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
