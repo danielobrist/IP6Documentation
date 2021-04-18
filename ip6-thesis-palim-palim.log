@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.13)  13 APR 2021 17:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.15)  18 APR 2021 13:53
 entering extended mode
 **./ip6-thesis-palim-palim.tex
 (ip6-thesis-palim-palim.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> xparse <2020-03-03>
-(C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
 Document Class: report 2020/04/10 v1.4m Standard LaTeX document class
-(C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
 File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
 \c@part=\count179
@@ -22,32 +22,117 @@ File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
 )
-(C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen139
+\Gin@req@width=\dimen140
+)
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/chngcntr\chngcntr.sty
+Package: chngcntr 2018/04/09 v1.1a change counter resetting
+Package chngcntr Info: \counterwithout already defined.
+(chngcntr)             Quitting chngcntr on input line 21.
+)
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count188
+\lst@gtempboxa=\box47
+\lst@token=\toks16
+\lst@length=\count189
+\lst@currlwidth=\dimen141
+\lst@column=\count190
+\lst@pos=\count191
+\lst@lostspace=\dimen142
+\lst@width=\dimen143
+\lst@newlines=\count192
+\lst@lineno=\count193
+\lst@maxwidth=\dimen144
+
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count194
+\lst@skipnumbers=\count195
+\lst@framebox=\box48
+)
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
-File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count188
-\l__pdf_internal_box=\box47
+File: l3backend-pdftex.def 2021-03-02 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count196
+\l__pdf_internal_box=\box49
 ) (ip6-thesis-palim-palim.aux)
 \openout1 = `ip6-thesis-palim-palim.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count197
+\scratchdimen=\dimen145
+\scratchbox=\box50
+\nofMPsegments=\count198
+\nofMParguments=\count199
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count266
+\MPscratchDim=\dimen146
+\MPnumerator=\count267
+\makeMPintoPDFobject=\count268
+\everyMPtoPDFconversion=\toks18
+)
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+)
+\c@lstlisting=\count269
  [1
 
-{C:/Users/sever/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [1] (ip6-thesis
--palim-palim.toc
+{C:/Users/danio/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+[1] (ip6-thesis-palim-palim.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 9.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -67,15 +152,15 @@ Chapter 1.
 ]
 Chapter 2.
 
-Overfull \hbox (5.40141pt too wide) in paragraph at lines 55--56
-[]\OT1/cmr/m/n/12 Forschungsstand (Welche Meth-o-den/Ansatze wer-den angewen-d
-et?) 
+Overfull \hbox (5.40141pt too wide) in paragraph at lines 101--102
+[]\OT1/cmr/m/n/12 Forschungsstand (Welche Meth-o-d-en/Ansatze wer-den angewen-
+det?) 
  []
 
 
-Overfull \hbox (5.40141pt too wide) in paragraph at lines 60--61
-[]\OT1/cmr/m/n/12 Forschungsstand (Welche Meth-o-den/Ansatze wer-den angewen-d
-et?) 
+Overfull \hbox (5.40141pt too wide) in paragraph at lines 106--107
+[]\OT1/cmr/m/n/12 Forschungsstand (Welche Meth-o-d-en/Ansatze wer-den angewen-
+det?) 
  []
 
 [3
@@ -83,45 +168,105 @@ et?)
 ]
 Chapter 3.
 
-Overfull \hbox (3.87369pt too wide) in paragraph at lines 93--94
-[]\OT1/cmr/m/n/12 Organisation der Spieletests (Auf-bau, Ablauf, Test-per-so-ne
-n, Test-szenar-
+Overfull \hbox (22.18056pt too wide) in paragraph at lines 138--139
+\OT1/cmr/m/n/12 WebRTC [https://webrtc.org/] ist ein Open-Source-Projekt, das d
+ie Echtzeitkom-
  []
 
 [4
 
-] [5]
+]
+Overfull \hbox (14.60841pt too wide) in paragraph at lines 140--143
+\OT1/cmr/m/n/12 WebRTC ver-wen-det die RTCPeer-Con-nec-tion [https://developer.
+mozilla.org/en-
+ []
+
+
+Overfull \hbox (16.05139pt too wide) in paragraph at lines 140--143
+\OT1/cmr/m/n/12 US/docs/Web/API/RTCPeerConnection] JavaScript API, um Streaming
+-Daten
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--143
+
+ []
+
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 144.
+[5]
+<./images//WebRTC-Full-Monty.png, id=30, 837.1275pt x 570.13pt>
+File: ./images//WebRTC-Full-Monty.png Graphic file (type png)
+<use ./images//WebRTC-Full-Monty.png>
+Package pdftex.def Info: ./images//WebRTC-Full-Monty.png  used on input line 16
+9.
+(pdftex.def)             Requested size: 390.0pt x 265.60358pt.
+
+Underfull \hbox (badness 2865) in paragraph at lines 170--170
+[]\OT1/cmr/m/n/12 Figure 1: STUN, TURN, und Sig-nal-isierung in We-bRTC. Quelle
+:
+ []
+
+
+Overfull \hbox (49.82878pt too wide) in paragraph at lines 167--172
+\OT1/cmr/m/n/12 die Peer-to-Peer-Kommunikation fehlschlagt.[https://webrtc.org
+/getting-started/turn-
+ []
+
+
+Overfull \hbox (12.36804pt too wide) in paragraph at lines 173--174
+\OT1/cmr/m/n/12 ple [https://webrtc.github.io/samples/src/content/peerconnectio
+n/trickle-ice/]
+ []
+
+
+Overfull \hbox (23.261pt too wide) in paragraph at lines 173--174
+\OT1/cmr/m/n/12 ubermittelt jeder Palim-Palim-Client beim Verbindungsauf-bau f
+ol-gende pcConfig-
+ []
+
+[6 <./images//WebRTC-Full-Monty.png>] [7]
+Overfull \hbox (3.87369pt too wide) in paragraph at lines 203--204
+[]\OT1/cmr/m/n/12 Organisation der Spieletests (Auf-bau, Ablauf, Test-per-so-ne
+n, Test-szenar-
+ []
+
+[8]
 Chapter 4.
-[6
+[9
 
 ]
 Chapter 5.
-[7
+[10
 
 ]
 Appendix A.
-[8
+[11
 
 ]
 Appendix B.
-[9
+[12
 
 ] (ip6-thesis-palim-palim.aux) ) 
 Here is how much of TeX's memory you used:
- 439 strings out of 479334
- 7840 string characters out of 2857084
- 293824 words of memory out of 3000000
- 17962 multiletter control sequences out of 15000+200000
- 408627 words of font info for 44 fonts, out of 3000000 for 9000
+ 2966 strings out of 479334
+ 42361 string characters out of 2857084
+ 410861 words of memory out of 3000000
+ 20432 multiletter control sequences out of 15000+200000
+ 409142 words of font info for 46 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,4n,50p,181b,170s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\sever\AppData\Local\MiKTeX\fonts/pk/
-ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/sever/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/sever/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on ip6-thesis-palim-palim.pdf (11 pages, 44443 bytes).
+ 68i,7n,74p,744b,1174s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\danio\AppData\Local\MiKTeX\fonts/pk/
+ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/danio/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/danio/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/danio/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/danio/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Use
+rs/danio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pf
+b>
+Output written on ip6-thesis-palim-palim.pdf (14 pages, 225564 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
+ 76 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

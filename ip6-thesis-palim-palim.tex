@@ -1,5 +1,51 @@
 \documentclass[12pt,a4paper]{report}
 
+% -- Images --
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+% -- Continuous figure numbering --
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+
+% -- Code blocks --
+\usepackage{listings}
+\usepackage{color}
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+% -- Code blocks Stlye --
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+\lstset{
+   language=JavaScript,
+   backgroundcolor=\color{lightgray},
+   extendedchars=true,
+   basicstyle=\footnotesize\ttfamily,
+   showstringspaces=false,
+   showspaces=false,
+   numbers=left,
+   numberstyle=\footnotesize,
+   numbersep=9pt,
+   tabsize=2,
+   breaklines=true,
+   showtabs=false,
+   captionpos=b
+}
+
 \begin{document}
 
 
@@ -88,6 +134,70 @@
 				\item Deployment
 				\item Betrieb
 			\end{itemize}
+		\subsection{WebRTC}
+WebRTC [https://webrtc.org/] ist ein Open-Source-Projekt, das die Echtzeitkommunikation von Audio, Video und Daten in Web- und nativen Anwendungen ermöglicht. Die Technologie ist in allen modernen Browsern sowie auf nativen Clients für alle wichtigen Plattformen verfügbar. Dabei wird zwischen zwei Browsern eine Peer-To-Peer-Verbindung aufgebaut, worüber die Daten gestreamt werden.
+			\subsubsection{Signaling}
+			WebRTC verwendet die RTCPeerConnection [https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection] JavaScript API, um Streaming-Daten zwischen Browsern zu kommunizieren. Zusätzlich wird aber auch einen Mechanismus benötigt, um die Kommunikation zu koordinieren und Kontrollnachrichten zu senden. Dieser Prozess wird als \textit{Signaling} bezeichnet. Signaling-Methoden und -protokolle sind von WebRTC nicht spezifiziert und können je nach Anwendungsfall entsprechend gewählt werden.\\		
+In diesem Projekt wurde Socket.IO für die Signalisierung verwendt, da es sich mit seinem integrierten Room-Konzept für eine Video-Chat-App anbietet. Es gibt aber viele Alternativen, welche sich teilwiese besser für produktive Applikationen eignen (https://bloggeek.me/siganling-protocol-webrtc/). Palim-Palim verwendet eine Node.js Server-Applikation (implementiert in server.js), welche als Signaling-Server fungiert. Der Server hat dabei folgende zwei Aufgaben. \\\\
+			Erstens fungiert er als Message Relay. Dies wir benötigt, um verschiedene Informationen von und zu den Clients zu senden, damit diese untereinander eine WebRTC-Peer-Verbindung aufbauen können:
+			\begin{lstlisting}
+socket.on('message', function (message) {
+  log('Got message: ', message);
+  socket.broadcast.emit('message', message);
+});
+\end{lstlisting}
+Zweitens verwaltet er alle WebRTC-Videochat-'Räume':
+\begin{lstlisting}
+if (numClients === 0) {
+  socket.join(room);
+  socket.emit('created', room, socket.id);
+} else if (numClients === 1) {
+  socket.join(room);
+  socket.emit('joined', room, socket.id);
+  io.sockets.in(room).emit('ready');
+} else { // max two clients
+  socket.emit('full', room);
+}
+\end{lstlisting}
+Wie im Code ersichtlich ist, erlaubt unsere Applikation maximal zwei Peers in einem Raum.\\
+Zusätzlich werden in unserer Applikation die Positionen der Gameobjekte über den Server synchronisiert (TODO).
+
+			\subsubsection{STUN und TURN}			
+
+			WebRTC ist grundsätzlich so konzipiert, dass es Peer-to-Peer funktioniert. Benutzer können sich also auf dem direktesten Weg verbinden. Die Technologie ist jedoch darauf ausgelegt, mit realen Netzwerken zurechtzukommen: Client-Anwendungen müssen NAT-Gateways und Firewalls überwinden, und Peer-to-Peer-Netzwerke benötigen Fallbacks, falls die direkte Verbindung ausfällt. Als Teil dieses Prozesses verwenden WebRTC-APIs sogenannte \textit{STUN-Server}, um die IP-Adresse ihres Computers zu ermitteln, und \textit{TURN-Server} (Traversal Using Relay NAT), welche als Relay-Server fungieren, falls die Peer-to-Peer-Kommunikation fehlschlägt.[https://webrtc.org/getting-started/turn-server]
+			\begin{figure}[h!]
+			\includegraphics[width=\textwidth]{WebRTC-Full-Monty}
+			\caption[Caption for LOF]{STUN, TURN, und Signalisierung in WebRTC. Quelle: https://www.html5rocks.com/en/tutorials/webrtc/infrastructure/.}
+			\end{figure}
+			
+			Palim-Palim verwendet als STUN-Server öffentlich verfügbare Server von Google. Als TURN UDP- und TCP-Fallback-Verbindungen werden die Konfigurationen aus dem WebRTC-Sample-Projekt übernommen. Diese Server werden gratis angeboten und können mit Tools wie Google’s Trickle ICE sample [https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/] auf ihre Verfügbarkeit getestet werden [https://bloggeek.me/webrtc-turn/]. Die STUN- und TURN-Server-Adressen müssen bei dem Aufbau der Peer-Connection vom Client an den Signaling-Server übermittelt werden. Dazu übermittelt jeder Palim-Palim-Client beim Verbindungsaufbau folgende pcConfig-Werte an den Server:
+			
+			\begin{lstlisting}
+			var pcConfig = {
+  'iceServers': [
+    {
+      'urls': 'stun:stun.l.google.com:19302'
+    },
+    {
+      'urls': 'turn:192.158.29.39:3478?transport=udp',
+      'credential': 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
+      'username': '28224511:1379330808'
+    },
+    {
+      'urls': 'turn:192.158.29.39:3478?transport=tcp',
+      'credential': 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
+      'username': '28224511:1379330808'
+    }
+  ]
+};
+			\end{lstlisting}
+			
+			In etwa 82 Prozent der Fälle ist die Peer-To-Peer-Verbindung stabil genug, und die TURN-Server werden überhaupt nicht benötigt. Jedoch müssen sie trotzdem bei jeder Verbinung angegeben werden. TODO more infos https://www.callstats.io/blog/2017/10/26/webrtc-product-turn-server
+		\subsubsection{Sicherheit}
+		Verschlüsselung ist für alle WebRTC-Komponenten obligatorisch, und seine JavaScript-APIs können nur von sicheren Quellen (HTTPS oder localhost) aus verwendet werden. Die Signalisierungsmechanismen sind allerdings nicht in den WebRTC-Standards definiert. Hier liegt es an den Entwicklern, sichere Protokolle zu verwenden. TODO<Für unser Projekt noch definieren und ausformulieren>
+		
+		
+		\newpage
 		\section{Durchführung Spieletests}
 			\begin{itemize}
 				\item Organisation der Spieletests (Aufbau, Ablauf, Testpersonen, Testszenarien, Testumgebung)
