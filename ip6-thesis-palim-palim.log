@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.15)  26 APR 2021 09:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.15)  26 APR 2021 10:46
 entering extended mode
 **./ip6-thesis-palim-palim.tex
 (ip6-thesis-palim-palim.tex
@@ -172,12 +172,12 @@ Chapter 6.
 ]
 Chapter 7.
 
-Overfull \hbox (10.08575pt too wide) in paragraph at lines 125--125
+Overfull \hbox (10.08575pt too wide) in paragraph at lines 130--130
 []\OT1/cmr/bx/n/17.28 Planung und Durchfuhrung der Spieletests 
  []
 
 
-Overfull \hbox (3.87369pt too wide) in paragraph at lines 127--128
+Overfull \hbox (3.87369pt too wide) in paragraph at lines 132--133
 []\OT1/cmr/m/n/12 Organisation der Spieletests (Auf-bau, Ablauf, Test-per-so-ne
 n, Test-szenar-
  []
@@ -284,7 +284,7 @@ Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/danio/
 AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Use
 rs/danio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pf
 b>
-Output written on ip6-thesis-palim-palim.pdf (21 pages, 231744 bytes).
+Output written on ip6-thesis-palim-palim.pdf (21 pages, 232350 bytes).
 PDF statistics:
  98 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
