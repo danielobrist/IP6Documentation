@@ -93,21 +93,26 @@
 	\item Aufbau des Dokuments und Überleitung in den theoretischen Teil
 \end{itemize}
 
-\chapter{Theoretischer Teil}
+% -- Theoretischer Teil --
+\chapter{Umfeldanalyse und Zielgruppe}
 \begin{itemize}
 	\item Beschreibung des Umfelds / Anwendungsdomäne (betagte Personen und Kinder)
-	\item Intergenerationelles Spielen
-	\begin{itemize}
-		\item Forschungsstand (Welche Methoden/Ansätze werden angewendet?)
-		\item Bisherige Erkenntnisse zu intergenerationellem Spielen
-	\end{itemize}
-	\item Videochats in Videospielen
-	\begin{itemize}
+\end{itemize}
+\chapter{Intergenerationelles Spielen}
+\begin{itemize}
+	\item Forschungsstand (Welche Methoden/Ansätze werden angewendet?)
+	\item Bisherige Erkenntnisse zu intergenerationellem Spielen
+\end{itemize}
+\chapter{Videochats in Videospielen}
+\begin{itemize}
 		\item Forschungsstand (Welche Methoden/Ansätze werden angewendet?)
 		\item Bisherige Erkenntnisse zu Videochats in Videospielen
 	\end{itemize}
+	\chapter{Aufstellung der Forschungsfragen}
+	\begin{itemize}
 	\item Lücken der bisherigen Forschung
 	\item Aufstellung der Forschungsfragen
+	\chapter{Methoden}
 	\item In Palim-Palim verwendete Methoden
 	\begin{itemize}
 		\item Methode der Spieletest
@@ -115,26 +120,29 @@
 	\end{itemize}
 \end{itemize}
 
-\chapter{Praktischer Teil}
-	\section{Videospiel Palim-Palim}
-		\subsection{Gamedesign}
-			\begin{itemize}
-				\item Auswahl Spielkonzept
-				\item Spielkonzept
-				\item Gameplay-Loops
-				\item Spielvarianten
-				\item Design und Usability
-			\end{itemize}
-		\subsection{Implementation}
-			\begin{itemize}
-				\item Technologien
-				\item Architektur
-				\item Sicherheit
-				\item Testing
-				\item Deployment
-				\item Betrieb
-			\end{itemize}
-		\subsection{WebRTC}
+% -- Praktischer Teil --
+\chapter{Spieletests und Resultate}
+	\section{Planung und Durchführung der Spieletests}
+	\begin{itemize}
+		\item Organisation der Spieletests (Aufbau, Ablauf, Testpersonen, Testszenarien, Testumgebung)
+		\item Beobachtungen
+	\end{itemize}
+	\section{Resultate}
+	\begin{itemize}
+		\item Ergebnisse
+		\item Beantwortung der aufgestellten Forschungsfragen
+	\end{itemize}
+\chapter{Gamedesign}
+	\section{Ideenfindung}
+	\section{Spielkonzept}
+	\section{Gameplay-Loops}
+	\section{Spielvarianten}
+	\section{Design und Usability}
+	
+\chapter{Implementation}
+\section{Ideenfindung}
+	\section{Technologien}
+			\subsection{WebRTC}
 WebRTC [https://webrtc.org/] ist ein Open-Source-Projekt, das die Echtzeitkommunikation von Audio, Video und Daten in Web- und nativen Anwendungen ermöglicht. Die Technologie ist in allen modernen Browsern sowie auf nativen Clients für alle wichtigen Plattformen verfügbar. Dabei wird zwischen zwei Browsern eine Peer-To-Peer-Verbindung aufgebaut, worüber die Daten gestreamt werden.
 			\subsubsection{Signaling}
 			WebRTC verwendet die RTCPeerConnection [https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection] JavaScript API, um Streaming-Daten zwischen Browsern zu kommunizieren. Zusätzlich wird aber auch einen Mechanismus benötigt, um die Kommunikation zu koordinieren und Kontrollnachrichten zu senden. Dieser Prozess wird als \textit{Signaling} bezeichnet. Signaling-Methoden und -protokolle sind von WebRTC nicht spezifiziert und können je nach Anwendungsfall entsprechend gewählt werden.\\		
@@ -198,16 +206,15 @@ Zusätzlich werden in unserer Applikation die Positionen der Gameobjekte über d
 		
 		
 		\newpage
-		\section{Durchführung Spieletests}
-			\begin{itemize}
-				\item Organisation der Spieletests (Aufbau, Ablauf, Testpersonen, Testszenarien, Testumgebung)
-				\item Beobachtungen
-				\item Ergebnisse
-				\item Beantwortung der aufgestellten Forschungsfragen
-			\end{itemize}
+	\section{Architektur}
+	\section{Sicherheit}
+	\section{Testing}
+	\section{Deployment}
+	\section{Betrieb}
 			
 			
-\chapter{Schlussfolgerung}
+			
+\chapter{Fazit}
 	\begin{itemize}
 		\item Zusammenfassung des Erreichten / Zielerreichung
 		\item Zentrale Erkenntnisse
