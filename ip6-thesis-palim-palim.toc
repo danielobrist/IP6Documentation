@@ -1,4 +1,8 @@
 \contentsline {paragraph}{Titelblatt}{1}{}%
+\contentsline {paragraph}{Projekt-Team}{1}{}%
+\contentsline {paragraph}{Auftraggeber und Betreuung FHNW}{1}{}%
+\contentsline {paragraph}{Zeitbudget}{1}{}%
+\contentsline {paragraph}{Wichtigste Daten}{2}{}%
 \contentsline {chapter}{\numberline {1}Einleitung}{3}{}%
 \contentsline {paragraph}{Teil 1}{3}{}%
 \contentsline {paragraph}{Teil 2}{3}{}%

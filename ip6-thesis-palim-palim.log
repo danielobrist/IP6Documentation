@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.15)  26 APR 2021 10:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.13)  4 MAY 2021 11:16
 entering extended mode
 **./ip6-thesis-palim-palim.tex
 (ip6-thesis-palim-palim.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> xparse <2020-03-03>
-(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+(C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
 Document Class: report 2020/04/10 v1.4m Standard LaTeX document class
-(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+(C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
 File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
 \c@part=\count179
@@ -22,37 +22,37 @@ File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
 )
-(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+(C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+(C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+(C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
 fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 
-(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+(C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen139
 \Gin@req@width=\dimen140
 )
-(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/chngcntr\chngcntr.sty
+(C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/latex/chngcntr\chngcntr.sty
 Package: chngcntr 2018/04/09 v1.1a change counter resetting
 Package chngcntr Info: \counterwithout already defined.
 (chngcntr)             Quitting chngcntr on input line 21.
 )
-(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+(C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
 \lst@mode=\count188
 \lst@gtempboxa=\box47
 \lst@token=\toks16
@@ -66,48 +66,48 @@ Package chngcntr Info: \counterwithout already defined.
 \lst@lineno=\count193
 \lst@maxwidth=\dimen144
 
-(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+(C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 \c@lstnumber=\count194
 \lst@skipnumbers=\count195
 \lst@framebox=\box48
 )
-(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+(C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
-(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
+(C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
 Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
 
-(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+(C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
-(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+(C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
-File: l3backend-pdftex.def 2021-03-02 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count196
 \l__pdf_internal_box=\box49
 ) (ip6-thesis-palim-palim.aux)
 \openout1 = `ip6-thesis-palim-palim.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
 
-(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+(C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count197
@@ -122,7 +122,7 @@ ii
 \makeMPintoPDFobject=\count268
 \everyMPtoPDFconversion=\toks18
 )
-(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+(C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -131,14 +131,35 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 \c@lstlisting=\count269
  [1
 
-{C:/Users/danio/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-[1] (ip6-thesis-palim-palim.toc
+{C:/Users/sever/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 62--67
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--83
+
+ []
+
+[1
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 87--90
+
+ []
+
+[2] [1] (ip6-thesis-palim-palim.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 13.
+(Font)              <12> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 13.
+(Font)              <8> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 13.
+(Font)              <6> on input line 17.
  [1
 
 ])
@@ -172,12 +193,12 @@ Chapter 6.
 ]
 Chapter 7.
 
-Overfull \hbox (10.08575pt too wide) in paragraph at lines 130--130
+Overfull \hbox (10.08575pt too wide) in paragraph at lines 165--165
 []\OT1/cmr/bx/n/17.28 Planung und Durchfuhrung der Spieletests 
  []
 
 
-Overfull \hbox (3.87369pt too wide) in paragraph at lines 132--133
+Overfull \hbox (3.87369pt too wide) in paragraph at lines 167--168
 []\OT1/cmr/m/n/12 Organisation der Spieletests (Auf-bau, Ablauf, Test-per-so-ne
 n, Test-szenar-
  []
@@ -191,25 +212,25 @@ Chapter 8.
 ]
 Chapter 9.
 
-Overfull \hbox (22.18056pt too wide) in paragraph at lines 146--147
+Overfull \hbox (22.18056pt too wide) in paragraph at lines 181--182
 \OT1/cmr/m/n/12 WebRTC [https://webrtc.org/] ist ein Open-Source-Projekt, das d
 ie Echtzeitkom-
  []
 
 
-Overfull \hbox (14.60841pt too wide) in paragraph at lines 148--151
+Overfull \hbox (14.60841pt too wide) in paragraph at lines 183--186
 \OT1/cmr/m/n/12 WebRTC ver-wen-det die RTCPeer-Con-nec-tion [https://developer.
 mozilla.org/en-
  []
 
 
-Overfull \hbox (16.05139pt too wide) in paragraph at lines 148--151
+Overfull \hbox (16.05139pt too wide) in paragraph at lines 183--186
 \OT1/cmr/m/n/12 US/docs/Web/API/RTCPeerConnection] JavaScript API, um Streaming
 -Daten
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--151
+Underfull \hbox (badness 10000) in paragraph at lines 183--186
 
  []
 
@@ -217,21 +238,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 148--151
 
 ]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 152.
-<./images//WebRTC-Full-Monty.png, id=47, 837.1275pt x 570.13pt>
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 187.
+<./images//WebRTC-Full-Monty.png, id=53, 837.1275pt x 570.13pt>
 File: ./images//WebRTC-Full-Monty.png Graphic file (type png)
 <use ./images//WebRTC-Full-Monty.png>
-Package pdftex.def Info: ./images//WebRTC-Full-Monty.png  used on input line 17
-7.
+Package pdftex.def Info: ./images//WebRTC-Full-Monty.png  used on input line 21
+2.
 (pdftex.def)             Requested size: 390.0pt x 265.60358pt.
 
-Underfull \hbox (badness 2865) in paragraph at lines 178--178
+Underfull \hbox (badness 2865) in paragraph at lines 213--213
 []\OT1/cmr/m/n/12 Figure 1: STUN, TURN, und Sig-nal-isierung in We-bRTC. Quelle
 :
  []
 
 
-Overfull \hbox (49.82878pt too wide) in paragraph at lines 175--180
+Overfull \hbox (49.82878pt too wide) in paragraph at lines 210--215
 \OT1/cmr/m/n/12 die Peer-to-Peer-Kommunikation fehlschlagt.[https://webrtc.org
 /getting-started/turn-
  []
@@ -240,13 +261,13 @@ Overfull \hbox (49.82878pt too wide) in paragraph at lines 175--180
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (12.36804pt too wide) in paragraph at lines 181--182
+Overfull \hbox (12.36804pt too wide) in paragraph at lines 216--217
 \OT1/cmr/m/n/12 ple [https://webrtc.github.io/samples/src/content/peerconnectio
 n/trickle-ice/]
  []
 
 
-Overfull \hbox (23.261pt too wide) in paragraph at lines 181--182
+Overfull \hbox (23.261pt too wide) in paragraph at lines 216--217
 \OT1/cmr/m/n/12 ubermittelt jeder Palim-Palim-Client beim Verbindungsauf-bau f
 ol-gende pcConfig-
  []
@@ -269,24 +290,24 @@ Appendix B.
 
 ] (ip6-thesis-palim-palim.aux) ) 
 Here is how much of TeX's memory you used:
- 2966 strings out of 479334
- 42361 string characters out of 2857084
- 410861 words of memory out of 3000000
- 20432 multiletter control sequences out of 15000+200000
+ 2968 strings out of 479334
+ 42309 string characters out of 2857084
+ 410872 words of memory out of 3000000
+ 20434 multiletter control sequences out of 15000+200000
  409142 words of font info for 46 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,7n,74p,744b,1628s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\danio\AppData\Local\MiKTeX\fonts/pk/
-ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/danio/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/danio/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/danio/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/danio/
+ <C:\Users\sever\AppData\Local\MiKTeX\fonts/pk/
+ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/sever/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/sever/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/sever/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/sever/
 AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Use
-rs/danio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pf
+rs/sever/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pf
 b>
-Output written on ip6-thesis-palim-palim.pdf (21 pages, 232350 bytes).
+Output written on ip6-thesis-palim-palim.pdf (23 pages, 234825 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
+ 104 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
