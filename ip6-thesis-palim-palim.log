@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.13)  4 MAY 2021 11:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.13)  4 MAY 2021 15:08
 entering extended mode
 **./ip6-thesis-palim-palim.tex
 (ip6-thesis-palim-palim.tex
@@ -155,104 +155,147 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--90
 
 [2] [1] (ip6-thesis-palim-palim.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 17.
+(Font)              <12> on input line 14.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 17.
+(Font)              <8> on input line 14.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 17.
- [1
-
-])
+(Font)              <6> on input line 14.
+)
 \tf@toc=\write3
 \openout3 = `ip6-thesis-palim-palim.toc'.
 
- [2]
+ [1
+
+]
 Chapter 1.
-[3
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--138
+
+ []
+
+[2
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 149--154
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--154
+
+ []
+
+
+Overfull \hbox (2.8251pt too wide) in paragraph at lines 149--154
+\OT1/cmr/m/n/12 Erganzend zum Video-Telefonie-Aspekt gibt es bere-its viel Lit
+-er-atur bezuglich
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--154
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--154
+
+ []
+
+
+Overfull \hbox (6.50653pt too wide) in paragraph at lines 149--154
+\OT1/cmr/m/n/12 Spiels wird. An-schliessend wur-den mit allen Vari-anten Spiel-
+tests durchgefuhrt,
+ []
+
+[3] [4]
 Chapter 2.
-[4
 
-]
-Chapter 3.
+Overfull \hbox (0.34482pt too wide) in paragraph at lines 166--166
+[]\OT1/cmr/m/it/12 Beschreibung des Um-felds / An-wen-dungs-domane (be-tagte P
+er-so-nen und
+ []
+
 [5
 
 ]
-Chapter 4.
+Chapter 3.
 [6
 
 ]
-Chapter 5.
+Chapter 4.
 [7
 
 ]
-Chapter 6.
+Chapter 5.
 [8
+
+]
+Chapter 6.
+[9
 
 ]
 Chapter 7.
 
-Overfull \hbox (10.08575pt too wide) in paragraph at lines 165--165
+Overfull \hbox (10.08575pt too wide) in paragraph at lines 207--207
 []\OT1/cmr/bx/n/17.28 Planung und Durchfuhrung der Spieletests 
  []
 
 
-Overfull \hbox (3.87369pt too wide) in paragraph at lines 167--168
+Overfull \hbox (3.87369pt too wide) in paragraph at lines 209--210
 []\OT1/cmr/m/n/12 Organisation der Spieletests (Auf-bau, Ablauf, Test-per-so-ne
 n, Test-szenar-
  []
 
-[9
+[10
 
 ]
 Chapter 8.
-[10
+[11
 
 ]
 Chapter 9.
 
-Overfull \hbox (22.18056pt too wide) in paragraph at lines 181--182
+Overfull \hbox (22.18056pt too wide) in paragraph at lines 223--224
 \OT1/cmr/m/n/12 WebRTC [https://webrtc.org/] ist ein Open-Source-Projekt, das d
 ie Echtzeitkom-
  []
 
 
-Overfull \hbox (14.60841pt too wide) in paragraph at lines 183--186
+Overfull \hbox (14.60841pt too wide) in paragraph at lines 225--228
 \OT1/cmr/m/n/12 WebRTC ver-wen-det die RTCPeer-Con-nec-tion [https://developer.
 mozilla.org/en-
  []
 
 
-Overfull \hbox (16.05139pt too wide) in paragraph at lines 183--186
+Overfull \hbox (16.05139pt too wide) in paragraph at lines 225--228
 \OT1/cmr/m/n/12 US/docs/Web/API/RTCPeerConnection] JavaScript API, um Streaming
 -Daten
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--186
+Underfull \hbox (badness 10000) in paragraph at lines 225--228
 
  []
 
-[11
+[12
 
 ]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 187.
-<./images//WebRTC-Full-Monty.png, id=53, 837.1275pt x 570.13pt>
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 229.
+<./images//WebRTC-Full-Monty.png, id=57, 837.1275pt x 570.13pt>
 File: ./images//WebRTC-Full-Monty.png Graphic file (type png)
 <use ./images//WebRTC-Full-Monty.png>
-Package pdftex.def Info: ./images//WebRTC-Full-Monty.png  used on input line 21
-2.
+Package pdftex.def Info: ./images//WebRTC-Full-Monty.png  used on input line 25
+4.
 (pdftex.def)             Requested size: 390.0pt x 265.60358pt.
 
-Underfull \hbox (badness 2865) in paragraph at lines 213--213
+Underfull \hbox (badness 2865) in paragraph at lines 255--255
 []\OT1/cmr/m/n/12 Figure 1: STUN, TURN, und Sig-nal-isierung in We-bRTC. Quelle
 :
  []
 
 
-Overfull \hbox (49.82878pt too wide) in paragraph at lines 210--215
+Overfull \hbox (49.82878pt too wide) in paragraph at lines 252--257
 \OT1/cmr/m/n/12 die Peer-to-Peer-Kommunikation fehlschlagt.[https://webrtc.org
 /getting-started/turn-
  []
@@ -261,53 +304,54 @@ Overfull \hbox (49.82878pt too wide) in paragraph at lines 210--215
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (12.36804pt too wide) in paragraph at lines 216--217
+Overfull \hbox (12.36804pt too wide) in paragraph at lines 258--259
 \OT1/cmr/m/n/12 ple [https://webrtc.github.io/samples/src/content/peerconnectio
 n/trickle-ice/]
  []
 
 
-Overfull \hbox (23.261pt too wide) in paragraph at lines 216--217
+Overfull \hbox (23.261pt too wide) in paragraph at lines 258--259
 \OT1/cmr/m/n/12 ubermittelt jeder Palim-Palim-Client beim Verbindungsauf-bau f
 ol-gende pcConfig-
  []
 
-[12] [13 <./images//WebRTC-Full-Monty.png>] [14] [15]
+[13] [14 <./images//WebRTC-Full-Monty.png>] [15] [16]
 Chapter 10.
-[16
-
-]
-Chapter 11.
 [17
 
 ]
-Appendix A.
+Chapter 11.
 [18
 
 ]
-Appendix B.
+Appendix A.
 [19
+
+]
+Appendix B.
+[20
 
 ] (ip6-thesis-palim-palim.aux) ) 
 Here is how much of TeX's memory you used:
- 2968 strings out of 479334
- 42309 string characters out of 2857084
+ 2970 strings out of 479334
+ 42333 string characters out of 2857084
  410872 words of memory out of 3000000
- 20434 multiletter control sequences out of 15000+200000
- 409142 words of font info for 46 fonts, out of 3000000 for 9000
+ 20435 multiletter control sequences out of 15000+200000
+ 409501 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,7n,74p,744b,1628s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\sever\AppData\Local\MiKTeX\fonts/pk/
 ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/sever/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/sever/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/sever/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/sever/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Use
-rs/sever/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pf
-b>
-Output written on ip6-thesis-palim-palim.pdf (23 pages, 234825 bytes).
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/sever/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/sev
+er/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/U
+sers/sever/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.
+pfb><C:/Users/sever/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmtt10.pfb>
+Output written on ip6-thesis-palim-palim.pdf (24 pages, 259986 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
+ 111 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

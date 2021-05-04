@@ -102,58 +102,100 @@ Ende:	20. August 2021 \\
 \break
 
 \chapter{Einleitung}
-\paragraph{Teil 1}
-\begin{itemize}
+\paragraph{Teil 1 / Was wurde erreicht?}
+\emph{\begin{itemize}
+\color{blue}
  \item Beschreibung des Videospiels Palim-Palim (inkl. Screenshot)
  \item Aufstellung der Forschungsfragen und den Erkenntnissen
-\end{itemize}
+\end{itemize}}
 
-\paragraph{Teil 2}
-\begin{itemize}
+\paragraph{Teil 2 / Warum wurde es gemacht?}
+\emph{\begin{itemize}
+\color{blue}
  \item Ausgangslage inkl. Forschungsstand
  \item Relevanz der Problemstellung
-\end{itemize}
+ \item Was ist das Umfeld?
+\end{itemize}}
 
-\paragraph{Teil 3}
-\begin{itemize}
+\paragraph{Teil 3 / Wie wurde es gemacht?}
+\emph{\begin{itemize}
+\color{blue}
  \item Grobe Beschreibung der angewendeten Methodik
  \begin{itemize}
  	\item Spielentwicklung (Architektur, Technologien)
  	\item Spieletests (Methoden)
  \end{itemize}
-\end{itemize}
+\end{itemize}}
  
 \paragraph{Teil 4}
-\begin{itemize}
+\emph{\begin{itemize}
+\color{blue}
 	\item Aufbau des Dokuments und Überleitung in den theoretischen Teil
+\end{itemize}}
+
+Palim-Palim ist ein interaktives Multiplayer-Videospiel für Kinder und betagte Menschen. Zwei Spielende können damit Kinder-Kaufladen in einer virtuellen Umgebung spielen. Es verfügt über einen Video-Chat als inhärente Game-Mechanik, um die Kommunikation zwischen den Spielerinnen und Spielern zu fördern.\\\\
+Mit dem Spiel wird untersucht, welchen Einfluss ein Video-Chat in Videospielen auf die User Experience und die Kommunikation zwischen den Spielenden hat. Im Speziellen werden die folgenden Fragestellungen untersucht:
+\begin{itemize}
+	\item Welche Wirkung hat ein integrierter Video-Chat auf das Spielerlebnis von betagten Menschen?
+	\item Welche Wirkung hat ein integrierter Video-Chat auf das Spielerlebnis von Kindern? 
+	\item Welche Auswirkungen hat die Art und Weise, wie der Video-Chat in das Spiel integriert ist, auf das Spielerlebnis? 
+	\item Welche Wirkung hat ein integrierter Video-Chat auf die Kommunikation zwischen den Spielenden?
+	\item Wird ein integrierter Video-Chat aktiv als Kommunikationsmittel zur Bewältigung von Spielaufgaben genutzt?
+	\item Welche Auswirkungen hat die Art und Weise, wie der Video-Chat in das Spiel integriert ist, auf die Förderung der Kommunikation?
 \end{itemize}
+
+\paragraph{\emph{\color{blue} Erkenntnisse}}
+
+Video-Chats werden heutzutage schon von vielen Familien benutzt, um mit Ihren Verwandten zu kommunizieren. Auch in der Kommunikation mit den Grosseltern wird dabei immer mehr auf Video-Telefonie gesetzt. Dies gilt besonders für Zeiten, in denen Besuche im Alters- oder Pflegeheim auf Grund kursierenden Viren wie Corona schwierig oder unmöglich werden. Betagte Menschen schätzen und nutzen diese moderne Art der Kommunikation mit der Familie auch immer mehr – besonders weil es öfters auf ältere Benutzergruppen angepasste Angebote gibt [1].\\\\
+			Allerdings hat die Video-Telefonie immer noch Grenzen, welche die Interaktionen unnatürlich und teilweise entfremdend wirken lassen. Vor allem für Kinder ist es schwierig, Gesprächsthemen und Kommunikationswege zu finden, die sich so lustig und verbindend anfühlen, wie die Zeit mit der Grossmutter oder dem Grossvater im echten Leben. Oft sind Kinder vom Gespräch schnell gelangweilt – sie würden lieber etwas spielen [2]. Spielen kann ein Mittel sein, um Kinder besser einzubeziehen und die Interaktion mit ihnen zu unterstützen, wie bisherige Studien zu dem Thema Video-Calls mit Eltern und Kindern zeigen [3].\\\\
+			Ergänzend zum Video-Telefonie-Aspekt gibt es bereits viel Literatur bezüglich generationenübergreifender Computerspiele [4], [5], [6]. Erkenntnisse aus einer Studie von Derboven et al [7] deuten ausserdem drauf hin, dass in einem Multiplayer-Videospiel die zusätzliche Kommunikationsfunktionalität durch einen Video-Chat oft sowohl von älteren als auch von jüngeren Personen begrüsst wird. Allerdings bietet die Forschung bisher keine detaillierte Studie mit Kindern und betagten Personen in diesem Zusammenhang.\\\\
+			Am Institut für Data Science (I4DS) der Fachhochschule Nordwestschweiz wird im Rahmen des Projekts Myosotis schon seit einigen Jahren daran gearbeitet, Video-Spiele zu entwickeln, welche in unterhaltsamer Weise die soziale Interaktion zwischen betagten Menschen und ihren Angehörigen unterstützen [8]. Dabei wurden schon etliche Spiele umgesetzt und getestet [6]. Mit einer Integration eines Video-Chats in ein Spiel hat sich jedoch bisher noch kein Team explizit auseinandergesetzt. Palim-Palim schliesst diese Lücke und zeigt wertvolle Erkenntnisse über die Kombination von Video-Chats und Video-Spielen mit Kindern und betagten Personen.\\\\
+			Um die formulierten Fragen zu beantworten, wurden mehrere Varianten eines Videospiels implementiert, in welchen ein Video-Stream zu einem Teil des Spiels wird. Anschliessend wurden mit allen Varianten Spieltests durchgeführt, um herauszufinden, ob die Integration eines Video-Chats in einem Video-Spiel einen positiven oder negativen Einfluss auf die User Experience sowie die Kommunikation zwischen den Spielenden hat. Die Arbeit fokussiert sich speziell auch auf die Art und Weise, wie ein Video-Stream in ein Spiel integriert werden kann.
+
+\paragraph{\emph{\color{blue} Grobe Systemarchitektur, verwendete Methoden und Konzepte}}
+
+ 
 
 % -- Theoretischer Teil --
 \chapter{Umfeldanalyse und Zielgruppe}
-\begin{itemize}
-	\item Beschreibung des Umfelds / Anwendungsdomäne (betagte Personen und Kinder)
-\end{itemize}
+\emph{
+	\begin{itemize}
+		\color{blue}
+		\item Beschreibung des Umfelds / Anwendungsdomäne (betagte Personen und Kinder)
+	\end{itemize}
+}
 \chapter{Intergenerationelles Spielen}
-\begin{itemize}
-	\item Forschungsstand (Welche Methoden/Ansätze werden angewendet?)
-	\item Bisherige Erkenntnisse zu intergenerationellem Spielen
-\end{itemize}
+\emph{
+	\begin{itemize}
+		\color{blue}
+		\item Forschungsstand (Welche Methoden/Ansätze werden angewendet?)
+		\item Bisherige Erkenntnisse zu intergenerationellem Spielen
+	\end{itemize}
+}
 \chapter{Videochats in Videospielen}
-\begin{itemize}
+\emph{
+	\begin{itemize}
+		\color{blue}
 		\item Forschungsstand (Welche Methoden/Ansätze werden angewendet?)
 		\item Bisherige Erkenntnisse zu Videochats in Videospielen
 	\end{itemize}
-	\chapter{Aufstellung der Forschungsfragen}
+}
+\chapter{Aufstellung der Forschungsfragen}
+\emph{
 	\begin{itemize}
-	\item Lücken der bisherigen Forschung
-	\item Aufstellung der Forschungsfragen
-	\chapter{Methoden}
-	\item In Palim-Palim verwendete Methoden
+		\color{blue}
+		\item Lücken der bisherigen Forschung
+		\item Aufstellung der Forschungsfragen
+	\end{itemize}
+}
+\chapter{Methoden}
+\emph{
+	\color{blue}
+	In Palim-Palim verwendete Methoden
 	\begin{itemize}
 		\item Methode der Spieletest
 		\item Methode der Spieletest-Auswertung
-	\end{itemize}
-\end{itemize}
+	\end{itemize}}
 
 % -- Praktischer Teil --
 \chapter{Spieletests und Resultate}
