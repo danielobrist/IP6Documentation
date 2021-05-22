@@ -276,7 +276,6 @@ Die Überprüfung der im Kapitel 2 aufgestellten Hypothesen wird durch Spieltest
 	\section{Design und Usability}
 	
 \chapter{Implementation}
-	\section{Architektur}
 	\section{Technologien}
 			\subsection{WebRTC}
 WebRTC [https://webrtc.org/] ist ein Open-Source-Projekt, das die Echtzeitkommunikation von Audio, Video und Daten in Web- und nativen Anwendungen ermöglicht. Die Technologie ist in allen modernen Browsern sowie auf nativen Clients für alle wichtigen Plattformen verfügbar und ist eine Empfehlung des World Wide Web Consortium (W3C) [https://www.w3.org/TR/webrtc/] und ein Standard der Internet Engineering Task Force (IETF) [https://www.ietf.org/blog/webrtc-support/]. Dabei wird zwischen zwei Browsern eine Peer-To-Peer-Verbindung aufgebaut, worüber die Daten gestreamt werden. Auf der Peer-To-Peer-Verbindung lassen sich auch eigene DataChannels erstellen, die z.B. zur Übertragung von Text-Nachrichten, Positions-Daten von Game-Objekten oder sogar Files zwischen den Peers verwendet werden können [https://webrtc.ventures/2016/05/5-uses-of-the-data-channel/].
@@ -345,6 +344,25 @@ Zusätzlich werden in unserer Applikation die Positionen der Gameobjekte über e
 		
 		
 		\newpage
+	\section{Architektur}
+	\subsection{Gampeplay-Synchronisation}
+	Um die Interaktionen der beiden Spieler zu synchronisieren, wird normalerweise ein Server verwendet, der die Inputs der Spieler entgegennimmt, und als zentrale Authorität den Zustand des Spiels bestimmt. Bei Palim-Palim wurde dies aber anders gelöst. Das Spiel nutzt seine Peer-To-Peer-Funktionalität aus und kreiert neben dem Video- und Audiostream auch einen spezifischen DataChannel für Game-Updates. Dieser Channel wird genutzt, um die Objekte beider Szenen zu synchronisieren.
+	
+
+	
+Der DataChannel überträgt JSON-Strings via UDP. UDP als Protokoll ist sehr schnell und deshalb sind die Änderungen auch fast ohne Verzögerung beim Peer sichtbar. Die Wahl des Protokolls kann beim Erstellen des DataChannels gewählt werden [Code Erstllung DataChannel]. Eine weitere Eigenschaft von UDP ist, dass die Reihenfolge der Übertragung nicht garantiert ist - im Gegensatz zu TCP z.B. Da die Game-Updates sehr oft geschickt werden, ist es in diesem Fall egal, in welcher Reihenfolge die Nachrichten ankommen. (Man muss sich das für jeden Fall überlegen...)
+\begin{lstlisting}
+const dataChannel = peerConnection.createDataChannel('gameUpdates', {
+  ordered: false,
+  id: room
+  });
+dataChannel.onmessage = handleReceiveMessage;
+dataChannel.onerror = handleError;
+dataChannel.onopen = handleDataChannelStatusChange;
+dataChannel.onclose = handleDataChannelStatusChange;
+\end{lstlisting}
+
+Diese Art der Gameplay-Synchronisation erlaubt es den Clients, total unabhängig von einem Server zu spielen. Da der Server nur fürs Signaling benutzt wird, ist auch eine grosse Skalierung der Spieleranzahl denkbar. Der Server muss die Spieler nur inital vermitteln, was keine grosse Sache ist. Alle anderen Berechnungen sowie der Abgleich der Spielwelt werden auf den Clients direkt vorgenommen. Da kein Umweg über einen Server genommen werden muss, ist auch die Latenz niedrig. (Einziges Manko: es gibt keine zentrale Authorität. Das heisst Spieler könnten den Client-Code manipulieren und sich unfaire Vorteile verschaffen. Da Palim-Palim und sein Publikum aber nicht kompetitiv sind, ist diese Gefahr des Cheatings vernachlässigbar.)
 	\section{Sicherheit}
 	\section{Testing}
 	\section{Deployment und Betrieb (Anhang?)}			
