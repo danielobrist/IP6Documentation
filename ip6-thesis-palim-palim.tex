@@ -279,7 +279,7 @@ Die Überprüfung der im Kapitel 2 aufgestellten Hypothesen wird durch Spieltest
 	\section{Architektur}
 	\section{Technologien}
 			\subsection{WebRTC}
-WebRTC [https://webrtc.org/] ist ein Open-Source-Projekt, das die Echtzeitkommunikation von Audio, Video und Daten in Web- und nativen Anwendungen ermöglicht. Die Technologie ist in allen modernen Browsern sowie auf nativen Clients für alle wichtigen Plattformen verfügbar. Dabei wird zwischen zwei Browsern eine Peer-To-Peer-Verbindung aufgebaut, worüber die Daten gestreamt werden.
+WebRTC [https://webrtc.org/] ist ein Open-Source-Projekt, das die Echtzeitkommunikation von Audio, Video und Daten in Web- und nativen Anwendungen ermöglicht. Die Technologie ist in allen modernen Browsern sowie auf nativen Clients für alle wichtigen Plattformen verfügbar und ist eine Empfehlung des World Wide Web Consortium (W3C) [https://www.w3.org/TR/webrtc/] und ein Standard der Internet Engineering Task Force (IETF) [https://www.ietf.org/blog/webrtc-support/]. Dabei wird zwischen zwei Browsern eine Peer-To-Peer-Verbindung aufgebaut, worüber die Daten gestreamt werden. Auf der Peer-To-Peer-Verbindung lassen sich auch eigene DataChannels erstellen, die z.B. zur Übertragung von Text-Nachrichten, Positions-Daten von Game-Objekten oder sogar Files zwischen den Peers verwendet werden können [https://webrtc.ventures/2016/05/5-uses-of-the-data-channel/].
 			\subsubsection{Signaling}
 			WebRTC verwendet die RTCPeerConnection [https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection] JavaScript API, um Streaming-Daten zwischen Browsern zu kommunizieren. Zusätzlich wird aber auch einen Mechanismus benötigt, um die Kommunikation zu koordinieren und Kontrollnachrichten zu senden. Dieser Prozess wird als \textit{Signaling} bezeichnet. Signaling-Methoden und -protokolle sind von WebRTC nicht spezifiziert und können je nach Anwendungsfall entsprechend gewählt werden.\\		
 In diesem Projekt wurde Socket.IO für die Signalisierung verwendt, da es sich mit seinem integrierten Room-Konzept für eine Video-Chat-App anbietet. Es gibt aber viele Alternativen, welche sich teilwiese besser für produktive Applikationen eignen (https://bloggeek.me/siganling-protocol-webrtc/). Palim-Palim verwendet eine Node.js Server-Applikation (implementiert in server.js), welche als Signaling-Server fungiert. Der Server hat dabei folgende zwei Aufgaben. \\\\
@@ -304,7 +304,7 @@ if (numClients === 0) {
 }
 \end{lstlisting}
 Wie im Code ersichtlich ist, erlaubt unsere Applikation maximal zwei Peers in einem Raum.\\
-Zusätzlich werden in unserer Applikation die Positionen der Gameobjekte über den Server synchronisiert (TODO).
+Zusätzlich werden in unserer Applikation die Positionen der Gameobjekte über einen eigenen DataChannel zwischen den Peers synchronisiert (TODO DataChannel).
 
 			\subsubsection{STUN und TURN}			
 
@@ -338,7 +338,10 @@ Zusätzlich werden in unserer Applikation die Positionen der Gameobjekte über d
 			
 			In etwa 82 Prozent der Fälle ist die Peer-To-Peer-Verbindung stabil genug, und die TURN-Server werden überhaupt nicht benötigt. Jedoch müssen sie trotzdem bei jeder Verbinung angegeben werden. TODO more infos https://www.callstats.io/blog/2017/10/26/webrtc-product-turn-server
 		\subsubsection{Sicherheit}
-		Verschlüsselung ist für alle WebRTC-Komponenten obligatorisch, und seine JavaScript-APIs können nur von sicheren Quellen (HTTPS oder localhost) aus verwendet werden. Die Signalisierungsmechanismen sind allerdings nicht in den WebRTC-Standards definiert. Hier liegt es an den Entwicklern, sichere Protokolle zu verwenden. TODO<Für unser Projekt noch definieren und ausformulieren>
+		Verschlüsselung ist für alle WebRTC-Komponenten obligatorisch, und seine JavaScript-APIs können nur von sicheren Quellen (HTTPS oder localhost) aus verwendet werden. Video, Audio oder Daten zwischen zwei Peers werden mit Secure Real Time Protocol (SRTP) verschlüsselt. SRTP verschlüsselt die Session, sodass niemand die Nachricht ohne die richtigen Verschlüsselungsschlüssel entschlüsseln kann. Unverschlüsselte Kommunikation gibt es in WebRTC nicht. Schlüssel werden ebenfalls nicht über den Signaling Server ausgetauscht, sonder nur direkt zwischen den Peers. Dazu kommt HTTPS zum Signaling-Server und die im Browser und inn Betriebssystem vorgegebenen Sicherheiten. 
+		[https://webrtc-security.github.io/]
+		[https://webrtc-security.github.io/]
+		TODO<Für unser Projekt noch definieren und ausformulieren gemäss Quellen>
 		
 		
 		\newpage
