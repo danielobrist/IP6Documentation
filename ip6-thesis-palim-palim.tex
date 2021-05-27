@@ -363,6 +363,12 @@ dataChannel.onclose = handleDataChannelStatusChange;
 \end{lstlisting}
 
 Diese Art der Gameplay-Synchronisation erlaubt es den Clients, total unabhängig von einem Server zu spielen. Da der Server nur fürs Signaling benutzt wird, ist auch eine grosse Skalierung der Spieleranzahl denkbar. Der Server muss die Spieler nur inital vermitteln, was keine grosse Sache ist. Alle anderen Berechnungen sowie der Abgleich der Spielwelt werden auf den Clients direkt vorgenommen. Da kein Umweg über einen Server genommen werden muss, ist auch die Latenz niedrig. (Einziges Manko: es gibt keine zentrale Authorität. Das heisst Spieler könnten den Client-Code manipulieren und sich unfaire Vorteile verschaffen. Da Palim-Palim und sein Publikum aber nicht kompetitiv sind, ist diese Gefahr des Cheatings vernachlässigbar.)
+
+	\subsection{3D-Objekte laden}
+	(Backend/Frontent Kapitel)? (vieleicht als subsection von Frontend)? 
+	-- Aufbau einer 3D-Szene in Three.js erklären
+	-- Beschaffenheit und laden von GLTF-Files in Palim-Palim erklären 
+	https://discoverthreejs.com/book/first-steps/load-models/
 	\section{Sicherheit}
 	\section{Testing}
 	\section{Deployment und Betrieb (Anhang?)}			
