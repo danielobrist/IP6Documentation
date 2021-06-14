@@ -1,7 +1,7 @@
 \documentclass[12pt,a4paper]{report}
 
 % -- Imports biblatex and defines bib file --
-\usepackage[backend=bibtex,style=ieee,language=german]{biblatex}
+\usepackage[backend=bibtex,style=numeric,language=german,sorting=none]{biblatex}
 \addbibresource{references.bib}
 % http://tug.ctan.org/info/biblatex-cheatsheet/biblatex-cheatsheet.pdf
 
@@ -283,18 +283,17 @@ Die Überprüfung der im Kapitel 2 aufgestellten Hypothesen wird durch Spieltest
 \chapter{Implementation}
 	\section{Technologien}
 			\subsection{WebRTC}
-WebRTC ist ein Open-Source-Projekt, das die Echtzeitkommunikation von Audio, Video und Daten in Web- und nativen Anwendungen ermöglicht \cite{noauthor_webrtc_2011}. Die Technologie ist in allen modernen Browsern sowie auf nativen Clients für alle wichtigen Plattformen verfügbar und ist eine Empfehlung des World Wide Web Consortium (W3C) \cite{noauthor_webrtc_2021} und ein Standard der Internet Engineering Task Force (IETF) \cite{noauthor_support_2021}. Dabei wird zwischen zwei Browsern eine Peer-To-Peer-Verbindung aufgebaut, worüber die Daten gestreamt werden. Auf der Peer-To-Peer-Verbindung lassen sich auch eigene DataChannels erstellen, die z.B. zur Übertragung von Text-Nachrichten, Positions-Daten von Game-Objekten oder sogar Files zwischen den Peers verwendet werden können [https://webrtc.ventures/2016/05/5-uses-of-the-data-channel/].
+WebRTC ist ein Open-Source-Projekt, das die Echtzeitkommunikation von Audio, Video und Daten in Web- und nativen Anwendungen ermöglicht \cite{noauthor_webrtc_2011}. Die Technologie ist in allen modernen Browsern sowie auf nativen Clients für alle wichtigen Plattformen verfügbar, ist eine Empfehlung des World Wide Web Consortium (W3C) \cite{noauthor_webrtc_2021} und ein Standard der Internet Engineering Task Force (IETF) \cite{noauthor_support_2021}. Dabei wird zwischen zwei Browsern eine Peer-To-Peer-Verbindung aufgebaut, worüber die Daten gestreamt werden. Auf der Peer-To-Peer-Verbindung lassen sich auch eigene Daten-Kanäle erstellen, die z.B. zur Übertragung von Text-Nachrichten, Positions-Daten von Game-Objekten oder sogar Files zwischen den Peers verwendet werden können \cite{noauthor_webrtc_nodate}.
 			\subsubsection{Signaling}
-			WebRTC verwendet die RTCPeerConnection \cite{noauthor_rtcpeerconnection_nodate} JavaScript API, um Streaming-Daten zwischen Browsern zu kommunizieren. Zusätzlich wird aber auch einen Mechanismus benötigt, um die Kommunikation zu koordinieren und Kontrollnachrichten zu senden. Dieser Prozess wird als \textit{Signaling} bezeichnet. Signaling-Methoden und -protokolle sind von WebRTC nicht spezifiziert und können je nach Anwendungsfall entsprechend gewählt werden.\\		
-In diesem Projekt wurde Socket.IO für die Signalisierung verwendt, da es sich mit seinem integrierten Room-Konzept für eine Video-Chat-App anbietet. Palim-Palim verwendet eine Node.js Server-Applikation (implementiert in server.js), welche als Signaling-Server fungiert. Der Server hat dabei folgende zwei Aufgaben. \\\\
-			Erstens fungiert er als Message Relay. Dies wir benötigt, um verschiedene Informationen von und zu den Clients zu senden, damit diese untereinander eine WebRTC-Peer-Verbindung aufbauen können:
+			WebRTC verwendet die RTCPeerConnection JavaScript API, um Streaming-Daten direkt zwischen Browsern zu kommunizieren \cite{noauthor_rtcpeerconnection_nodate}. Zusätzlich wird aber auch einen Mechanismus benötigt, welcher die Kommunikation der beiden Peers koordiniert und Kontrollnachrichten sendet. Dieser Prozess wird als \textit{Signaling} bezeichnet. Signaling-Methoden und -protokolle sind von WebRTC nicht spezifiziert und können je nach Anwendungsfall entsprechend gewählt werden. In Palim-Palim wurde die JavaScript-Library Socket.io für die Signalisierung verwendt. \\		
+Socket.io erlaubt eine einfache und bidirektionale Kommunkation zwischen den Clients und dem Signaling-Server. Mit seinem integrierten Room-Konzept eignet sich Socket.io zudem sehr gut für eine Video-Chat-App. Eine Node.js Server-Applikation fungiert als Signaling-Server für Palim-Palim. Der Server hat dabei folgende zwei Aufgaben: er dient als Message Relay und verwaltet alle Videochat-Räume. \\\\
+Die Funktionaliät als Message Relay ist wichtig, da sich die Peers vor dem Verbindungsaufbau noch nicht kennen. Ein Signaling-Server, welcher beiden Cleints bekannt ist, wird benötigt. So können initiale Informationen von und zu den Clients gsendet werden, damit diese untereinander eine WebRTC-Peer-Verbindung aufbauen können:
 			\begin{lstlisting}
 socket.on('message', function (message) {
-  log('Got message: ', message);
-  socket.broadcast.emit('message', message);
+  socket.to(room).emit('message', message);
 });
 \end{lstlisting}
-Zweitens verwaltet er alle WebRTC-Videochat-'Räume':
+Zweitens verwaltet der Signaling-Server alle WebRTC-Videochat-'Räume'. Tritt man zum Beispiel einem Raum bei, so überprüft der Server, ob die Raumkapazität schon erreicht wurde und sendet entsprechende Antworten an den Client:
 \begin{lstlisting}
 if (numClients === 0) {
   socket.join(room);
@@ -307,37 +306,37 @@ if (numClients === 0) {
   socket.emit('full', room);
 }
 \end{lstlisting}
-Wie im Code ersichtlich ist, erlaubt unsere Applikation maximal zwei Peers in einem Raum.\\
-Zusätzlich werden in unserer Applikation die Positionen der Gameobjekte über einen eigenen DataChannel zwischen den Peers synchronisiert (TODO DataChannel).
+Wie im Code ersichtlich ist, erlaubt unsere Applikation maximal zwei Peers in einem Raum. Ist man der erste Spieler, erhält der Client die Anwtort 'created' vom Signaling-Server. Ist bereits ein Client in dem Raum, wird ein 'joined' zurückgegeben. Wurde die Raum-Kapazität erreicht, sendet der Palim-Palim Server dem Client ein 'full'. Diese Nachrichten werden dann Client-seitig entsprechend behandelt.
+
 
 			\subsubsection{STUN und TURN}			
 
-			WebRTC ist grundsätzlich so konzipiert, dass es Peer-to-Peer funktioniert. Benutzer können sich also auf dem direktesten Weg verbinden. Die Technologie ist jedoch darauf ausgelegt, mit realen Netzwerken zurechtzukommen: Client-Anwendungen müssen NAT-Gateways und Firewalls überwinden, und Peer-to-Peer-Netzwerke benötigen Fallbacks, falls die direkte Verbindung ausfällt. Als Teil dieses Prozesses verwenden WebRTC-APIs sogenannte \textit{STUN-Server}, um die IP-Adresse ihres Computers zu ermitteln, und \textit{TURN-Server} (Traversal Using Relay NAT), welche als Relay-Server fungieren, falls die Peer-to-Peer-Kommunikation fehlschlägt \cite{noauthor_turn-server_nodate}.
+			WebRTC ist grundsätzlich so konzipiert, dass es Peer-to-Peer funktioniert. Benutzer können sich also auf dem direktesten Weg verbinden. Die Technologie ist jedoch auch bewusst darauf ausgelegt, mit realen Netzwerken zurechtzukommen: Client-Anwendungen müssen NAT-Gateways und Firewalls überwinden, und Peer-to-Peer-Netzwerke benötigen Fallbacks, falls die direkte Verbindung ausfällt. Als Teil dieses Prozesses verwendet die WebRTC-API sogenannte \textit{STUN-Server}, um die IP-Adresse ihres Computers zu ermitteln, und \textit{TURN-Server} (Traversal Using Relay NAT), welche als dedizierte Relay-Server fungieren, falls die Peer-to-Peer-Kommunikation fehlschlägt \cite{noauthor_turn-server_nodate}.
 			\begin{figure}[h!]
-			\includegraphics[width=\textwidth]{WebRTC-Full-Monty}
-			\caption[Caption for LOF]{STUN, TURN, und Signalisierung in WebRTC \cite{article_build_nodate}.}
+			\includegraphics[width=\textwidth]{WebRTC_nat_stun_firewall_turn_black}
+			\caption[Caption for LOF]{STUN, TURN, und Signalisierung in WebRTC (eigene Darstellung).}
 			\end{figure}
 			
-			Palim-Palim verwendet als STUN-Server öffentlich verfügbare Server von Google. Als TURN UDP- und TCP-Fallback-Verbindungen werden die Konfigurationen aus dem WebRTC-Sample-Projekt übernommen. Diese Server werden gratis angeboten und können mit Tools wie Google’s Trickle ICE sample \cite{noauthor_trickle_nodate} auf ihre Verfügbarkeit getestet werden \cite{noauthor_webrtc_2020}. Die STUN- und TURN-Server-Adressen müssen bei dem Aufbau der Peer-Connection vom Client an den Signaling-Server übermittelt werden. Dazu übermittelt jeder Palim-Palim-Client beim Verbindungsaufbau folgende pcConfig-Werte an den Server:
+			Palim-Palim verwendet als STUN-Server öffentlich verfügbare Server von Google. Da diese STUN-Server nur zur Ermittlung der eigenen öffentlichen IP-Addresse dienen, lässt sich hier ohne grosse Auswirkungen auf den Datenschutz oder die Sicherheit öffentlich gehostete Server verwenden. \\	
+			
+			Als Fallback-Verbindungen wird allerdings beim produktiven Betrieb einer WebRTC-Applikation unbedingt ein eigener TURN-Server mit einer öffentlichen IP-Adresse benötigt. Es gibt keine offiziell öffentlich verfügbaren TURN-Server, da der Netzwerkverkehr über so einen Server sehr stark ansteigen kann. Daher lohnt es sich für niemanden, fremden Verkehr über seinen TURN-Server zuzulassen. Es ist also ebenfalls von Vorteil, seinen TURN-Server mit einer ensprechenden Authentifizierung zu versehen.
+Palim-Palim verwendet einen auf SwitchEngines gehosteten TURN-Server. Dieser Linux-Server verwendet Coturn, eine Open-Source Implementierung des TURN-Protokolls \cite{noauthor_coturncoturn_2021}.  \\	
+
+Die STUN- und TURN-Server-Adressen müssen bei dem Aufbau der Peer-Connection vom Client an den Signaling-Server übermittelt werden. Dazu übermittelt jeder Palim-Palim-Client beim Verbindungsaufbau folgende pcConfig-Werte an den Server:
 			
 			\begin{lstlisting}
-			var pcConfig = {
-  'iceServers': [
-    {
-      'urls': 'stun:stun.l.google.com:19302'
-    },
-    {
-      'urls': 'turn:192.158.29.39:3478?transport=udp',
-      'credential': 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
-      'username': '28224511:1379330808'
-    },
-    {
-      'urls': 'turn:192.158.29.39:3478?transport=tcp',
-      'credential': 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
-      'username': '28224511:1379330808'
-    }
-  ]
-};
+			this.peerConnectionConfig = {
+            'iceServers': [
+                {
+                  'urls': 'stun:stun.l.google.com:19302'
+                },
+                {
+                  'urls': 'turn:86.119.43.130:3478',
+                  'credential': 'ZV78Nz75/3sk<:d.[.#m3;dch4v(2+RdvS9',
+                  'username': 'palimpalim'
+                }
+            ]
+        };
 			\end{lstlisting}
 			
 			In etwa 82 Prozent der Fälle ist die Peer-To-Peer-Verbindung stabil genug, und die TURN-Server werden überhaupt nicht benötigt. Jedoch müssen sie trotzdem bei jeder Verbinung angegeben werden. TODO more infos\cite{callstats_why_nodate} https://www.callstats.io/blog/2017/10/26/webrtc-product-turn-server

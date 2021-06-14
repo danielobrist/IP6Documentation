@@ -118,6 +118,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {11}Literaturverzeichnis}{24}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Ehrlichkeitserklärung}{27}{}%
+\contentsline {chapter}{\numberline {A}Ehrlichkeitserklärung}{26}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Testprotokolle, weitere Spielkonzepte/Ideenfindung... }{28}{}%
+\contentsline {chapter}{\numberline {B}Testprotokolle, weitere Spielkonzepte/Ideenfindung... }{27}{}%
