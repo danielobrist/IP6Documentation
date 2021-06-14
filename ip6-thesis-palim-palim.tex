@@ -5,6 +5,10 @@
 \addbibresource{references.bib}
 % http://tug.ctan.org/info/biblatex-cheatsheet/biblatex-cheatsheet.pdf
 
+% -- Language --
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+
 % -- Images --
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
@@ -319,7 +323,7 @@ Wie im Code ersichtlich ist, erlaubt unsere Applikation maximal zwei Peers in ei
 			
 			Palim-Palim verwendet als STUN-Server öffentlich verfügbare Server von Google. Da diese STUN-Server nur zur Ermittlung der eigenen öffentlichen IP-Addresse dienen, lässt sich hier ohne grosse Auswirkungen auf den Datenschutz oder die Sicherheit öffentlich gehostete Server verwenden. \\	
 			
-			Als Fallback-Verbindungen wird allerdings beim produktiven Betrieb einer WebRTC-Applikation unbedingt ein eigener TURN-Server mit einer öffentlichen IP-Adresse benötigt. Es gibt keine offiziell öffentlich verfügbaren TURN-Server, da der Netzwerkverkehr über so einen Server sehr stark ansteigen kann. Daher lohnt es sich für niemanden, fremden Verkehr über seinen TURN-Server zuzulassen. Es ist also ebenfalls von Vorteil, seinen TURN-Server mit einer ensprechenden Authentifizierung zu versehen.
+			Als Fallback-Verbindungen wird allerdings beim produktiven Betrieb einer WebRTC-Applikation unbedingt ein privater TURN-Server mit einer öffentlich sichtbaren IP-Adresse benötigt. Es gibt keine allgemein verfügbaren TURN-Server, da der Netzwerkverkehr über so einen Server sehr stark ansteigen kann. Daher lohnt es sich für niemanden, fremden Verkehr über seinen TURN-Server zuzulassen. Es ist also ebenfalls von Vorteil, seinen TURN-Server mit einer ensprechenden Authentifizierung zu versehen.
 Palim-Palim verwendet einen auf SwitchEngines gehosteten TURN-Server. Dieser Linux-Server verwendet Coturn, eine Open-Source Implementierung des TURN-Protokolls \cite{noauthor_coturncoturn_2021}.  \\	
 
 Die STUN- und TURN-Server-Adressen müssen bei dem Aufbau der Peer-Connection vom Client an den Signaling-Server übermittelt werden. Dazu übermittelt jeder Palim-Palim-Client beim Verbindungsaufbau folgende pcConfig-Werte an den Server:

@@ -1,4 +1,5 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {german}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Titelblatt}{1}{}%
 \defcounter {refsection}{0}\relax 
