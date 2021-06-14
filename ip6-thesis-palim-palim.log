@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.15)  24 MAY 2021 13:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.3.15)  14 JUN 2021 10:21
 entering extended mode
 **./ip6-thesis-palim-palim.tex
 (ip6-thesis-palim-palim.tex
@@ -22,13 +22,300 @@ File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
 )
-(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
-Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
+Package: biblatex 2020/12/31 v3.16 programmable bibliographies (PK/MW)
 
-(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count188
+) (C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
 )
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.s
+ty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)) (C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count189
+
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count190
+\c@listtotal=\count191
+\c@listcount=\count192
+\c@liststart=\count193
+\c@liststop=\count194
+\c@citecount=\count195
+\c@citetotal=\count196
+\c@multicitecount=\count197
+\c@multicitetotal=\count198
+\c@instcount=\count199
+\c@maxnames=\count266
+\c@minnames=\count267
+\c@maxitems=\count268
+\c@minitems=\count269
+\c@citecounter=\count270
+\c@maxcitecounter=\count271
+\c@savedcitecounter=\count272
+\c@uniquelist=\count273
+\c@uniquename=\count274
+\c@refsection=\count275
+\c@refsegment=\count276
+\c@maxextratitle=\count277
+\c@maxextratitleyear=\count278
+\c@maxextraname=\count279
+\c@maxextradate=\count280
+\c@maxextraalpha=\count281
+\c@abbrvpenalty=\count282
+\c@highnamepenalty=\count283
+\c@lownamepenalty=\count284
+\c@maxparens=\count285
+\c@parenlevel=\count286
+\blx@tempcnta=\count287
+\blx@tempcntb=\count288
+\blx@tempcntc=\count289
+\blx@maxsection=\count290
+\blx@maxsegment@0=\count291
+\blx@notetype=\count292
+\blx@parenlevel@text=\count293
+\blx@parenlevel@foot=\count294
+\blx@sectionciteorder@0=\count295
+\blx@entrysetcounter=\count296
+\blx@biblioinstance=\count297
+\labelnumberwidth=\skip49
+\labelalphawidth=\skip50
+\biblabelsep=\skip51
+\bibitemsep=\skip52
+\bibnamesep=\skip53
+\bibinitsep=\skip54
+\bibparsep=\skip55
+\bibhang=\skip56
+\blx@bcfin=\read2
+\blx@bcfout=\write3
+\blx@langwohyphens=\language79
+\c@mincomprange=\count298
+\c@maxcomprange=\count299
+\c@mincompwidth=\count300
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
+File: blx-dm.def 2020/12/31 v3.16 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'ieee.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count301
+\c@savedafterword=\count302
+\c@annotator=\count303
+\c@savedannotator=\count304
+\c@author=\count305
+\c@savedauthor=\count306
+\c@bookauthor=\count307
+\c@savedbookauthor=\count308
+\c@commentator=\count309
+\c@savedcommentator=\count310
+\c@editor=\count311
+\c@savededitor=\count312
+\c@editora=\count313
+\c@savededitora=\count314
+\c@editorb=\count315
+\c@savededitorb=\count316
+\c@editorc=\count317
+\c@savededitorc=\count318
+\c@foreword=\count319
+\c@savedforeword=\count320
+\c@holder=\count321
+\c@savedholder=\count322
+\c@introduction=\count323
+\c@savedintroduction=\count324
+\c@namea=\count325
+\c@savednamea=\count326
+\c@nameb=\count327
+\c@savednameb=\count328
+\c@namec=\count329
+\c@savednamec=\count330
+\c@translator=\count331
+\c@savedtranslator=\count332
+\c@shortauthor=\count333
+\c@savedshortauthor=\count334
+\c@shorteditor=\count335
+\c@savedshorteditor=\count336
+\c@labelname=\count337
+\c@savedlabelname=\count338
+\c@institution=\count339
+\c@savedinstitution=\count340
+\c@lista=\count341
+\c@savedlista=\count342
+\c@listb=\count343
+\c@savedlistb=\count344
+\c@listc=\count345
+\c@savedlistc=\count346
+\c@listd=\count347
+\c@savedlistd=\count348
+\c@liste=\count349
+\c@savedliste=\count350
+\c@listf=\count351
+\c@savedlistf=\count352
+\c@location=\count353
+\c@savedlocation=\count354
+\c@organization=\count355
+\c@savedorganization=\count356
+\c@origlocation=\count357
+\c@savedoriglocation=\count358
+\c@origpublisher=\count359
+\c@savedorigpublisher=\count360
+\c@publisher=\count361
+\c@savedpublisher=\count362
+\c@language=\count363
+\c@savedlanguage=\count364
+\c@origlanguage=\count365
+\c@savedoriglanguage=\count366
+\c@pageref=\count367
+\c@savedpageref=\count368
+\shorthandwidth=\skip57
+\shortjournalwidth=\skip58
+\shortserieswidth=\skip59
+\shorttitlewidth=\skip60
+\shortauthorwidth=\skip61
+\shorteditorwidth=\skip62
+\locallabelnumberwidth=\skip63
+\locallabelalphawidth=\skip64
+\localshorthandwidth=\skip65
+\localshortjournalwidth=\skip66
+\localshortserieswidth=\skip67
+\localshorttitlewidth=\skip68
+\localshortauthorwidth=\skip69
+\localshorteditorwidth=\skip70
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
+File: blx-compat.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load BibTeX backend compatibility...
+Package biblatex Info: ... file 'blx-bibtex.def' found.
+
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-bibtex.def
+File: blx-bibtex.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
+
+Package biblatex Warning: Using fall-back BibTeX(8) backend:
+(biblatex)                functionality may be reduced/unavailable.
+
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
+File: biblatex.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
+\c@textcitecount=\count369
+\c@textcitetotal=\count370
+\c@textcitemaxnames=\count371
+\c@biburlbigbreakpenalty=\count372
+\c@biburlbreakpenalty=\count373
+\c@biburlnumpenalty=\count374
+\c@biburlucpenalty=\count375
+\c@biburllcpenalty=\count376
+\biburlbigskip=\muskip17
+\biburlnumskip=\muskip18
+\biburlucskip=\muskip19
+\biburllcskip=\muskip20
+\c@smartand=\count377
+)
+Package biblatex Info: Trying to load bibliography style 'ieee'...
+Package biblatex Info: ... file 'ieee.bbx' found.
+
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-ieee\ieee.bbx
+File: ieee.bbx 2021/03/25 v1.3e biblatex bibliography style
+Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.bbx' found.
+
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\numeric-co
+mp.bbx
+File: numeric-comp.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\numeric.bb
+x
+File: numeric.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.b
+bx
+File: standard.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count378
+\c@bbx:relatedtotal=\count379
+))))
+Package biblatex Info: Trying to load citation style 'ieee'...
+Package biblatex Info: ... file 'ieee.cbx' found.
+
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-ieee\ieee.cbx
+File: ieee.cbx 2021/03/25 v1.3e biblatex citation style
+Package biblatex Info: Trying to load citation style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.cbx' found.
+
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\numeric-co
+mp.cbx
+File: numeric-comp.cbx 2020/12/31 v3.16 biblatex citation style (PK/MW)
+\c@cbx@tempcnta=\count380
+\c@cbx@tempcntb=\count381
+\c@cbx@tempcntc=\count382
+\c@cbx@tempcntd=\count383
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\cites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.cfg
+File: biblatex.cfg 
+)) (C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.st
+y
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
 (C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
 
@@ -53,23 +340,23 @@ Package chngcntr Info: \counterwithout already defined.
 (chngcntr)             Quitting chngcntr on input line 21.
 )
 (C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count188
+\lst@mode=\count384
 \lst@gtempboxa=\box47
 \lst@token=\toks16
-\lst@length=\count189
+\lst@length=\count385
 \lst@currlwidth=\dimen141
-\lst@column=\count190
-\lst@pos=\count191
+\lst@column=\count386
+\lst@pos=\count387
 \lst@lostspace=\dimen142
 \lst@width=\dimen143
-\lst@newlines=\count192
-\lst@lineno=\count193
+\lst@newlines=\count388
+\lst@lineno=\count389
 \lst@maxwidth=\dimen144
 
 (C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count194
-\lst@skipnumbers=\count195
+\c@lstnumber=\count390
+\lst@skipnumbers=\count391
 \lst@framebox=\box48
 )
 (C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
@@ -84,42 +371,83 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
+\@quotelevel=\count392
+\@quotereset=\count393
+
 (C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2021-03-02 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count196
+\l__color_backend_stack_int=\count394
 \l__pdf_internal_box=\box49
 ) (ip6-thesis-palim-palim.aux)
 \openout1 = `ip6-thesis-palim-palim.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\german.lbx
+File: german.lbx 2020/12/31 v3.16 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+Package biblatex Info: Input encoding 'utf8' specified.
+Package biblatex Info: Data encoding 'utf8' specified.
+(biblatex)             No need to reencode data.
+Package biblatex Info: Document encoding is UTF8 ....
+ (C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2021-02-18 L3 programming layer (loader) 
+)
+Package biblatex Info: ... and expl3
+(biblatex)             2021-02-18 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl3
+.sty
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty
+Package: xparse 2020-10-27 L3 Experimental document command parser
+
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e-generic.tex))
+Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
+)
+\openout3 = `ip6-thesis-palim-palim-blx.bib'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'ip6-thesis-palim-palim.bbl' found.
+ (ip6-thesis-palim-palim.bbl)
+Package biblatex Info: Reference section=0 on input line 56.
+Package biblatex Info: Reference segment=0 on input line 56.
 
 (C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count197
+\scratchcounter=\count395
 \scratchdimen=\dimen145
 \scratchbox=\box50
-\nofMPsegments=\count198
-\nofMParguments=\count199
+\nofMPsegments=\count396
+\nofMParguments=\count397
 \everyMPshowfont=\toks17
-\MPscratchCnt=\count266
+\MPscratchCnt=\count398
 \MPscratchDim=\dimen146
-\MPnumerator=\count267
-\makeMPintoPDFobject=\count268
+\MPnumerator=\count399
+\makeMPintoPDFobject=\count400
 \everyMPtoPDFconversion=\toks18
 )
 (C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -128,81 +456,81 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-\c@lstlisting=\count269
+\c@lstlisting=\count401
  [1
 
 {C:/Users/danio/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 62--67
+Underfull \hbox (badness 10000) in paragraph at lines 67--72
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--83
+Underfull \hbox (badness 10000) in paragraph at lines 73--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--83
+Underfull \hbox (badness 10000) in paragraph at lines 73--88
 
  []
 
 [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 87--90
+Underfull \hbox (badness 10000) in paragraph at lines 92--95
 
  []
 
 [2] [1] (ip6-thesis-palim-palim.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 19.
+(Font)              <12> on input line 39.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 19.
+(Font)              <8> on input line 39.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 19.
+(Font)              <6> on input line 39.
  [1
 
 ])
-\tf@toc=\write3
-\openout3 = `ip6-thesis-palim-palim.toc'.
+\tf@toc=\write4
+\openout4 = `ip6-thesis-palim-palim.toc'.
 
  [2]
 Chapter 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--138
+Underfull \hbox (badness 10000) in paragraph at lines 141--143
 
  []
 
 [3
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 149--154
+Underfull \hbox (badness 10000) in paragraph at lines 154--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--154
+Underfull \hbox (badness 10000) in paragraph at lines 154--159
 
  []
 
 
-Overfull \hbox (2.8251pt too wide) in paragraph at lines 149--154
+Overfull \hbox (2.8251pt too wide) in paragraph at lines 154--159
 \OT1/cmr/m/n/12 Erganzend zum Video-Telefonie-Aspekt gibt es bere-its viel Lit
 -er-atur bezuglich
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--154
+Underfull \hbox (badness 10000) in paragraph at lines 154--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--154
+Underfull \hbox (badness 10000) in paragraph at lines 154--159
 
  []
 
 
-Overfull \hbox (6.50653pt too wide) in paragraph at lines 149--154
+Overfull \hbox (6.50653pt too wide) in paragraph at lines 154--159
 \OT1/cmr/m/n/12 Spiels wird. An-schliessend wur-den mit allen Vari-anten Spiel-
 tests durchgefuhrt,
  []
@@ -210,13 +538,13 @@ tests durchgefuhrt,
 [4] [5]
 Chapter 2.
 
-Overfull \hbox (0.34482pt too wide) in paragraph at lines 166--166
+Overfull \hbox (0.34482pt too wide) in paragraph at lines 171--171
 []\OT1/cmr/m/it/12 Beschreibung des Um-felds / An-wen-dungs-domane (be-tagte P
 er-so-nen und
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--168
+Underfull \hbox (badness 10000) in paragraph at lines 172--173
 
  []
 
@@ -233,18 +561,18 @@ Chapter 4.
 ]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--196
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
 
  []
 
 
-Overfull \hbox (6.73328pt too wide) in paragraph at lines 198--200
+Overfull \hbox (6.73328pt too wide) in paragraph at lines 203--205
 \OT1/cmr/bx/n/12 Wie lasst sich Video-Telefonie mit Video-Spielen kom-binieren
 , damit
  []
 
 
-Overfull \hbox (3.85579pt too wide) in paragraph at lines 201--201
+Overfull \hbox (3.85579pt too wide) in paragraph at lines 206--206
 []\OT1/cmr/bx/n/17.28 Einzelfragen im the-ma-tis-chen Zusam-men-
  []
 
@@ -257,28 +585,28 @@ Chapter 6.
 ]
 Chapter 7.
 
-Overfull \hbox (10.08575pt too wide) in paragraph at lines 246--246
+Overfull \hbox (10.08575pt too wide) in paragraph at lines 251--251
 []\OT1/cmr/bx/n/17.28 Planung und Durchfuhrung der Spieletests 
  []
 
 
-Overfull \hbox (1.9427pt too wide) in paragraph at lines 251--251
+Overfull \hbox (1.9427pt too wide) in paragraph at lines 256--256
 []\OT1/cmr/m/it/12 Organisation der Spieletests (Auf-bau, Ablauf, Test-per-so-n
 en, Test-szenar-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--257
+Underfull \hbox (badness 10000) in paragraph at lines 258--262
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--257
+Underfull \hbox (badness 10000) in paragraph at lines 258--262
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--257
+Underfull \hbox (badness 10000) in paragraph at lines 258--262
 
  []
 
@@ -287,17 +615,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 253--257
 ] [14]
 Chapter 8.
 
-Underfull \hbox (badness 10000) in paragraph at lines 262--266
+Underfull \hbox (badness 10000) in paragraph at lines 267--271
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 262--266
+Underfull \hbox (badness 10000) in paragraph at lines 267--271
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 262--266
+Underfull \hbox (badness 10000) in paragraph at lines 267--271
 
  []
 
@@ -306,49 +634,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 262--266
 ] [16]
 Chapter 9.
 
-Overfull \hbox (22.18056pt too wide) in paragraph at lines 281--282
-\OT1/cmr/m/n/12 WebRTC [https://webrtc.org/] ist ein Open-Source-Projekt, das d
-ie Echtzeitkom-
+Overfull \hbox (19.42644pt too wide) in paragraph at lines 288--291
+\OT1/cmr/m/n/12 WebRTC ver-wen-det die RTCPeer-Con-nec-tion [13] JavaScript API
+, um Streaming-
  []
 
 
-Overfull \hbox (103.93388pt too wide) in paragraph at lines 281--282
-\OT1/cmr/m/n/12 und ein Stan-dard der In-ter-net En-gi-neer-ing Task Force (IET
-F) [https://www.ietf.org/blog/webrtc-
- []
-
-
-Overfull \hbox (0.10524pt too wide) in paragraph at lines 281--282
-\OT1/cmr/m/n/12 support/]. Dabei wird zwis-chen zwei Browsern eine Peer-To-Peer
--Verbindung
- []
-
-
-Overfull \hbox (5.3862pt too wide) in paragraph at lines 281--282
-[]\OT1/cmr/m/n/12 Ubertragung von Text-Nachrichten, Positions-Daten von Game-Ob
-jekten oder
- []
-
-
-Overfull \hbox (84.95203pt too wide) in paragraph at lines 281--282
-\OT1/cmr/m/n/12 sogar Files zwis-chen den Peers ver-wen-det wer-den konnen [ht
-tps://webrtc.ventures/2016/05/5-
- []
-
-
-Overfull \hbox (14.60841pt too wide) in paragraph at lines 283--286
-\OT1/cmr/m/n/12 WebRTC ver-wen-det die RTCPeer-Con-nec-tion [https://developer.
-mozilla.org/en-
- []
-
-
-Overfull \hbox (16.05139pt too wide) in paragraph at lines 283--286
-\OT1/cmr/m/n/12 US/docs/Web/API/RTCPeerConnection] JavaScript API, um Streaming
--Daten
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 283--286
+Underfull \hbox (badness 10000) in paragraph at lines 288--291
 
  []
 
@@ -356,66 +648,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 283--286
 
 ]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 287.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 292.
 <./images//WebRTC-Full-Monty.png, id=73, 837.1275pt x 570.13pt>
 File: ./images//WebRTC-Full-Monty.png Graphic file (type png)
 <use ./images//WebRTC-Full-Monty.png>
 Package pdftex.def Info: ./images//WebRTC-Full-Monty.png  used on input line 31
-2.
+7.
 (pdftex.def)             Requested size: 390.0pt x 265.60358pt.
-
-Underfull \hbox (badness 2865) in paragraph at lines 313--313
-[]\OT1/cmr/m/n/12 Figure 1: STUN, TURN, und Sig-nal-isierung in We-bRTC. Quelle
-:
- []
-
-
-Overfull \hbox (49.82878pt too wide) in paragraph at lines 310--315
-\OT1/cmr/m/n/12 die Peer-to-Peer-Kommunikation fehlschlagt.[https://webrtc.org
-/getting-started/turn-
- []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (12.36804pt too wide) in paragraph at lines 316--317
-\OT1/cmr/m/n/12 ple [https://webrtc.github.io/samples/src/content/peerconnectio
-n/trickle-ice/]
- []
-
-
-Overfull \hbox (23.261pt too wide) in paragraph at lines 316--317
-\OT1/cmr/m/n/12 ubermittelt jeder Palim-Palim-Client beim Verbindungsauf-bau f
-ol-gende pcConfig-
+Overfull \hbox (5.14452pt too wide) in paragraph at lines 321--322
+\OT1/cmr/m/n/12 Palim-Client beim Verbindungsauf-bau fol-gende pcConfig-Werte a
+n den Server: 
  []
 
 [18] [19 <./images//WebRTC-Full-Monty.png>]
-Overfull \hbox (23.91376pt too wide) in paragraph at lines 340--344
+Overfull \hbox (23.91376pt too wide) in paragraph at lines 345--349
 \OT1/cmr/m/n/12 Ses-sion, so-dass nie-mand die Nachricht ohne die richti-gen Ve
 r-schlusselungsschlussel
  []
 
-
-Overfull \hbox (42.28671pt too wide) in paragraph at lines 340--344
-\OT1/cmr/m/n/12 Sicher-heiten. [https://webrtc-security.github.io/] [https://we
-brtc-security.github.io/]
- []
-
-
-Overfull \hbox (4.03899pt too wide) in paragraph at lines 340--344
-\OT1/cmr/m/n/12 TODO<Fur unser Pro-jekt noch definieren und aus-for-mulieren g
-emass Quellen> 
- []
-
 [20]
-Overfull \hbox (15.58008pt too wide) in paragraph at lines 349--350
+Overfull \hbox (15.58008pt too wide) in paragraph at lines 354--355
 \OT1/cmr/m/n/12 wurde dies aber an-ders gelost. Das Spiel nutzt seine Peer-To-
 Peer-Funktionalitat
  []
 
 
-Overfull \hbox (8.6946pt too wide) in paragraph at lines 353--354
+Overfull \hbox (8.6946pt too wide) in paragraph at lines 358--359
 \OT1/cmr/m/n/12 Eigen-schaft von UDP ist, dass die Rei-hen-folge der []Ubertrag
 ung nicht garantiert
  []
@@ -426,37 +689,93 @@ Chapter 10.
 
 ]
 Chapter 11.
+
+Overfull \hbox (0.15564pt too wide) in paragraph at lines 393--393
+\OT1/cmtt/m/n/12 1016 / j . chb . 2013 . 04 . 037$\OT1/cmr/m/n/12 . []Adresse[]
+: $\OT1/cmtt/m/n/12 https : / / linkinghub . elsevier .
+ []
+
 [24
 
 ]
+Overfull \hbox (12.49927pt too wide) in paragraph at lines 393--393
+[]\OT1/cmr/m/n/12 M. Sol-dati. ``FHNW Myosotis-Garden,'' FHNW Myosotis-Garden. 
+(2015),
+ []
+
+
+Overfull \hbox (4.23561pt too wide) in paragraph at lines 393--393
+[]\OT1/cmr/m/n/12 ``WebRTC 1.0: Real-Time Com-mu-ni-ca-tion Be-tween Browsers.'
+' (26. []Jan.
+ []
+
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 3
+93.
+(C:\Users\danio\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 393.
+
+Overfull \hbox (9.41183pt too wide) in paragraph at lines 393--393
+[]\OT1/cmr/m/n/12 ``TURN-Server,'' We-bRTC. (), []Adresse[]: $\OT1/cmtt/m/n/12 
+https : / / webrtc . org / getting -[]
+ []
+
+
+Overfull \hbox (13.60408pt too wide) in paragraph at lines 393--393
+\OT1/cmtt/m/n/12 src / content / peerconnection / trickle -[] ice/$ \OT1/cmr/m/
+n/12 ([]be-sucht am []14.06.2021). 
+ []
+
+
+Overfull \hbox (34.99081pt too wide) in paragraph at lines 393--393
+[]\OT1/cmr/m/n/12 ``WebRTC TURN Servers: When you NEED it \TS1/cmr/m/n/12 ˆ \OT
+1/cmr/m/n/12 BlogGeek.me,'' BlogGeek.me.
+ []
+
+[25]
+Overfull \hbox (28.22954pt too wide) in paragraph at lines 393--393
+[]\OT1/cmr/m/n/12 Adresse[]: $\OT1/cmtt/m/n/12 https : / / webrtc -[] security 
+. github . io/$ \OT1/cmr/m/n/12 ([]be-sucht am []14.06.2021). 
+ []
+
+[26]
 Appendix A.
-[25
+[27
 
 ]
 Appendix B.
-[26
+[28
 
-] (ip6-thesis-palim-palim.aux) ) 
+] (ip6-thesis-palim-palim.aux)
+Package logreq Info: Writing requests to 'ip6-thesis-palim-palim.run.xml'.
+\openout1 = `ip6-thesis-palim-palim.run.xml'.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2983 strings out of 479334
- 42634 string characters out of 2857084
- 410872 words of memory out of 3000000
- 20448 multiletter control sequences out of 15000+200000
- 409501 words of font info for 47 fonts, out of 3000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 68i,7n,74p,909b,1628s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\danio\AppData\Local\MiKTeX\fonts/pk/
-ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/danio/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/danio/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/danio/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/dan
-io/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/U
-sers/danio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.
-pfb><C:/Users/danio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmtt10.pfb>
-Output written on ip6-thesis-palim-palim.pdf (30 pages, 276867 bytes).
+ 10964 strings out of 479334
+ 200811 string characters out of 2857084
+ 774375 words of memory out of 3000000
+ 28319 multiletter control sequences out of 15000+200000
+ 409971 words of font info for 49 fonts, out of 3000000 for 9000
+ 1143 hyphenation exceptions out of 8191
+ 68i,7n,74p,1869b,1255s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\danio\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
+1200.pk><C:/Users/danio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmbx12.pfb><C:/Users/danio/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmbxti10.pfb><C:/Users/danio/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/danio/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/danio/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/danio/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/danio/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Use
+rs/danio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pf
+b><C:/Users/danio/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmtt12.pfb>
+Output written on ip6-thesis-palim-palim.pdf (32 pages, 310943 bytes).
 PDF statistics:
- 130 PDF objects out of 1000 (max. 8388607)
+ 150 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
