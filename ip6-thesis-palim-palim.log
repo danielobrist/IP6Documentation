@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.13)  12 JUL 2021 14:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.13)  15 JUL 2021 22:35
 entering extended mode
 **./ip6-thesis-palim-palim.tex
 (ip6-thesis-palim-palim.tex
@@ -590,194 +590,270 @@ Kapitel 6.
 Kapitel 7.
 [13
 
-] [14]
-Overfull \hbox (6.87228pt too wide) in paragraph at lines 295--296
+] [14] [15]
+Overfull \hbox (6.87228pt too wide) in paragraph at lines 303--304
 []\OT1/cmr/m/n/12 Illustrationen von Ver-kaufs-per-so-nal und Ein-kaufs-per-son
  nicht fix: Rbuen:
  []
 
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 312--316
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--316
+Underfull \hbox (badness 10000) in paragraph at lines 311--321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--316
+Underfull \hbox (badness 10000) in paragraph at lines 311--321
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--321
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--321
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--321
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--321
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--321
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--321
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--321
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--321
 
  []
 
 [16] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 322--324
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 322--324
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 322--324
+
+ []
+
+
+Overfull \hbox (3.7126pt too wide) in paragraph at lines 333--338
+\OT1/cmr/m/n/12 Die zwei Te-stings ha-ben dies nicht be-wie-sen. F[]ur den eine
+n Pro-ban-den braucht
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 355--359
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--359
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--359
+
+ []
+
+[19] [20]
 Kapitel 8.
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--325
+Underfull \hbox (badness 10000) in paragraph at lines 364--368
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--325
+Underfull \hbox (badness 10000) in paragraph at lines 364--368
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--325
+Underfull \hbox (badness 10000) in paragraph at lines 364--368
 
  []
 
-[18
+[21
 
-] [19]
+] [22]
 Kapitel 9.
 
-Overfull \hbox (2.7502pt too wide) in paragraph at lines 338--339
+Overfull \hbox (2.7502pt too wide) in paragraph at lines 381--382
 \OT1/cmr/m/n/12 die Wahl auf We-bRTC zur []Ubertragung der Multimedia-Daten, so
 -wie Three.js
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 343--346
+Underfull \hbox (badness 10000) in paragraph at lines 386--389
 
  []
 
-[20
+[23
 
 ]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 347.
- [21]
-Underfull \hbox (badness 10000) in paragraph at lines 394--395
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 390.
+ [24]
+Underfull \hbox (badness 10000) in paragraph at lines 437--438
 
  []
 
-[22]
-Overfull \hbox (1.96817pt too wide) in paragraph at lines 396--397
+[25]
+Overfull \hbox (1.96817pt too wide) in paragraph at lines 439--440
 \OT1/cmr/m/n/12 WebRTC-Applikation un-be-dingt ein ei-ge-ner TURN-Server mit ei
 -ner []offentlich
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 396--397
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
 
  []
 
 
-Overfull \hbox (4.60158pt too wide) in paragraph at lines 398--399
+Overfull \hbox (4.60158pt too wide) in paragraph at lines 441--442
 []\OT1/cmr/m/n/12 Gem[]ass Aus-wer-tun-gen des We-bRTC Call Qua-li-ty Dienst-le
 i-sters call-stats.io
  []
 
-<./images//WebRTC_nat_stun_firewall_turn_black.png, id=92, 635.7351pt x 331.478
-4pt>
+<./images//WebRTC_nat_stun_firewall_turn_black.png, id=101, 635.7351pt x 331.47
+84pt>
 File: ./images//WebRTC_nat_stun_firewall_turn_black.png Graphic file (type png)
 
 <use ./images//WebRTC_nat_stun_firewall_turn_black.png>
 Package pdftex.def Info: ./images//WebRTC_nat_stun_firewall_turn_black.png  use
-d on input line 402.
+d on input line 445.
 (pdftex.def)             Requested size: 390.0pt x 203.34967pt.
-[23 <./images//WebRTC_nat_stun_firewall_turn_black.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 409--410
+[26 <./images//WebRTC_nat_stun_firewall_turn_black.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 452--453
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--412
+Underfull \hbox (badness 10000) in paragraph at lines 454--455
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--414
+Underfull \hbox (badness 10000) in paragraph at lines 456--457
 
  []
 
-[24] [25]
+[27] [28]
 Kapitel 10.
 
-Overfull \hbox (23.26505pt too wide) in paragraph at lines 438--438
+Overfull \hbox (23.26505pt too wide) in paragraph at lines 481--481
  []\OT1/cmr/m/it/12 3D-Objekte in Three.js nut-zen (https://discoverthreejs.com
 /book/first-steps/load-
  []
 
-[26
-
-] [27] [28]
-Kapitel 11.
 [29
+
+] [30] [31]
+Kapitel 11.
+[32
 
 ]
 Kapitel 12.
-[30
+[33
 
 ]
-Overfull \hbox (9.36214pt too wide) in paragraph at lines 490--490
+Overfull \hbox (9.36214pt too wide) in paragraph at lines 533--533
 []\OT1/cmr/m/n/12 Marco Sol-da-ti. \OT1/cmr/m/it/12 FHNW Myosotis-Garden\OT1/cm
 r/m/n/12 . FHNW Myosotis-Garden. 2015.
  []
 
 
-Overfull \hbox (7.36456pt too wide) in paragraph at lines 490--490
+Overfull \hbox (7.36456pt too wide) in paragraph at lines 533--533
 \OT1/cmr/m/n/12 2021. \OT1/cmr/m/sc/12 url\OT1/cmr/m/n/12 : $\OT1/cmtt/m/n/12 h
 ttps : / / www . w3 . org / TR / webrtc/$ \OT1/cmr/m/n/12 (be-sucht am 14.06.20
 21). 
  []
 
 
-Overfull \hbox (9.87445pt too wide) in paragraph at lines 490--490
+Overfull \hbox (9.87445pt too wide) in paragraph at lines 533--533
 []\OT1/cmr/m/it/12 WebRTC Da-ta-Chan-nel\OT1/cmr/m/n/12 . We-bRTC. \OT1/cmr/m/s
 c/12 url\OT1/cmr/m/n/12 : $\OT1/cmtt/m/n/12 https : / / webrtc . org / getting 
 -[]
  []
 
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 4
-90.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 5
+33.
 (C:\Users\sever\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 490.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 533.
 
-Overfull \hbox (9.55121pt too wide) in paragraph at lines 490--490
+Overfull \hbox (9.55121pt too wide) in paragraph at lines 533--533
 []\OT1/cmr/m/n/12 Damien Ar-ra-cheques-ne. \OT1/cmr/m/it/12 Socket.IO\OT1/cmr/m
 /n/12 . Socket.IO. 11. Ju-ni 2021. \OT1/cmr/m/sc/12 url\OT1/cmr/m/n/12 : $\OT1/
 cmtt/m/n/12 https :
  []
 
 
-Overfull \hbox (13.8352pt too wide) in paragraph at lines 490--490
+Overfull \hbox (13.8352pt too wide) in paragraph at lines 533--533
 []\OT1/cmr/m/it/12 TURN-Server\OT1/cmr/m/n/12 . We-bRTC. \OT1/cmr/m/sc/12 url\O
 T1/cmr/m/n/12 : $\OT1/cmtt/m/n/12 https : / / webrtc . org / getting -[] starte
 d /
  []
 
-[31]
-Overfull \hbox (1.66017pt too wide) in paragraph at lines 490--490
+[34]
+Overfull \hbox (1.66017pt too wide) in paragraph at lines 533--533
 []\OT1/cmr/m/it/12 coturn/coturn\OT1/cmr/m/n/12 . original-date: 2015-07-17T08:
 15:16Z. 14. Ju-ni 2021. \OT1/cmr/m/sc/12 url\OT1/cmr/m/n/12 :
  []
 
 
-Overfull \hbox (25.95409pt too wide) in paragraph at lines 490--490
+Overfull \hbox (25.95409pt too wide) in paragraph at lines 533--533
 \OT1/cmtt/m/n/12 threejs / lessons / threejs -[] fundamentals . html$ \OT1/cmr/
 m/n/12 (be-sucht am 12.07.2021). 
  []
 
 
-Overfull \hbox (7.76443pt too wide) in paragraph at lines 490--490
+Overfull \hbox (7.76443pt too wide) in paragraph at lines 533--533
 []\OT1/cmr/m/it/12 WebGL Fun-da-men-tals\OT1/cmr/m/n/12 . \OT1/cmr/m/sc/12 url\
 OT1/cmr/m/n/12 : $\OT1/cmtt/m/n/12 https : / / webglfundamentals . org / webgl 
 /
  []
 
-[32]
+[35]
 Anhang A.
-[33
+[36
 
 ]
 Anhang B.
-[34
+[37
 
 ] (ip6-thesis-palim-palim.aux)
 Package logreq Info: Writing requests to 'ip6-thesis-palim-palim.run.xml'.
@@ -791,7 +867,7 @@ Here is how much of TeX's memory you used:
  29082 multiletter control sequences out of 15000+200000
  410348 words of font info for 50 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
- 68i,6n,74p,1869b,1747s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,6n,74p,1869b,1749s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\sever\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti
 1200.pk> <C:\Users\sever\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\tcrm1200.pk><C:/Users/sever/AppData/Local/Programs/MiKTeX/fonts/type1/public/
@@ -806,9 +882,9 @@ sever/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C
 12.pfb><C:/Users/sever/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
 s/cm/cmtt10.pfb><C:/Users/sever/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/amsfonts/cm/cmtt12.pfb>
-Output written on ip6-thesis-palim-palim.pdf (38 pages, 374883 bytes).
+Output written on ip6-thesis-palim-palim.pdf (41 pages, 381307 bytes).
 PDF statistics:
- 180 PDF objects out of 1000 (max. 8388607)
+ 189 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
