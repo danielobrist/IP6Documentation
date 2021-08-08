@@ -171,6 +171,7 @@ Video-Chats werden heutzutage schon von vielen Familien benutzt, um mit Ihren Ve
 	\begin{itemize}
 		\color{blue}
 		\item Beschreibung des Umfelds / Anwendungsdomäne (betagte Personen und Kinder)
+		\item Persona?
 	\end{itemize}
 }
 Die verwendeten Begriffe Kind und betagte Person werden dabei im Rahmen des Projekts wie folgt definiert:\\
@@ -370,7 +371,7 @@ Die Überprüfung der im Kapitel 2 aufgestellten Hypothesen wird durch Spieltest
 		\subsection{Gameplay-Loops}
 		Durch die Aufteilung in die beiden Rollen lassen sich für beide Spieler*innen verschiedene Aktionen und somit ein unterschiedliches Gameplay definieren. Diese Art der Unterteilung eignet sich hervorragend, um das Gameplay jeweils auf die spezifischen Anforderungen von Kindern bzw. betagten Personen anpassen zu können.\\\\
 		Der Gameplay-Loop ist in der nachfolgenden Abbildung 2 skizziert. Die Haupt-Interaktionen zwischen den beiden Spieler*innen bestehen aus der Kommunikation der Einkaufsliste und dem Hin- und Herreichen von Objekten auf der gemeinsamen Tresen-Fläche.\\\\
-		\emph{\color{blue} Gameplay-Loops}\\\\
+		\emph{\color{blue} Hier das Spiel (aktueller Stand beschreiben und nur auf mögliche Weiterentwicklungen hinweisen. Nicht alle möglichen angedachten Funktionen auflisten, das machen wir erst am Schluss}\\\\
 		Dieses übergeordnete Gameplay soll als Leitfaden für den Spielverlauf dienen. Allerdings bietet das Spiel durch die gemeinsame Tresen-Fläche und dem interaktiven Video-Stream bewusst Möglichkeiten für sonstige Interaktionen mit dem Gegenüber. Damit soll für die Benutzerinnen und Benutzer ein gewisser Freiraum entstehen, in welchem sie den Verlauf des Spiels auf spielerische Art und Weise beeinflussen können. Dies soll das Spiel besonders für das Kind interessanter machen, um eine aktive und lustige Kommunikation mit der betagten Person zu fördern. 
 	\section{Spielvarianten}
 	Damit der Einfluss der Video-Telefonie als Teil des Spiels messbar wird, werden unterschiedliche Varianten des Spiels implementiert und getestet: 
@@ -381,9 +382,10 @@ Die Überprüfung der im Kapitel 2 aufgestellten Hypothesen wird durch Spieltest
 	\item Spiel mit Video-Chat, in die Spiel-Umgebung integriert und optionale Interaktionsmöglichkeiten mit dem Video-Stream 
 	\item Spiel mit Video-Chat, speziell in die Spiel-Umgebung integriert und zum Spielerfolg notwendige Interaktionsmöglichkeiten mit dem Video-Stream 
 \end{enumerate}
-\emph{\color{blue}Tabelle Spielvarianten}
+\emph{\color{blue}Tabelle Spielvarianten, klar zeigen welche implementiert wurden und welche nicht. Screenshots einzelner Varianten}
 	\section{Design und Usability}
-	
+	\emph{\color{blue} Warum 3D-Welt, Wahl der 3D-Assets, Platzierung der Viedos gegenüber, Asysmetrische Gameplay (ältere Person sieht Liste, Jüngere nicht), Positionierung Tablet/Kamera, Bedienung mit Touch (Sphere um Items zum Draggen) - Gesten, Aufteilung Screenspace}
+
 \chapter{Technologien}
 	Palim-Palim kombiniert die Funktionalitäten einer Video-Chat-Applikation mit einem Multiplayer-Spiel. Um diesen Anforderungen gerecht zu werden, wurden entsprechende Technologien zur Umsetzung ausgewählt. Dabei fiel die Wahl auf WebRTC zur Übertragung der Multimedia-Daten, sowie Three.js als 3D(dreidimensional)-Bibliothek für die Gestaltung und Umsetzung der 3D-Gameplay-Szene.
 	
@@ -475,10 +477,26 @@ Mesh-Objekte sind gezeichnete Formen (Geometry) mit einem bestimmten Material. G
 
 
 \chapter{Implementation}
-	\section{WebRTC}
+	\section{Architektur}
+	\emph{
+		\color{blue}
+	\begin{itemize}
+		\item Überblick App/Aufteilung der Klassen + grobes Klassen-Diagram
+	\end{itemize}}
+	\section{PeerConnection}
+	\emph{
+		\color{blue}
+	\begin{itemize}
+		\item Verbindungsaufbau zwischen zwei Peers Prozessidagramm und erklärung
+	\end{itemize}}
 	
-	\section {Three.js}
-
+	\section{Game}
+	\emph{
+		\color{blue}
+		Architektur des GameManagers beschreiben und begründen, Ablauf eines GameEvents als Prozessdiagramm 
+	\begin{itemize}
+		\item Beschaffenheit und Laden von GLTF-Files in Palim-Palim erklären
+	\end{itemize}}
 	\subsection{3D-Objekte laden}
 	\emph{
 		\color{blue}
@@ -491,18 +509,12 @@ Mesh-Objekte sind gezeichnete Formen (Geometry) mit einem bestimmten Material. G
 	\emph{
 		\color{blue}
 	\begin{itemize}
-		\item Interaktionskonzept DragControls und 3D-Szene skizzieren und erklären 
+		\item Interaktionskonzept DragControls und 3D-Szene skizzieren und erklären (Interaktionsebene und Containers)
 	\end{itemize}}
 	
-	\subsection{Physik}
-	\emph{
-		\color{blue}
-	\begin{itemize}
-		\item Versuche mit ammojs und headless Möglichkeiten auf Server 
-	\end{itemize}}
+
 		
 	\newpage
-	\section{Architektur}
 	\subsection{Gampeplay-Synchronisation}
 	Um die Interaktionen der beiden Spieler zu synchronisieren, wird normalerweise ein Server verwendet, der die Inputs der Spieler entgegennimmt, und als zentrale Authorität den Zustand des Spiels bestimmt. Bei Palim-Palim wurde dies aber anders gelöst. Das Spiel nutzt seine Peer-To-Peer-Funktionalität aus und kreiert neben dem Video- und Audiostream auch einen spezifischen DataChannel für Game-Updates. Dieser Channel wird genutzt, um die Objekte beider Szenen zu synchronisieren.
 	
@@ -521,9 +533,7 @@ dataChannel.onclose = handleDataChannelStatusChange;
 \end{lstlisting}
 
 Diese Art der Gameplay-Synchronisation erlaubt es den Clients, total unabhängig von einem Server zu spielen. Da der Server nur fürs Signaling benutzt wird, ist auch eine grosse Skalierung der Spieleranzahl denkbar. Der Server muss die Spieler nur inital vermitteln, was keine grosse Sache ist. Alle anderen Berechnungen sowie der Abgleich der Spielwelt werden auf den Clients direkt vorgenommen. Da kein Umweg über einen Server genommen werden muss, ist auch die Latenz niedrig. (Einziges Manko: es gibt keine zentrale Authorität. Das heisst Spieler könnten den Client-Code manipulieren und sich unfaire Vorteile verschaffen. Da Palim-Palim und sein Publikum aber nicht kompetitiv sind, ist diese Gefahr des Cheatings vernachlässigbar.)
-
-	\section{Testing}
-	\section{Deployment und Betrieb (Anhang?)}			
+		
 			
 			
 \chapter{Fazit}
@@ -535,6 +545,12 @@ Diese Art der Gameplay-Synchronisation erlaubt es den Clients, total unabhängig
 		\item Weiterführende Forschung
 	\end{itemize}
 
+	\subsection{Physik als mögliche Weiterentwicklung}
+	\emph{
+		\color{blue}
+	\begin{itemize}
+		\item Versuche mit ammojs und headless Möglichkeiten auf Server 
+	\end{itemize}}
 
 \chapter{Literaturverzeichnis}
 \printbibliography[heading=none]
@@ -543,7 +559,7 @@ Diese Art der Gameplay-Synchronisation erlaubt es den Clients, total unabhängig
 
 \chapter{Ehrlichkeitserklärung}
 
-\chapter{Testprotokolle, weitere Spielkonzepte/Ideenfindung... }
+\chapter{Testprotokolle, weitere Spielkonzepte/Ideenfindung, Readme des Repos... }
 
 
 \end{document}
