@@ -488,19 +488,19 @@ Der Server verwaltet zusätzlich alle Videochat-Räume und dient als Vermittler 
 Um unabhängig zu funktionieren, wurde für Palim-Palim ein eigener TURN-Server aufgesetzt. Der im Projekt verwendet TURN-Server läuft mit Linux Ubuntu und benutzt Coturn, eine Open-Source Implementierung des TURN-Protokolls \cite{noauthor_coturncoturn_2021}.\\\\
 Um selbst ein TURN-Sever bereitzustellen, wird lediglich ein Server mit einer öffentlichen IP-Adresse benötigt. Nach der Konfiguration kann die Adresse des TURN-Servers beim Erstellen der PeerConnection im Client-Code von Palim-Palim in der Konfiguration mitgegeben (siehe Listing \ref{lst:peerConfig}). Eine Anleitung zum Einrichten und Konfigurieren eines Linux-TURN-Servers inklusive Verweise auf weitere Ressourcen zu dem Thema sind im Anhang dieser Arbeit zu finden.\\\\
 
-	\begin{lstlisting}[caption={Konfiguration der PeerConnection},label={lst:peerConfig},language=Javascript]
-		this.peerConnectionConfig = {
-            'iceServers': [
-                {
-                  'urls': 'stun:stun.l.google.com:19302'
-                },
-                {
-                  'urls': 'turn:86.119.43.130:3478',
-                  'credential': '*****************',
-                  'username': 'palimpalim'
-                }
-            ]
-        };
+	\begin{lstlisting}[caption={Konfiguration der PeerConnection},label={lst:peerConfig},language=JavaScript]
+this.peerConnectionConfig = {
+	'iceServers': [
+		{
+			'urls': 'stun:stun.l.google.com:19302'
+		},
+		{
+			'urls': 'turn:86.119.43.130:3478',
+			'credential': '*****************',
+			'username': 'palimpalim'
+		}
+	]
+};
 	\end{lstlisting}
 	
 \section{PeerConnectionManager}
