@@ -528,11 +528,11 @@ Der darunterliegende RTCDataChannel besitzt einige Properties, um die Übertragu
 		
 	\newpage
 	\subsection{Gampeplay-Synchronisation}
-	Um die Interaktionen der beiden Spieler zu synchronisieren, wird normalerweise ein Server verwendet, der die Inputs der Spieler entgegennimmt, und als zentrale Authorität den Zustand des Spiels bestimmt. Bei Palim-Palim wurde dies aber anders gelöst. Das Spiel nutzt seine Peer-To-Peer-Funktionalität aus und kreiert neben dem Video- und Audiostream auch einen spezifischen DataChannel für Game-Updates. Dieser Channel wird genutzt, um die Objekte beider Szenen zu synchronisieren.
+	Um die Interaktionen der beiden Spieler zu synchronisieren, wird normalerweise (BemSev: Quelle?) ein Server verwendet, der die Inputs der Spieler entgegennimmt, und als zentrale Authorität den Zustand des Spiels bestimmt. Bei Palim-Palim wurde dies aber anders gelöst. Das Spiel nutzt seine Peer-To-Peer-Funktionalität aus und kreiert neben dem Video- und Audiostream auch einen spezifischen DataChannel für Game-Updates. Dieser Channel wird genutzt, um die Objekte beider Szenen zu synchronisieren. (BemSev: Warum wurde es anders gelöst? -> auf Begründung zwei Absätze weiter unten verweisen?)
 	
 
 	
-Der DataChannel überträgt JSON-Strings via UDP. UDP als Protokoll ist sehr schnell und deshalb sind die Änderungen auch fast ohne Verzögerung beim Peer sichtbar. Die Wahl des Protokolls kann beim Erstellen des DataChannels gewählt werden [Code Erstllung DataChannel]. Eine weitere Eigenschaft von UDP ist, dass die Reihenfolge der Übertragung nicht garantiert ist - im Gegensatz zu TCP z.B. Da die Game-Updates sehr oft geschickt werden, ist es in diesem Fall egal, in welcher Reihenfolge die Nachrichten ankommen. (Man muss sich das für jeden Fall überlegen...)
+Der DataChannel überträgt JSON-Strings via User Datagram Protocol (UDP). UDP als Protokoll ist sehr schnell (BemSev: Quelle?) und deshalb sind die Änderungen auch fast ohne Verzögerung beim Peer sichtbar. Die Wahl des Protokolls kann beim Erstellen des DataChannels gewählt werden [Code Erstllung DataChannel]. Eine weitere Eigenschaft von UDP ist, dass die Reihenfolge der Übertragung nicht garantiert ist - im Gegensatz zu Transmission Control Protocol (TCP) beispielsweise. Da die Game-Updates sehr oft geschickt werden, ist es in diesem Fall egal, in welcher Reihenfolge die Nachrichten ankommen. (Man muss sich das für jeden Fall überlegen...) (BemSev: Beim letzten Satz komme ich nicht draus)
 \begin{lstlisting}
 const dataChannel = peerConnection.createDataChannel('gameUpdates', {
   ordered: false,
@@ -544,7 +544,7 @@ dataChannel.onopen = handleDataChannelStatusChange;
 dataChannel.onclose = handleDataChannelStatusChange;
 \end{lstlisting}
 
-Diese Art der Gameplay-Synchronisation erlaubt es den Clients, total unabhängig von einem Server zu spielen. Da der Server nur fürs Signaling benutzt wird, ist auch eine grosse Skalierung der Spieleranzahl denkbar. Der Server muss die Spieler nur inital vermitteln, was keine grosse Sache ist. Alle anderen Berechnungen sowie der Abgleich der Spielwelt werden auf den Clients direkt vorgenommen. Da kein Umweg über einen Server genommen werden muss, ist auch die Latenz niedrig. (Einziges Manko: es gibt keine zentrale Authorität. Das heisst Spieler könnten den Client-Code manipulieren und sich unfaire Vorteile verschaffen. Da Palim-Palim und sein Publikum aber nicht kompetitiv sind, ist diese Gefahr des Cheatings vernachlässigbar.)
+Diese Art der Gameplay-Synchronisation erlaubt es den Clients, total unabhängig von einem Server zu spielen. Da der Server nur fürs Signaling benutzt wird, ist auch eine grosse Skalierung der Spieleranzahl denkbar. Der Server muss die Spieler nur inital vermitteln, was keine grosse Sache ist. Alle anderen Berechnungen sowie der Abgleich der Spielwelt werden auf den Clients direkt vorgenommen. Da kein Umweg über einen Server genommen werden muss, ist auch die Latenz niedrig. (Einziges Manko: es gibt keine zentrale Authorität. Das heisst Spieler könnten den Client-Code manipulieren und sich unfaire Vorteile verschaffen. Da Palim-Palim und sein Publikum aber nicht kompetitiv sind, ist diese Gefahr des Cheatings (BemSev: evtl. deutschen Begriff verwenden?) vernachlässigbar.) (BemSev: Klammer weglassen?)
 		
 			
 			
