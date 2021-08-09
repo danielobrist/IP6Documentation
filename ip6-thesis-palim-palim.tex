@@ -497,14 +497,21 @@ Mesh-Objekte sind gezeichnete Formen (Geometry) mit einem bestimmten Material. G
 	\begin{itemize}
 		\item Beschaffenheit und Laden von GLTF-Files in Palim-Palim erklären
 	\end{itemize}}
-	\subsection{3D-Objekte laden}
-	\emph{
-		\color{blue}
-		3D-Objekte in Three.js nutzen (https://discoverthreejs.com/book/first-steps/load-models/)
-	\begin{itemize}
-		\item Beschaffenheit und Laden von GLTF-Files in Palim-Palim erklären
-	\end{itemize}}
 	
+	\subsection{3D-Objekte laden}
+	Nach Möglichkeit sollte bei Webanwendungen die Datenmenge, welche über den Flaschenhals Netzwerk gesendet werden muss, möglichst geringgehalten werden, um lange Ladezeiten zu verhindern. Da 3D-Objekte bereits eher grosse Dateien sind, ist es gerade bei deren Verwendung wichtig, einige Punkte zu beachten. Nachfolgend wurde dokumentiert welche Optimierungen in Palim-Palim implementiert sind.
+Palim-Palim lädt 3D-Objekte, welche in allen Spielmodi verwendet werden (Tresen, Einkaufskorb), während sich die Spielenden noch in der Gamelobby befinden, weswegen für diese keine Wartezeit entsteht. Die vom Spielmodi abhängigen 3D-Objekte (Einkaufsgegenstände) werden geladen, während die betagte Person die Anleitung liest und das Kind das Spiel erklärt bekommt.\\\\
+Für die 3D-Objekte verwendet Palim-Palim Dateien des Graphics Language Transmission Format (glTF). Dieses Dateiformat kann 3D-Modelle sehr effizient übertragen und laden, weswegen es sich sehr gut für Webapplikationen eignet [https://www.khronos.org/gltf/]. In einer glTF-Datei ist nicht nur die Geometrie eines 3D-Objekts gespeichert, sondern Szenen, Kameras, Materialien, Texturen und auch Animationen (nicht abschliessende Liste) [https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/figures/gltfOverview-2.0.0b.png]. Deswegen muss in Palim-Palim beim Laden der 3D-Objekte zuerst die Szene der glTF Datei ausgelesen und danach in dieser nach Meshes (Geometrie eines 3D-Objekts) gesucht werden.\\\\
+\begin{lstlisting}
+const loadedData = await loader.loadAsync(this.config.models[i].path);
+loadedData.scene.traverse((o) => {
+    if (o.isMesh) {
+	 ...
+    }
+});
+\end{lstlisting}
+Die in Palim-Palim verwendeten 3D-Objekte wurden mit Blender [https://www.blender.org/] auf eine möglichst kleine Dateigrösse gebracht, um die Ladezeit, zusätzlich zum optimalen Dateiformat, zu optimieren. Dazu wurde der «Decimate Modifier» angewendet, welcher es erlaubt, die Polygone einer Geometrie zu reduzieren und dabei den ursprünglichen Körper nur minimal zu verändern [https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/decimate.html]. Für die bessere Verwaltung im Programm wurden in Blender zusätzlich die zwei folgenden Modifikationen an den ursprünglichen glTF-Dateien durchgeführt. Einerseits wurden Objekte, die aus mehreren Meshes bestanden, zu einem Mesh zusammengefügt und anderseits wurde der Mittelpunkt des Meshs auf den Koordinatenursprung gelegt. Die Skalierung des Meshs hingegen kann über einen Parameter in der Konfigurationsdatei von Palim-Palim festgelegt werden, somit können die einzelnen Objekte aufeinander abgestimmt werden.
+
 	\subsection{Interaktionen}
 	\emph{
 		\color{blue}
