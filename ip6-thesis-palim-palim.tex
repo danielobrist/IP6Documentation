@@ -478,11 +478,30 @@ Mesh-Objekte sind gezeichnete Formen (Geometry) mit einem bestimmten Material. G
 
 \chapter{Implementation}
 	\section{Architektur}
-	\emph{
-		\color{blue}
-	\begin{itemize}
-		\item Überblick App/Aufteilung der Klassen + grobes Klassen-Diagram
-	\end{itemize}}
+In diesem Kapitel werden die einzelnen Komponenten von Palim-Palim und deren Funktionen vorgestellt. Die Struktur von Palim-Palim wurde bewusst so aufgebaut, dass die Video-Chat-Funktionalität möglichst von der Game-Logik entkoppelt ist. Dadurch ist es einfacher, den Video-Chat auch in anderen Spielen zu integrieren.
+	
+	\subsection{Server}
+Da Palim-Palim über das Internet zugänglich sein soll, benötigt das Spiel einen Server, welcher den Client Code zur Verfügung stellt. Der Server-Code im server.js File nutzt daher Express.js (Link zu express), womit der mit Webpack gebaute Client-Javascript-Code den Benutzer beim Aufruf der Webapplikation zur Verfügung gestellt wird.\\\\
+Der Server verwaltet zusätzlich alle Videochat-Räume und dient als Vermittler für den Verbindungsaufbau des Video-Calls. Dies wird auch Signaling genannt (siehe Kapitel «Signaling») und funktioniert folgendermassen: Sobald zwei Spielende einem Raum betreten, wird dieser Raum genutzt, um Verbindungsinformationen zwischen den Peers auszutauschen. Dies wurde in Palim-Palim gemäss einem Google Codelab Beispiel umgesetzt \cite{noauthor_real_nodate}. Socket.io erlaubt eine einfache und bidirektionale Kommunikation zwischen den Clients und dem Server. Mit seinem Room-Konzept eignet sich Socket.io zudem sehr gut für eine Video-Chat-App. Über den Socket.io-Raum kann die Peer-To-Peer-Verbindung zwischen den Clients dann ausgehandelt und erstellt werden. Steht diese direkte Verbindung einmal, wird der Server nicht mehr benötigt. Ab dann läuft die Kommunikation in den meisten Fällen nur noch direkt zwischen den Clients. Eine Ausnahme stellt hierbei die Verwendung eines TURN-Servers dar (siehe Kapitel «TURN-Server»).
+
+	\subsection{TURN-Sever}
+Um unabhängig zu funktionieren, wurde für Palim-Palim ein eigener TURN-Server aufgesetzt. Der im Projekt verwendet TURN-Server läuft mit Linux Ubuntu und benutzt Coturn, eine Open-Source Implementierung des TURN-Protokolls \cite{noauthor_coturncoturn_2021}.\\\\
+Um selbst ein TURN-Sever bereitzustellen, wird lediglich ein Server mit einer öffentlichen IP-Adresse benötigt. Nach der Konfiguration kann die Adresse des TURN-Servers beim Erstellen der PeerConnection im Client-Code von Palim-Palim in der Konfiguration mitgegeben (siehe Listing \ref{lst:peerConfig}). Eine Anleitung zum Einrichten und Konfigurieren eines Linux-TURN-Servers inklusive Verweise auf weitere Ressourcen zu dem Thema sind im Anhang dieser Arbeit zu finden.\\\\
+
+	\begin{lstlisting}[caption={Konfiguration der PeerConnection},label={lst:peerConfig},language=Javascript]
+		this.peerConnectionConfig = {
+            'iceServers': [
+                {
+                  'urls': 'stun:stun.l.google.com:19302'
+                },
+                {
+                  'urls': 'turn:86.119.43.130:3478',
+                  'credential': '*****************',
+                  'username': 'palimpalim'
+                }
+            ]
+        };
+	\end{lstlisting}
 	
 \section{PeerConnectionManager}
 Die Video-Chat-Funktionalität wurde in Palim-Palim möglichst unabhängig vom Gameplay als eigene Klasse implementiert. Die PeerconnectionManager-Klasse übernimmt hierbei zentrale Funktionen wie das Betreten eines Raumes, die Etablierung der Video-Streams zwischen den Spielern sowie den Aufbau von dedizierten Datenkanälen (sogenannten DataChannels).\\\\ In der PeerConnectionManager-Klasse selbst findet der Aufbau der Peer-To-Peer-Verbindung statt. Die Klasse instanziiert hierzu ein PeerConnection-Objekt, welches die RTCPeerConnection erweitert. RTCPeerConnection ist die API, welche von WebRTC-Anwendungen verwendet wird, um eine Verbindung zwischen Peers herzustellen und Audio und Video zu übertragen \cite{noauthor_rtcpeerconnection_nodate-1}. Diese PeerConnection stellt eine WebRTC-Verbindung zwischen dem lokalen Computer und einem entfernten Peer dar. Sie bietet Methoden, um eine Verbindung zu einer Gegenseite herzustellen, die Verbindung aufrechtzuerhalten und zu überwachen sowie die Verbindung zu schließen, wenn sie nicht mehr benötigt wird. Der PeerConnectionManager orchestriert über dieses Objekt den Verbindungsaufbau und dient als einzige Schnittstelle des Video-Chats zum Rest der Applikation.\\\\
@@ -528,11 +547,11 @@ Der darunterliegende RTCDataChannel besitzt einige Properties, um die Übertragu
 		
 	\newpage
 	\subsection{Gampeplay-Synchronisation}
-	Um die Interaktionen der beiden Spieler zu synchronisieren, wird normalerweise (BemSev: Quelle?) ein Server verwendet, der die Inputs der Spieler entgegennimmt, und als zentrale Authorität den Zustand des Spiels bestimmt. Bei Palim-Palim wurde dies aber anders gelöst. Das Spiel nutzt seine Peer-To-Peer-Funktionalität aus und kreiert neben dem Video- und Audiostream auch einen spezifischen DataChannel für Game-Updates. Dieser Channel wird genutzt, um die Objekte beider Szenen zu synchronisieren. (BemSev: Warum wurde es anders gelöst? -> auf Begründung zwei Absätze weiter unten verweisen?)
+	Um die Interaktionen der beiden Spieler zu synchronisieren, wird normalerweise ein Server verwendet, der die Inputs der Spieler entgegennimmt, und als zentrale Authorität den Zustand des Spiels bestimmt. Bei Palim-Palim wurde dies aber anders gelöst. Das Spiel nutzt seine Peer-To-Peer-Funktionalität aus und kreiert neben dem Video- und Audiostream auch einen spezifischen DataChannel für Game-Updates. Dieser Channel wird genutzt, um die Objekte beider Szenen zu synchronisieren.
 	
 
 	
-Der DataChannel überträgt JSON-Strings via User Datagram Protocol (UDP). UDP als Protokoll ist sehr schnell (BemSev: Quelle?) und deshalb sind die Änderungen auch fast ohne Verzögerung beim Peer sichtbar. Die Wahl des Protokolls kann beim Erstellen des DataChannels gewählt werden [Code Erstllung DataChannel]. Eine weitere Eigenschaft von UDP ist, dass die Reihenfolge der Übertragung nicht garantiert ist - im Gegensatz zu Transmission Control Protocol (TCP) beispielsweise. Da die Game-Updates sehr oft geschickt werden, ist es in diesem Fall egal, in welcher Reihenfolge die Nachrichten ankommen. (Man muss sich das für jeden Fall überlegen...) (BemSev: Beim letzten Satz komme ich nicht draus)
+Der DataChannel überträgt JSON-Strings via UDP. UDP als Protokoll ist sehr schnell und deshalb sind die Änderungen auch fast ohne Verzögerung beim Peer sichtbar. Die Wahl des Protokolls kann beim Erstellen des DataChannels gewählt werden [Code Erstllung DataChannel]. Eine weitere Eigenschaft von UDP ist, dass die Reihenfolge der Übertragung nicht garantiert ist - im Gegensatz zu TCP z.B. Da die Game-Updates sehr oft geschickt werden, ist es in diesem Fall egal, in welcher Reihenfolge die Nachrichten ankommen. (Man muss sich das für jeden Fall überlegen...)
 \begin{lstlisting}
 const dataChannel = peerConnection.createDataChannel('gameUpdates', {
   ordered: false,
@@ -544,7 +563,7 @@ dataChannel.onopen = handleDataChannelStatusChange;
 dataChannel.onclose = handleDataChannelStatusChange;
 \end{lstlisting}
 
-Diese Art der Gameplay-Synchronisation erlaubt es den Clients, total unabhängig von einem Server zu spielen. Da der Server nur fürs Signaling benutzt wird, ist auch eine grosse Skalierung der Spieleranzahl denkbar. Der Server muss die Spieler nur inital vermitteln, was keine grosse Sache ist. Alle anderen Berechnungen sowie der Abgleich der Spielwelt werden auf den Clients direkt vorgenommen. Da kein Umweg über einen Server genommen werden muss, ist auch die Latenz niedrig. (Einziges Manko: es gibt keine zentrale Authorität. Das heisst Spieler könnten den Client-Code manipulieren und sich unfaire Vorteile verschaffen. Da Palim-Palim und sein Publikum aber nicht kompetitiv sind, ist diese Gefahr des Cheatings (BemSev: evtl. deutschen Begriff verwenden?) vernachlässigbar.) (BemSev: Klammer weglassen?)
+Diese Art der Gameplay-Synchronisation erlaubt es den Clients, total unabhängig von einem Server zu spielen. Da der Server nur fürs Signaling benutzt wird, ist auch eine grosse Skalierung der Spieleranzahl denkbar. Der Server muss die Spieler nur inital vermitteln, was keine grosse Sache ist. Alle anderen Berechnungen sowie der Abgleich der Spielwelt werden auf den Clients direkt vorgenommen. Da kein Umweg über einen Server genommen werden muss, ist auch die Latenz niedrig. (Einziges Manko: es gibt keine zentrale Authorität. Das heisst Spieler könnten den Client-Code manipulieren und sich unfaire Vorteile verschaffen. Da Palim-Palim und sein Publikum aber nicht kompetitiv sind, ist diese Gefahr des Cheatings vernachlässigbar.)
 		
 			
 			
