@@ -481,18 +481,15 @@ Mesh-Objekte sind gezeichnete Formen (Geometry) mit einem bestimmten Material. G
 
 
 \chapter{Implementation}
-	\section{Architektur}
-In diesem Kapitel werden die einzelnen Komponenten von Palim-Palim und deren Funktionen vorgestellt. Die Struktur von Palim-Palim wurde bewusst so aufgebaut, dass die Video-Chat-Funktionalität möglichst von der Game-Logik entkoppelt ist. Dadurch ist es einfacher, den Video-Chat auch in anderen Spielen zu integrieren.
+In diesem Kapitel werden die einzelnen Komponenten von Palim-Palim und deren Funktionen vorgestellt. Als erstes wird das Server-seitige Backend erklärt und danach die beiden zentralen Client-Komponenten, der PeerConnectionManager sowie der GameManager vorgestellt. Die Struktur von Palim-Palim wurde bewusst so aufgebaut, dass die Video-Chat-Funktionalität möglichst von der Game-Logik entkoppelt ist. Dadurch ist es einfacher, den Video-Chat auch in anderen Spielen zu integrieren. Ebenfalls war die Absicht, dadurch eine möglichst gute Grundlage zur Entwicklung eines entsprechenden Frameworks zu legen.
 	
-	\subsection{Server}
+\section{Server}\label{server}
 Da Palim-Palim über das Internet zugänglich sein soll, benötigt das Spiel einen Server, welcher den Client Code zur Verfügung stellt. Der Server-Code im server.js File nutzt daher Express.js (Link zu express), womit der mit Webpack gebaute Client-Javascript-Code den Benutzer beim Aufruf der Webapplikation zur Verfügung gestellt wird.\\\\
-Der Server verwaltet zusätzlich alle Videochat-Räume und dient als Vermittler für den Verbindungsaufbau des Video-Calls. Dies wird auch Signaling genannt (siehe Kapitel «Signaling») und funktioniert folgendermassen: Sobald zwei Spielende einem Raum betreten, wird dieser Raum genutzt, um Verbindungsinformationen zwischen den Peers auszutauschen. Dies wurde in Palim-Palim gemäss einem Google Codelab Beispiel umgesetzt \cite{noauthor_real_nodate}. Socket.io erlaubt eine einfache und bidirektionale Kommunikation zwischen den Clients und dem Server. Mit seinem Room-Konzept eignet sich Socket.io zudem sehr gut für eine Video-Chat-App. Über den Socket.io-Raum kann die Peer-To-Peer-Verbindung zwischen den Clients dann ausgehandelt und erstellt werden. Steht diese direkte Verbindung einmal, wird der Server nicht mehr benötigt. Ab dann läuft die Kommunikation in den meisten Fällen nur noch direkt zwischen den Clients. Eine Ausnahme stellt hierbei die Verwendung eines TURN-Servers dar (siehe Kapitel «TURN-Server»).
-
-	\subsection{TURN-Sever}
-Um unabhängig zu funktionieren, wurde für Palim-Palim ein eigener TURN-Server aufgesetzt. Der im Projekt verwendet TURN-Server läuft mit Linux Ubuntu und benutzt Coturn, eine Open-Source Implementierung des TURN-Protokolls \cite{noauthor_coturncoturn_2021}.\\\\
+Der Server verwaltet zusätzlich alle Videochat-Räume und dient als Vermittler für den Verbindungsaufbau des Video-Calls. Dies wird auch Signaling genannt (siehe Kapitel «Signaling») und funktioniert folgendermassen: Sobald zwei Spielende einem Raum betreten, wird dieser Raum genutzt, um Verbindungsinformationen zwischen den Peers auszutauschen. Dies wurde in Palim-Palim gemäss einem Google Codelab Beispiel umgesetzt \cite{noauthor_real_nodate}. Socket.io erlaubt eine einfache und bidirektionale Kommunikation zwischen den Clients und dem Server. Mit seinem Room-Konzept eignet sich Socket.io zudem sehr gut für eine Video-Chat-App. Über den Socket.io-Raum kann die Peer-To-Peer-Verbindung zwischen den Clients dann ausgehandelt und erstellt werden. Steht diese direkte Verbindung einmal, wird der Server nicht mehr benötigt. Ab dann läuft die Kommunikation in den meisten Fällen nur noch direkt zwischen den Clients.\\\\
+Um unabhängig zu funktionieren, wurde für Palim-Palim zudem ein eigener TURN-Server aufgesetzt. Der im Projekt verwendet TURN-Server läuft mit Linux Ubuntu und benutzt Coturn, eine Open-Source Implementierung des TURN-Protokolls \cite{noauthor_coturncoturn_2021}.\\\\
 Um selbst ein TURN-Sever bereitzustellen, wird lediglich ein Server mit einer öffentlichen IP-Adresse benötigt. Nach der Konfiguration kann die Adresse des TURN-Servers beim Erstellen der PeerConnection im Client-Code von Palim-Palim in der Konfiguration mitgegeben (siehe Codefragment \ref{lst:peerConfig}). Eine Anleitung zum Einrichten und Konfigurieren eines Linux-TURN-Servers inklusive Verweise auf weitere Ressourcen zu dem Thema sind im Anhang dieser Arbeit zu finden.\\\\
 
-	\begin{lstlisting}[caption={Konfiguration der PeerConnection},label={lst:peerConfig},language=JavaScript]
+	\begin{lstlisting}[caption={Konfiguration der PeerConnection mit der TURN-Server Adresse},label={lst:peerConfig},language=JavaScript]
 this.peerConnectionConfig = {
 	'iceServers': [
 		{
@@ -512,7 +509,12 @@ Die Video-Chat-Funktionalität wurde in Palim-Palim möglichst unabhängig vom G
 Um alle diese Funktionen innerhalb dieser Klasse möglichst übersichtlich zu umzusetzen, ist die PeerConnectionManager-Klasse von Palim-Palim selbst in einzelne Unterklassen mit den entsprechenden Teil-Verantwortlichkeiten aufgeteilt. Diese Komponenten und deren Zuständigkeiten werden in den nachfolgenden Kapiteln kurz vorgestellt.
 
 \subsection{RoomManager}
-Der RoomManager ist als einzige Schnittstelle mit dem Server für das WebRTC-Signaling des Clients zuständig. Er besitzt die Verantwortung über die Client-seitige Socket.io-Verbindung. Der RoomManager ermöglicht es somit einem Client via Socket.io einem Raum beizutreten. Der PeerConnectionManager verwendet den RoomManager, um Signaling-Messages an den Server zu versenden sowie diese zu empfangen. Auf dem Server werden die Anfragen der einzelnen Clients dann gehandelt, wie in Kapitel x genauer beschrieben.
+Der RoomManager ist als einzige Schnittstelle mit dem Server für das WebRTC-Signaling des Clients zuständig. Er besitzt die Verantwortung über die Client-seitige Socket.io-Verbindung. Der RoomManager ermöglicht es somit einem Client via Socket.io einem Raum beizutreten. Der PeerConnectionManager verwendet den RoomManager, um Signaling-Messages an den Server zu versenden sowie diese zu empfangen. Auf dem Server werden die Anfragen der einzelnen Clients dann gehandelt, wie in Kapitel \ref{server} genauer beschrieben.
+
+\begin{figure}[!htb]
+\includegraphics[width=\textwidth]{RoomManagerSd_noFrame}
+\caption[Caption for LOF]{Nachrichtenfluss beim Betreten eines Raumes (eigene Darstellung).}
+\end{figure}
 
 \subsection{VideoChatManager}
 Sobald der Spieler einen Raum betreten hat, wird via VideoChatManager der lokale Video- und Audiostream initiiert. Im JavaScript-Code geschieht dies via Navigator, wodurch der Browser den User um die Erlaubnis der Verwendung von Mikrofon und Kamera bittet. Erst wenn diese Erlaubnis gegeben wurde, kann auf die Daten von Kamera und Mikrofon zugegriffen werden. Der VideoChatManager fügt dann den Stream dem entsprechenden DOM-Element hinzu, wodurch die Spieler ihr eigenes Video sehen können. Ebenfalls löst dies in Palim-Palim ein «got user media»-Event aus, wodurch der PeerConnectionManager sowie der Signaling-Server informiert werden, dass dieser Client jetzt Zugriff auf Video- und Audio-Daten hat. Danach können der PeerConnection die MediaTracks hinzugefügt werden. \\\\
