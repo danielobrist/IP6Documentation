@@ -523,12 +523,15 @@ Der darunterliegende RTCDataChannel besitzt einige Properties, um die Übertragu
 
 	
 	\section{Game}
-	\emph{
-		\color{blue}
-		Architektur des GameManagers beschreiben und begründen, Ablauf eines GameEvents als Prozessdiagramm 
-	\begin{itemize}
-		\item Beschaffenheit und Laden von GLTF-Files in Palim-Palim erklären
-	\end{itemize}}
+Neben dem PeerConnectionManager als zentrale Steuereinheit der Videochat-Funktionalität, bildet der GameManager die zweite zentrale Klasse und übernimmt die zentralen Funktionen des Spiels Palim-Palim. Dazu gehört das Starten des Games, die Verwaltung der Game-Lobby, das Handling von Spielgeschehnissen sowie das Handling des Spielendes. Um diese Funktionen und das komplette Handling des Spiels übersichtlich zu gestalten, besitzt der GameManager je eine Instanz von weiteren Managern, welche wiederum Aufgaben übernehmen. Diese einzelnen Klassen werden nachfolgend genauer erläutert.\\\\
+Der \textbf{GameLobbyManager} dient zur Verwaltung der Game-Lobby. Er besitzt die Möglichkeit den Eröffnungsscreen, die Einstellungsscreens, die Erfolgsmeldung sowie auch den Screen für das Spielende und den Neustart anzuzeigen und die getätigten Benutzereingaben zu verwalten. Einige Eingaben führen zu weiteren Screens, andere lösen über den GameSyncManager eine Nachricht an den Peer aus.\\\\
+Der \textbf{GameSyncManager} hält die beiden Peers synchron. Vom GameLobbyManager oder vom GameManager aus, können über ihn Nachrichten an den anderen Peer gesendet werden. Bei einkommenden Nachrichten entscheidet der GameSyncManager, welche Events dadurch ausgelöst werden. Wie die genaue Synchronisation der Spielobjekte funktioniert, ist im späteren Kapitel «Gameplay Synchronisation» beschrieben.\\\\
+Der \textbf{SceneManager} ist die zentrale Steuereinheit der Game-Scene, alle Änderungen an der Scene geschehen darüber. Das Laden der 3D-Objekte, welches ebenfalls vom SceneManager übernommen wird, ist im nachfolgenden Kapitel «3D-Objekte laden» genauer erklärt.\\\\
+Der \textbf{AudioManager} ist befähigt Audio-Dateien abzuspielen.\\\\
+Über den \textbf{ShoppingListManager} wird die Einkaufsliste zufällig generiert. Dabei werden zwischen drei und fünf (BemSev: Vielleicht wissenschaftlich belegen, dass man sich so viele Objekte gut merken kann?) Verkaufsobjekte aus den möglichen Objekten ausgewählt, in einer Map gespeichert und über den SceneManager dem Benutzer angezeigt.\\\\
+Der \textbf{GameStateManager} überprüft, ob das Ziel des Spiels bereits erreicht wurde. Dabei wird die Map mit der Einkaufsliste mit den Objekten im virtuellen Einkaufskorb (Basket) abgeglichen. Dies erfolgt jeweils beim Hinzufügen eines Objekts in den Einkaufskorb. Im Erfolgsfall, wird über den gameSyncManager eine Nachricht an den Peer verschickt und über den EventDispatcher eine lokale Nachricht versendet. \\\\
+Der \textbf{InteractionManager} sorgt dafür, dass Benutzerinteraktionen in der 3D-Welt zu einer Aktion führen. Das genaue Handling dieser Interaktionen wird im Kapitel «Interaktionen» beschrieben.\\\\
+(BemSev: Sequenzdiagramme aus dem Anhang erwähnen)
 	
 	\subsection{3D-Objekte laden}
 	Nach Möglichkeit sollte bei Webanwendungen die Datenmenge, welche über den Flaschenhals Netzwerk gesendet werden muss, möglichst geringgehalten werden, um lange Ladezeiten zu verhindern. Da 3D-Objekte bereits eher grosse Dateien sind, ist es gerade bei deren Verwendung wichtig, einige Punkte zu beachten. Nachfolgend wurde dokumentiert welche Optimierungen in Palim-Palim implementiert sind.
