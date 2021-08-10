@@ -377,16 +377,23 @@ Die Überprüfung der im Kapitel 2 aufgestellten Hypothesen wird durch Spieltest
 		Der Gameplay-Loop ist in der nachfolgenden Abbildung 2 skizziert. Die Haupt-Interaktionen zwischen den beiden Spieler*innen bestehen aus der Kommunikation der Einkaufsliste und dem Hin- und Herreichen von Objekten auf der gemeinsamen Tresen-Fläche.\\\\
 		\emph{\color{blue} Hier das Spiel (aktueller Stand beschreiben und nur auf mögliche Weiterentwicklungen hinweisen. Nicht alle möglichen angedachten Funktionen auflisten, das machen wir erst am Schluss}\\\\
 		Dieses übergeordnete Gameplay soll als Leitfaden für den Spielverlauf dienen. Allerdings bietet das Spiel durch die gemeinsame Tresen-Fläche und dem interaktiven Video-Stream bewusst Möglichkeiten für sonstige Interaktionen mit dem Gegenüber. Damit soll für die Benutzerinnen und Benutzer ein gewisser Freiraum entstehen, in welchem sie den Verlauf des Spiels auf spielerische Art und Weise beeinflussen können. Dies soll das Spiel besonders für das Kind interessanter machen, um eine aktive und lustige Kommunikation mit der betagten Person zu fördern. 
-	\section{Spielvarianten}
-	Damit der Einfluss der Video-Telefonie als Teil des Spiels messbar wird, werden unterschiedliche Varianten des Spiels implementiert und getestet: 
+	\section{Spielvarianten/Videomodi}
+Damit der Einfluss der Videotelefonie als Teil des Spiels messbar wird, implementiert Palim-Palim unterschiedliche Videomodi. Dabei sind die ersten drei der folgenden Modi im aktuellen Stand bereits umgesetzt, die letzten beiden nur angedacht: 
 \begin{enumerate}
-	\item Spiel ohne Video-Chat 
-	\item Spiel mit Video-Chat, aber getrennt von der Spiel-Szene 
-	\item Spiel mit Video-Chat, in die Spiel-Umgebung integriert 
-	\item Spiel mit Video-Chat, in die Spiel-Umgebung integriert und optionale Interaktionsmöglichkeiten mit dem Video-Stream 
-	\item Spiel mit Video-Chat, speziell in die Spiel-Umgebung integriert und zum Spielerfolg notwendige Interaktionsmöglichkeiten mit dem Video-Stream 
+	\item Spiel ohne Videochat 
+	\item Spiel mit Videochat, aber getrennt von der Spielszene 
+	\item Spiel mit Videochat, in die Spielumgebung integriert 
+	\item Spiel mit Videochat, in die Spielumgebung integriert und optionale Interaktionsmöglichkeiten mit dem Videostream 
+	\item Spiel mit Videochat, speziell in die Spiel-Umgebung integriert und zum Spielerfolg notwendige Interaktionsmöglichkeiten mit dem Videostream 
 \end{enumerate}
-\emph{\color{blue}Tabelle Spielvarianten, klar zeigen welche implementiert wurden und welche nicht. Screenshots einzelner Varianten}
+
+In der ersten Variante sehen sich die Spielenden nicht. Sie können aber per Audio miteinander kommunizieren. Wie in Abb. xy ersichtlich ist, werden die Verkaufsperson sowie die einkaufende Person durch Illustrationen ersetzt.\\\\
+Screenshot Videomodus 1 (Perspektive betagte Person, also Einkäufer*in sichtbar)\\\\
+Der Screenshot des zweiten Videomodus (Abb. xy) zeigt, dass in diesem Modus die Videos der Spielenden unabhängig von der Gameszene in einer Ecke des Bildschirms dargestellt werden. Identisch zum ersten Modus werden die Personen durch Illustrationen ersetzt.\\\\
+Screenshot Videomodus 2 (Perspektive Kind, also Käufer*in sichtbar)\\\\
+Der Videomodus 3 rendert die Videos der Spielenden an die Position der ein- und verkaufenden Person. Dadurch soll der Eindruck entstehen, das Kind stünde hinter dem Tresen und verkauft Objekte und die Grossmutter oder der Grossvater des Kindes stünde auf der anderen Seite des Tresens und ist die Kundschaft. Diese Szenerie wird auf Abb. xy aus Sicht der betagten Person gezeigt.\\\\
+Screenshot Videomodus 3 (Perspektive betagte Person, also Kind sichtbar)\\\\
+
 	\section{Design und Usability}
 	
 Dieses Kapitel soll die zentralsten Entscheide im Bereich des Designs und der Usability von Palim-Palim aufzeigen und erklären.\\\\
