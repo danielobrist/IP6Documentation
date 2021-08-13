@@ -402,76 +402,44 @@ Das Verschieben von Objekten mit dem Finger erfordert eine gewisse Präzision. U
 
 
 \chapter{Technologien}
-	Palim-Palim kombiniert die Funktionalitäten einer Video-Chat-Applikation mit einem Multiplayer-Spiel. Um diesen Anforderungen gerecht zu werden, wurden entsprechende Technologien zur Umsetzung ausgewählt. Dabei fiel die Wahl auf WebRTC zur Übertragung der Multimedia-Daten, sowie Three.js als 3D(dreidimensional)-Bibliothek für die Gestaltung und Umsetzung der 3D-Gameplay-Szene.
+	Palim-Palim kombiniert die Funktionalitäten einer Video-Chat-Applikation mit einem Multiplayer-Spiel. Um diesen Anforderungen gerecht zu werden, wurden entsprechende Technologien zur Umsetzung evaluiert. Dabei fiel die Wahl auf WebRTC (Web Real-Time Communication) zur Übertragung der Multimedia-Daten, sowie Three.js als 3D-Bibliothek für die Gestaltung und Umsetzung der 3D-Gameplay-Szene. In diesem Kapitel wird als erstes die Technologiewahl begründet. Anschliessend werden die verwendeten Frameworks und deren Funktionen vorgestellt.
+	
+	\section{Technologiewahl}
+	- Anforderungen -Multiplayer -VideoChat -Zugriff auf Video für Interatkionen, Filter
+	- Möglichkeiten: Unity
+	- Möglichkeit: Javascript
 	
 			\section{WebRTC}
-WebRTC ist ein Open-Source-Projekt, das die Echtzeitkommunikation von Audio, Video und Daten in Web- und nativen Anwendungen ermöglicht \cite{noauthor_webrtc_2011}. Die Technologie ist in allen modernen Browsern sowie auf nativen Clients für alle wichtigen Plattformen verfügbar, ist eine Empfehlung des World Wide Web Consortium (W3C) \cite{noauthor_webrtc_2021} und ein Standard der Internet Engineering Task Force (IETF) \cite{noauthor_support_2021}. Dabei wird zwischen zwei Browsern eine Peer-To-Peer-Verbindung aufgebaut, worüber die Daten gestreamt werden. Auf der Peer-To-Peer-Verbindung lassen sich auch eigene Daten-Kanäle erstellen, die zum Beispiel zur Übertragung von Text-Nachrichten, Positions-Daten von Game-Objekten oder sogar Dokumenten zwischen den Peers verwendet werden können \cite{noauthor_webrtc_nodate}.
-			\subsection{Signaling-Server}
-			WebRTC verwendet die RTCPeerConnection JavaScript API (Application Programming Interface), um Streaming-Daten direkt zwischen Browsern zu kommunizieren \cite{noauthor_rtcpeerconnection_nodate}. Doch wie wird dieser Prozess initiiert? Die beiden Peers - genannt Alice und Bob - kennen sich zu Beginn ja gar noch nicht. Zusätzlich wird also ein Mechanismus benötigt, welcher die Kommunikation der beiden Peers koordiniert und Kontrollnachrichten sendet. Dieser Prozess wird in WebRTC als \textit{Signaling} bezeichnet. Signaling-Methoden und -protokolle sind von WebRTC nicht spezifiziert und können je nach Anwendungsfall entsprechend gewählt werden.  \\	
-			In Palim-Palim wurde die JavaScript-Library Socket.io für die Signalisierung verwendt \cite{arrachequesne_socketio_2021}. Socket.io erlaubt eine einfache und bidirektionale Kommunkation zwischen den Clients und einem Signaling-Server. Mit seinem integrierten Room-Konzept eignet sich Socket.io zudem sehr gut für eine Video-Chat-App. Eine Node.js Server-Applikation fungiert als Signaling-Server für Palim-Palim. Der Server hat dabei folgende zwei Aufgaben: er dient als Message Relay und verwaltet alle Videochat-Räume. \\\\
-Die Funktionaliät als Message Relay ist wichtig, da sich Alice und Bob vor dem Verbindungsaufbau noch nicht kennen. Ein Signaling-Server, welcher beiden Clients bekannt ist, wird benötigt. So können initiale Informationen von Alice zu Bob ausgetauscht werden, damit diese untereinander eine WebRTC-Peer-Verbindung aufbauen können:
-			\begin{lstlisting}
-socket.on('message', function (message) {
-  socket.to(room).emit('message', message);
-});
-\end{lstlisting}
-Zusätzlich verwaltet der Signaling-Server alle WebRTC-Videochat-'Räume'. Tritt zum Beispiel Alice einem Raum bei, so überprüft der Server, ob die Raumkapazität schon erreicht wurde und sendet entsprechende Antworten an sie:
-\begin{lstlisting}
-if (numClients === 0) {
-  socket.join(room);
-  socket.emit('created', room, socket.id);
-} else if (numClients === 1) {
-  socket.join(room);
-  socket.emit('joined', room, socket.id);
-  io.sockets.in(room).emit('ready');
-} else { // max two clients
-  socket.emit('full', room);
-}
-\end{lstlisting}
-Wie im Code ersichtlich ist, erlaubt Palim-Palim maximal zwei Peers in einem Raum. Ist Alice die erste Spielerin, erhält sie die Antwort 'created' vom Signaling-Server. Ist bereits ein Client in dem Raum, wird ihr ein 'joined' zurückgegeben. Wurde die Raum-Kapazität überschritten, sendet der Palim-Palim Server Alice ein 'full'. Diese Nachrichten werden dann Client-seitig im Browser von Alice entsprechend behandelt.
+WebRTC ist ein Open-Source-Projekt, das die Echtzeitkommunikation von Audio, Video und Daten in Web- und nativen Anwendungen ermöglicht \cite{noauthor_webrtc_2011}. Die Technologie ist in allen modernen Browsern sowie auf nativen Clients für alle wichtigen Plattformen verfügbar, ist eine Empfehlung des World Wide Web Consortium (W3C) \cite{noauthor_webrtc_2021} und ein Standard der Internet Engineering Task Force (IETF) \cite{noauthor_support_2021}. Dabei wird zwischen zwei Browsern eine Peer-to-Peer-Verbindung aufgebaut, worüber die Daten gestreamt werden. Auf der Peer-to-Peer-Verbindung lassen sich auch eigene Daten-Kanäle erstellen, die zum Beispiel zur Übertragung von Text-Nachrichten, Positions-Daten von Game-Objekten oder sogar Dokumenten zwischen den Peers verwendet werden können \cite{noauthor_webrtc_nodate}. Damit der Verbindungsaufbau reibungslos funktioniert, bedient sich WebRTC einiger Server-Verbindungen, welche in den folgenden beiden Kaptiel erläutert werden.
+
+			\subsection{Signaling-Server}\label{signaling-server}
+			WebRTC verwendet die RTCPeerConnection JavaScript API (Application Programming Interface), um Streaming-Daten direkt zwischen Browsern zu kommunizieren \cite{noauthor_rtcpeerconnection_nodate}. Um eine direkte Verbindung zwischen zwei sich unbekannten Clients herzustellen, wird ein Prozess benötigt, welcher die Kommunikation der beiden Peers koordiniert und Kontrollnachrichten sendet. Dieser Prozess wird in WebRTC als \textit{Signaling} bezeichnet. Signaling-Methoden und -protokolle sind von WebRTC nicht spezifiziert und können je nach Anwendungsfall entsprechend gewählt werden. Für einfachere Anwendungen ohne Anforderungen an die Skalierung der Benutzeranzahl bietet sich die JavaScript-Library Socket.io für die Signalisierung an \cite{arrachequesne_socketio_2021}. Socket.io erlaubt eine einfache und bidirektionale Kommunkation zwischen den Clients und einem Signaling-Server. Mit seinem integrierten Room-Konzept eignet sich Socket.io zudem sehr gut für eine Video-Chat-App. Der Server hat dabei folgende zwei Aufgaben: er dient als Message Relay und verwaltet alle Videochat-Räume. \\\\
+Die Funktionaliät als Message Relay ist wichtig, da sich die beiden Clients vor dem Verbindungsaufbau noch nicht kennen. Der Signaling-Server als Message Relay ist dabei für beide Clients der erste gemeinsame Kontaktpunkt. Nur so können initiale Informationen der Clients ausgetauscht werden, damit diese untereinander eine WebRTC-Peer-Verbindung aufbauen können.
+			
 
 
 			\subsection{STUN- und TURN-Server}			
 
-			WebRTC ist grundsätzlich so konzipiert, dass es Peer-to-Peer funktioniert. Alice und Bob können sich also auf dem direktesten Weg verbinden. Die Technologie ist jedoch auch bewusst darauf ausgelegt, mit realen Netzwerken zurechtzukommen: Client-Anwendungen müssen  NAT-Gateways (Network Address Translation) und Firewalls überwinden, und Peer-to-Peer-Netzwerke benötigen Fallbacks, falls die direkte Verbindung ausfällt. Als Teil dieses Prozesses verwendet die WebRTC-API zwei Netzwerkprotokolle als Hilfsmittel: 
+			WebRTC ist grundsätzlich so konzipiert, dass es Peer-to-Peer funktioniert. Zwei Clients können sich also auf dem direktesten Weg verbinden. Die Technologie ist jedoch auch bewusst darauf ausgelegt, mit realen Netzwerken zurechtzukommen: Client-Anwendungen müssen NAT-Gateways (Network Address Translation) und Firewalls überwinden, und Peer-to-Peer-Netzwerke benötigen eine Absicherung, falls die direkte Verbindung ausfällt. Als Teil dieses Prozesses verwendet die WebRTC-API zwei Netzwerkprotokolle als Hilfsmittel: 
 			
 \begin{itemize}
   \item \textit{STUN} (Session Traversal Utilities for NAT), um die öffentliche IP-Adresse und Port-Nummer für den direkten Kontaktaufbau zu ermitteln  \cite{noauthor_stun_2021}.
   \item \textit{TURN} (Traversal Using Relay NAT), welches die Kommunikation über NAT- oder Firewallgrenzen hinweg ermöglicht und als Fallback-Relay genutzt werden kann, sollte keine Peer-to-Peer-Verbindung möglich sein \cite{noauthor_traversal_2021}.
 \end{itemize}
 
-Für beide Protokolle müssen Server bereitgestellt werden, welche den WebRTC-Clients bekannt sein müssen. Die STUN- und TURN-Adressen müssen bei dem Aufbau der Peer-Connection der Clients an den Signaling-Server übermittelt werden \cite{noauthor_turn-server_nodate-1}. Dazu setzt jeder Palim-Palim-Client beim Verbindungsaufbau in den Konfigurations-Werten die Addressen der STUN- und TURN-Server:
-			
-			\begin{lstlisting}
-			this.peerConnectionConfig = {
-            'iceServers': [
-                {
-                  'urls': 'stun:stun.l.google.com:19302'
-                },
-                {
-                  'urls': 'turn:86.119.43.130:3478',
-                  'credential': '*****************',
-                  'username': 'palimpalim'
-                }
-            ]
-        };
-			\end{lstlisting}
-			
-			 
-Nur mit diesen beiden Server-Addressen im entsprechenden Konstruktor kann die Funktionalität des Video- und Audio-Streams über das Internet gewährleistet werden. Palim-Palim verwendet als STUN-Server einen öffentlich verfügbaren Server von Google. Da der STUN-Server nur zur Ermittlung der eigenen öffentlichen IP-Addresse dient, lässt sich hier ohne grosse Auswirkungen auf den Datenschutz oder die Sicherheit ein öffentlich gehosteter Server verwenden. \\	
-
-Als Fallback-Verbindungen wird allerdings im produktiven Betrieb einer WebRTC-Applikation unbedingt ein eigener TURN-Server mit einer öffentlich sichtbaren IP-Adresse benötigt \cite{noauthor_webrtc_2020}. Es gibt keine kostenlosen, öffentlich gehosteten TURN-Server, da der Netzwerkverkehr über so einen Server sehr stark ansteigen kann. Daher lohnt es sich für niemanden, fremden Verkehr über seinen TURN-Server zuzulassen. Es ist also ebenfalls von Vorteil, seinen TURN-Server mit einer ensprechenden Authentifizierung zu versehen. Palim-Palim verwendet einen auf SwitchEngines gehosteten TURN-Server. Dieser Linux-Server verwendet Coturn, eine Open-Source Implementierung des TURN-Protokolls \cite{noauthor_coturncoturn_2021}.  \\	
-			
-Gemäss Auswertungen des WebRTC Call Quality Dienstleisters callstats.io haben im Durchschnitt etwa 30 Prozent aller WebRTC-Sessions einen Client, der sich über einen TURN-Server verbindet \cite{callstats_why_nodate}. Das heisst in etwa 70 Prozent der Fälle ist die Peer-To-Peer-Verbindung stabil genug, und ein TURN-Server wird überhaupt nicht benötigt. Jedoch müssen sie trotzdem bei jeder Verbindung angegeben werden. Denn gewisse Benutzer*innen wären ohne die Unterstützung eines TURN-Relay-Servers nicht in der Lage zu kommunizieren.
+Für beide Protokolle müssen Server bereitgestellt werden, welche den WebRTC-Clients bekannt sein müssen. Die STUN- und TURN-Adressen müssen bei dem Aufbau der Peer-Connection der Clients an den Signaling-Server übermittelt werden \cite{noauthor_turn-server_nodate-1}. Wie dies in Palim-Palim umgesetzt wurde, ist im Kapitel \ref{server} genauer beschrieben.\\
+Als Fallback-Verbindungen wird im produktiven Betrieb einer WebRTC-Applikation unbedingt ein eigener TURN-Server mit einer öffentlich sichtbaren IP-Adresse benötigt \cite{noauthor_webrtc_2020}. Es gibt keine kostenlosen, öffentlich gehosteten TURN-Server, da der Netzwerkverkehr über so einen Server sehr stark ansteigen kann. Daher lohnt es sich für niemanden, fremden Verkehr über seinen TURN-Server zuzulassen.\\
+Gemäss Auswertungen des WebRTC Call Quality Dienstleisters callstats.io haben im Durchschnitt etwa 30 Prozent aller WebRTC-Sessions einen Client, der sich über einen TURN-Server verbindet \cite{callstats_why_nodate}. Das heisst in etwa 70 Prozent der Fälle ist die Peer-to-Peer-Verbindung stabil genug, und ein TURN-Server wird überhaupt nicht benötigt. Jedoch müssen sie trotzdem bei jeder Verbindung angegeben werden. Denn gewisse Benutzer*innen wären ohne die Unterstützung eines TURN-Relay-Servers nicht in der Lage zu kommunizieren.\\
 
 
-			\begin{figure}[h!]
-			\includegraphics[width=\textwidth]{WebRTC_nat_stun_firewall_turn_black}
-			\caption[Caption for LOF]{STUN, TURN, und Signalisierung in WebRTC (eigene Darstellung).}
-			\end{figure}
+\begin{figure}[h!]
+\includegraphics[width=\textwidth]{WebRTC_nat_stun_firewall_turn_black}
+\caption[Caption for LOF]{STUN, TURN, und Signalisierung in WebRTC (eigene Darstellung).}
+\end{figure}
 			
-Mit STUN-, TURN- und Signaling-Server besitzt Palim-Palim ein stabiles Backend für die Implementierung des Video-Streams mit WebRTC. Zusätzlich kann die Peer-To-Peer-Funktionalität von WebRTC auch zur Synchronisation von Gameplay-Daten direkt zwischen Alice und Bob genutzt werden. Die Multiplayer-Funktionalität kann so auch unabhängig von einem zentralen Server als gemeinsame Authorität ermöglicht werden.
+Mit STUN-, TURN- und Signaling-Server besitzt Palim-Palim ein stabiles Backend für die Implementierung des Video-Streams mit WebRTC. Zusätzlich kann die Peer-to-Peer-Funktionalität von WebRTC auch zur Synchronisation von Gameplay-Daten direkt zwischen Alice und Bob genutzt werden. Die Multiplayer-Funktionalität kann so auch unabhängig von einem zentralen Server als gemeinsame Authorität ermöglicht werden.\\\\
 			
+		\newpage
 		\subsection{Sicherheit}
 		Der Open-Source-Charakter von WebRTC kann bei potenziellen Anwender*innen der Technologie Sicherheitsbedenken hervorrufen. Diese Bedenken sind berechtigt und wurden bei der Entwicklung von Palim-Palim ebenfalls berücksichtigt. Damit der Datenschutz für die Spieler*innen sowie die Stabilität des Games gewährleistet werden kann, müssen bei der Implementation einige Punkte berücksichtigt werden. \\
 		
@@ -479,10 +447,10 @@ Mit STUN-, TURN- und Signaling-Server besitzt Palim-Palim ein stabiles Backend f
 		
 		Ebenfalls werden bei der Umleitung des Datenverkehrs über den TURN-Server die Daten nicht interpretiert oder modifiziert. Dies ist so im TURN-Standard definiert \cite{noauthor_rfc5766_nodate}. Das heisst, die Verwendung des TURN-Servers fügt dem WebRTC-Datenverkehr keine Sicherheitsschwachstellen hinzu. Die Verbindung zum Signaling-Server ist ebenfalls mit HTTPS geschützt, was als sicher genug für Online-Banking und Behörden-Websites gilt \cite{noauthor_study_nodate}. \\
 		
-		Somit lässt sich WebRTC als eigenständiges Framework für Videotelefonie als sehr sicher bezeichnen. Allerdings hängt diese Sicherheit auch von der umliegenden Web-Applikation und diese wiederum von dem verwendeten Browser ab. Als ein im Internet zugängliches Spiel sollte Palim-Palim deshalb über eine entsprechende User-Authentifizierung erweitert werden, sollte das Spiel dauerhaft produktiv betrieben werden wollen. Ebenfalls empfiehlt es sich, die WebRTC-Bibliothek und andere Abhängigkeiten aktuell zu halten.
+		Somit lässt sich WebRTC als eigenständiges Framework für Videotelefonie als sehr sicher bezeichnen. Allerdings hängt diese Sicherheit auch von der umliegenden Web-Applikation und diese wiederum von dem verwendeten Browser ab. Als ein im Internet zugängliches Spiel sollte eine solche Anwendung deshalb über eine entsprechende User-Authentifizierung erweitert werden, sollte das Spiel dauerhaft produktiv betrieben werden wollen. Diese Authentifizierung darf dabei nicht über den Signaling-Server laufen, denn der Datenverkehr zu ihm könnte abgefangen werden. Jede Client-Anwendung muss in der Lage sein, die Authentifizierung der potenziellen Gesprächspartner unabhängig vom Signaling-Server durchzuführen. Dies kann durch die Verwendung eines webbasierten Identitätsanbieters (IdP) erreicht werden, wie zum Beispiel Facebook Connect \cite{noauthor_facebook_nodate} oder OAuth (von Twitter) \cite{noauthor_oauth_nodate}. Ebenfalls empfiehlt es sich, die WebRTC-Bibliothek und andere Abhängigkeiten aktuell zu halten \cite{noauthor_study_nodate}.
 	
 	\section{Three.js}
-	Three.js ist eine 3D-Bibliothek, welche meistens die Web Graphics Library (WebGL) verwendet, um 3D-Inhalt zu zeichnen \cite{noauthor_threejs_nodate}. WebGL ist eine Rasterisierungs-Engine, das bedeutet, dass diese Bibiliothek nur Punkte, Linien und Dreiecke zeichnet und erst auf Basis des Codes entstehen dreidimensionale Objekte \cite{noauthor_webgl_nodate}. In Three.js stehen primitive 3D-Objekte genauso wie beispielsweise Lichter, Schatten, Materialien oder Texturen als vorgefertigte Code-Pakete zur Verfügung \cite{noauthor_threejs_nodate}.
+	Three.js ist eine 3D-Bibliothek, welche meistens die Web Graphics Library (WebGL) verwendet, um 3D-Inhalt darzustellen \cite{noauthor_threejs_nodate}. WebGL ist eine Rasterisierungs-Engine, das bedeutet, dass diese Bibiliothek nur Punkte, Linien und Dreiecke zeichnet und erst auf Basis des Codes entstehen dreidimensionale Objekte \cite{noauthor_webgl_nodate}. In Three.js stehen primitive 3D-Objekte genauso wie beispielsweise Lichter, Schatten, Materialien oder Texturen als vorgefertigte Code-Pakete zur Verfügung \cite{noauthor_threejs_nodate}.
 	
 
 	\subsection{Struktur}
@@ -496,9 +464,11 @@ In diesem Kapitel werden die einzelnen Komponenten von Palim-Palim und deren Fun
 	
 \section{Server}\label{server}
 Da Palim-Palim über das Internet zugänglich sein soll, benötigt das Spiel einen Server, welcher den Client Code zur Verfügung stellt. Der Server-Code im server.js File nutzt daher Express.js (Link zu express), womit der mit Webpack gebaute Client-Javascript-Code den Benutzer beim Aufruf der Webapplikation zur Verfügung gestellt wird.\\\\
-Der Server verwaltet zusätzlich alle Videochat-Räume und dient als Vermittler für den Verbindungsaufbau des Video-Calls. Dies wird auch Signaling genannt (siehe Kapitel «Signaling») und funktioniert folgendermassen: Sobald zwei Spielende einem Raum betreten, wird dieser Raum genutzt, um Verbindungsinformationen zwischen den Peers auszutauschen. Dies wurde in Palim-Palim gemäss einem Google Codelab Beispiel umgesetzt \cite{noauthor_real_nodate}. Socket.io erlaubt eine einfache und bidirektionale Kommunikation zwischen den Clients und dem Server. Mit seinem Room-Konzept eignet sich Socket.io zudem sehr gut für eine Video-Chat-App. Über den Socket.io-Raum kann die Peer-To-Peer-Verbindung zwischen den Clients dann ausgehandelt und erstellt werden. Steht diese direkte Verbindung einmal, wird der Server nicht mehr benötigt. Ab dann läuft die Kommunikation in den meisten Fällen nur noch direkt zwischen den Clients.\\\\
-Um unabhängig zu funktionieren, wurde für Palim-Palim zudem ein eigener TURN-Server aufgesetzt. Der im Projekt verwendet TURN-Server läuft mit Linux Ubuntu und benutzt Coturn, eine Open-Source Implementierung des TURN-Protokolls \cite{noauthor_coturncoturn_2021}.\\\\
-Um selbst ein TURN-Sever bereitzustellen, wird lediglich ein Server mit einer öffentlichen IP-Adresse benötigt. Nach der Konfiguration kann die Adresse des TURN-Servers beim Erstellen der PeerConnection im Client-Code von Palim-Palim in der Konfiguration mitgegeben (siehe Codefragment \ref{lst:peerConfig}). Eine Anleitung zum Einrichten und Konfigurieren eines Linux-TURN-Servers inklusive Verweise auf weitere Ressourcen zu dem Thema sind im Anhang dieser Arbeit zu finden.\\\\
+Der Server verwaltet zusätzlich alle Videochat-Räume und dient als Vermittler für den Verbindungsaufbau des Video-Calls. Dies wird auch Signaling genannt, wie bereits im Kapitel \ref{signaling-server} erläutert wurde, und funktioniert folgendermassen: Sobald zwei Spielende einem Raum betreten, wird dieser Raum genutzt, um Verbindungsinformationen zwischen den Peers auszutauschen. Dies wurde in Palim-Palim gemäss einem Google Codelab Beispiel mit Socket.io umgesetzt \cite{arrachequesne_socketio_2021} \cite{noauthor_real_nodate}. Socket.io erlaubt eine einfache und bidirektionale Kommunikation zwischen den Clients und dem Server. Mit seinem Room-Konzept eignet sich Socket.io zudem sehr gut für eine Video-Chat-App. Über den Socket.io-Raum kann die Peer-to-Peer-Verbindung zwischen den Clients dann ausgehandelt und erstellt werden. Steht diese direkte Verbindung einmal, wird der Server nicht mehr benötigt. Ab dann läuft die Kommunikation in den meisten Fällen nur noch direkt zwischen den Clients.\\\\
+
+Um unabhängig zu funktionieren, wurde für Palim-Palim zudem ein eigener TURN-Server aufgesetzt. Der im Projekt Palim-Palim verwendete TURN-Server läuft mit Linux Ubuntu und benutzt Coturn, eine Open-Source Implementierung des TURN-Protokolls \cite{noauthor_coturncoturn_2021}.\\\\
+
+Um selbst ein TURN-Sever bereitzustellen, wird lediglich ein Server mit einer öffentlichen IP-Adresse benötigt. Diesen versieht man idealerweise mit einer ensprechenden Authentifizierung, um unerwünschten Datenverkehr zu unterbinden. Nach der Konfiguration können die Adresse und die Zugangsdaten des TURN-Servers beim Erstellen der PeerConnection im Client-Code von Palim-Palim in der Konfiguration mitgegeben (siehe Codefragment \ref{lst:peerConfig}). Eine Anleitung zum Einrichten und Konfigurieren eines Linux-TURN-Servers inklusive Verweise auf weitere Ressourcen zu dem Thema sind im Anhang dieser Arbeit zu finden.\\\\
 
 	\begin{lstlisting}[caption={Konfiguration der PeerConnection mit der TURN-Server Adresse},label={lst:peerConfig},language=JavaScript]
 this.peerConnectionConfig = {
@@ -514,9 +484,11 @@ this.peerConnectionConfig = {
 	]
 };
 	\end{lstlisting}
+	
+
 \newpage
 \section{PeerConnectionManager}
-Die Video-Chat-Funktionalität wurde in Palim-Palim möglichst unabhängig vom Gameplay als eigene Klasse implementiert. Die PeerconnectionManager-Klasse übernimmt hierbei zentrale Funktionen wie das Betreten eines Raumes, die Etablierung der Video-Streams zwischen den Spielern sowie den Aufbau von dedizierten Datenkanälen (sogenannten DataChannels).\\\\ In der PeerConnectionManager-Klasse selbst findet der Aufbau der Peer-To-Peer-Verbindung statt. Die Klasse instanziiert hierzu ein PeerConnection-Objekt, welches die RTCPeerConnection erweitert. RTCPeerConnection ist die API, welche von WebRTC-Anwendungen verwendet wird, um eine Verbindung zwischen Peers herzustellen und Audio und Video zu übertragen \cite{noauthor_rtcpeerconnection_nodate-1}. Diese PeerConnection stellt eine WebRTC-Verbindung zwischen dem lokalen Computer und einem entfernten Peer dar. Sie bietet Methoden, um eine Verbindung zu einer Gegenseite herzustellen, die Verbindung aufrechtzuerhalten und zu überwachen sowie die Verbindung zu schließen, wenn sie nicht mehr benötigt wird. Der PeerConnectionManager orchestriert über dieses Objekt den Verbindungsaufbau und dient als einzige Schnittstelle des Video-Chats zum Rest der Applikation.\\\\
+Die Video-Chat-Funktionalität wurde in Palim-Palim möglichst unabhängig vom Gameplay als eigene Klasse implementiert. Die PeerconnectionManager-Klasse übernimmt hierbei zentrale Funktionen wie das Betreten eines Raumes, die Etablierung der Video-Streams zwischen den Spielern sowie den Aufbau von dedizierten Datenkanälen (sogenannten DataChannels).\\\\ In der PeerConnectionManager-Klasse selbst findet der Aufbau der Peer-to-Peer-Verbindung statt. Die Klasse instanziiert hierzu ein PeerConnection-Objekt, welches die RTCPeerConnection erweitert. RTCPeerConnection ist die API, welche von WebRTC-Anwendungen verwendet wird, um eine Verbindung zwischen Peers herzustellen und Audio und Video zu übertragen \cite{noauthor_rtcpeerconnection_nodate-1}. Diese PeerConnection stellt eine WebRTC-Verbindung zwischen dem lokalen Computer und einem entfernten Peer dar. Sie bietet Methoden, um eine Verbindung zu einer Gegenseite herzustellen, die Verbindung aufrechtzuerhalten und zu überwachen sowie die Verbindung zu schließen, wenn sie nicht mehr benötigt wird. Der PeerConnectionManager orchestriert über dieses Objekt den Verbindungsaufbau und dient als einzige Schnittstelle des Video-Chats zum Rest der Applikation.\\\\
 Um alle diese Funktionen innerhalb dieser Klasse möglichst übersichtlich zu umzusetzen, ist die PeerConnectionManager-Klasse von Palim-Palim selbst in einzelne Unterklassen mit den entsprechenden Teil-Verantwortlichkeiten aufgeteilt. Diese Komponenten und deren Zuständigkeiten werden in den nachfolgenden Kapiteln kurz vorgestellt.
 
 \newpage
@@ -578,7 +550,7 @@ Um alle Verkaufsobjekte herum ist ebenfalls eine Box (blauer Linienquader auf Ab
 		
 	\newpage
 	\subsection{Gampeplay-Synchronisation}
-	Um die Interaktionen der beiden Spieler zu synchronisieren, wird normalerweise ein Server verwendet, der die Inputs der Spieler entgegennimmt, und als zentrale Authorität den Zustand des Spiels bestimmt. Bei Palim-Palim wurde dies aber anders gelöst. Das Spiel nutzt seine Peer-To-Peer-Funktionalität aus und kreiert neben dem Video- und Audiostream auch einen spezifischen DataChannel für Game-Updates. Dieser Channel wird genutzt, um die Objekte beider Szenen zu synchronisieren.
+	Um die Interaktionen der beiden Spieler zu synchronisieren, wird normalerweise ein Server verwendet, der die Inputs der Spieler entgegennimmt, und als zentrale Authorität den Zustand des Spiels bestimmt. Bei Palim-Palim wurde dies aber anders gelöst. Das Spiel nutzt seine Peer-to-Peer-Funktionalität aus und kreiert neben dem Video- und Audiostream auch einen spezifischen DataChannel für Game-Updates. Dieser Channel wird genutzt, um die Objekte beider Szenen zu synchronisieren.
 	
 
 	
