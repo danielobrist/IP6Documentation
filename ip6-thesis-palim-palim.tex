@@ -431,7 +431,12 @@ this.peerConnectionConfig = {
 \section{PeerConnectionManager}
 Die Video-Chat-Funktionalität wurde in Palim-Palim möglichst unabhängig vom Gameplay als eigene Klasse implementiert. Die PeerconnectionManager-Klasse übernimmt hierbei zentrale Funktionen wie das Betreten eines Raumes, die Etablierung der Video-Streams zwischen den Spielern sowie den Aufbau von dedizierten Datenkanälen (sogenannten DataChannels).\\\\ 
 In der PeerConnectionManager-Klasse selbst findet der Aufbau der Peer-to-Peer-Verbindung statt. Die Klasse instanziiert hierzu ein PeerConnection-Objekt, welches die RTCPeerConnection erweitert. RTCPeerConnection ist die API, welche von WebRTC-Anwendungen verwendet wird, um eine Verbindung zwischen Peers herzustellen und Audio und Video zu übertragen \cite{noauthor_rtcpeerconnection_nodate-1}. Diese PeerConnection stellt eine WebRTC-Verbindung zwischen dem lokalen Computer und einem entfernten Peer dar. Sie bietet Methoden, um eine Verbindung zu einer Gegenseite herzustellen, die Verbindung aufrechtzuerhalten und zu überwachen sowie die Verbindung zu schließen, wenn sie nicht mehr benötigt wird. Der PeerConnectionManager orchestriert über dieses Objekt den Verbindungsaufbau und dient als einzige Schnittstelle des Video-Chats zum Rest der Applikation.\\\\
-Um alle diese Funktionen innerhalb dieser Klasse möglichst übersichtlich zu umzusetzen, ist die PeerConnectionManager-Klasse von Palim-Palim selbst in einzelne Unterklassen mit den entsprechenden Teil-Verantwortlichkeiten aufgeteilt. Diese Komponenten und deren Zuständigkeiten werden in den nachfolgenden Kapiteln kurz vorgestellt.
+Um alle diese Funktionen innerhalb dieser Klasse möglichst übersichtlich zu umzusetzen, ist die PeerConnectionManager-Klasse von Palim-Palim selbst in einzelne Unterklassen mit den entsprechenden Teil-Verantwortlichkeiten aufgeteilt. Diese Komponenten sind in der Abbildung \ref{fig:PeerConnectionManagerDiagram} dargestellt. Die einzelnen Zuständigkeiten der Klassen werden in den nachfolgenden Kapiteln vorgestellt.
+\begin{figure}[!htb]
+\includegraphics[width=\textwidth]{PeerConnectionManagerDiagram}
+\caption[Caption for LOF]{Klassendiagramm der PeerConnectionManager-Klasse und deren Subklassen (eigene Darstellung).}
+\label{fig:PeerConnectionManagerDiagram}
+\end{figure}
 
 \newpage
 \subsection{RoomManager}
