@@ -62,9 +62,40 @@
 
 \begin{document}
 
-
 \begin{titlepage}
-\paragraph{Titelblatt}
+    \begin{center}
+        \vspace*{1cm}
+            
+        \Huge
+        \textbf{Palim-Palim}
+            
+        \vspace{0.5cm}
+        \Large
+        Ein Videospiel mit integriertem Videochat für Kinder und betagte Menschen 
+            
+        \vspace{1.5cm}
+            
+        \textbf{Daniel Obrist}\\
+        \textbf{Severin Peyer}
+
+        \vfill
+            
+        Bachelorthesis
+        \vspace{0.8cm}
+
+        \includegraphics[width=0.65\textwidth]{fhnw_ht_10mm}
+
+        \vspace{0.8cm}
+            
+            
+        \Large
+        Studiengang Informatik\\
+        Profilierung iCompetence\\
+        Brugg, 20.08.2021\\
+        
+        \vspace{0.8cm}
+
+    \end{center}
 \end{titlepage}
 
 \chapter*{Projektinformationen}
@@ -374,7 +405,8 @@ Für die Gestaltung der Spielewelt wurde Three.js als Framework gewählt. Mit de
 WebRTC ist ein Open-Source-Projekt, das die Echtzeitkommunikation von Audio, Video und Daten in Web- und nativen Anwendungen ermöglicht \cite{noauthor_webrtc_2011}. Die Technologie ist in allen modernen Browsern sowie auf nativen Clients für alle wichtigen Plattformen verfügbar, ist eine Empfehlung des World Wide Web Consortium (W3C) \cite{noauthor_webrtc_2021} und ein Standard der Internet Engineering Task Force (IETF) \cite{noauthor_support_2021}. Dabei wird zwischen zwei Browsern eine Peer-to-Peer-Verbindung aufgebaut, worüber die Daten gestreamt werden. Auf der Peer-to-Peer-Verbindung lassen sich auch eigene Daten-Kanäle erstellen, die zum Beispiel zur Übertragung von Text-Nachrichten, Positions-Daten von Game-Objekten oder sogar Dokumenten zwischen den Peers verwendet werden können \cite{noauthor_webrtc_nodate}. Damit der Verbindungsaufbau reibungslos funktioniert, bedient sich WebRTC einiger Server-Verbindungen, welche in den folgenden beiden Kaptiel erläutert werden.
 
 \subsection{Signaling-Server}\label{signaling-server}
-WebRTC verwendet die RTCPeerConnection JavaScript API (Application Programming Interface), um Streaming-Daten direkt zwischen Browsern zu kommunizieren \cite{noauthor_rtcpeerconnection_nodate}. Um eine direkte Verbindung zwischen zwei sich unbekannten Clients herzustellen, wird ein Prozess benötigt, welcher die Kommunikation der beiden Peers koordiniert und Kontrollnachrichten sendet. Dieser Prozess wird in WebRTC als \textit{Signaling} bezeichnet. Signaling-Methoden und -protokolle sind von WebRTC nicht spezifiziert und können je nach Anwendungsfall entsprechend gewählt werden. Für einfachere Anwendungen ohne Anforderungen an die Skalierung der Benutzeranzahl bietet sich die JavaScript-Library Socket.io für die Signalisierung an \cite{arrachequesne_socketio_2021}. Socket.io erlaubt eine einfache und bidirektionale Kommunkation zwischen den Clients und einem Signaling-Server. Mit seinem integrierten Room-Konzept eignet sich Socket.io zudem sehr gut für eine Video-Chat-App. Der Server hat dabei folgende zwei Aufgaben: er dient als Message Relay und verwaltet alle Videochat-Räume. \\\\
+WebRTC verwendet die RTCPeerConnection JavaScript API (Application Programming Interface), um Streaming-Daten direkt zwischen Browsern zu kommunizieren \cite{noauthor_rtcpeerconnection_nodate}. Um eine direkte Verbindung zwischen zwei sich unbekannten Clients herzustellen, wird ein Prozess benötigt, welcher die Kommunikation der beiden Peers koordiniert und Kontrollnachrichten sendet. Dieser Prozess wird in WebRTC als \textit{Signaling} bezeichnet. Signaling-Methoden und -protokolle sind von WebRTC nicht spezifiziert und können je nach Anwendungsfall entsprechend gewählt werden. WebRTC-Anwendungen, welche skalierbar sein sollen, benötigen Signalisierungsserver, welche in der Lage sind eine erhebliche Last zu bewältigen. Solche Lösungen wurden im Rahmen von Palim-Palim nicht benötigt, weshalb an dieser Stelle lediglich auf entsprechende Ressoucen verwiesen wird \cite{article_build_nodate} \cite{venema_how_nodate}.\\
+Für einfachere Anwendungen ohne Anforderungen an die Skalierung der Benutzeranzahl bietet sich die JavaScript-Library Socket.io für die Signalisierung an \cite{arrachequesne_socketio_2021}. Socket.io erlaubt eine einfache und bidirektionale Kommunkation zwischen den Clients und einem Signaling-Server. Mit seinem integrierten Room-Konzept eignet sich Socket.io zudem sehr gut für eine Video-Chat-App. Der Server hat dabei folgende zwei Aufgaben: er dient als Message Relay und verwaltet alle Videochat-Räume. \\\\
 Die Funktionaliät als Message Relay ist wichtig, da sich die beiden Clients vor dem Verbindungsaufbau noch nicht kennen. Der Signaling-Server als Message Relay ist dabei für beide Clients der erste gemeinsame Kontaktpunkt. Nur so können initiale Informationen der Clients ausgetauscht werden, damit diese untereinander eine WebRTC-Peer-Verbindung aufbauen können.
 		
 
@@ -537,6 +569,11 @@ Diese Art der Gameplay-Synchronisation erlaubt es den Clients, total unabhängig
 		\item Mögliche Weiterentwicklungen (bezogen auf die Software
 		\item Weiterführende Forschung
 	\end{itemize}
+	
+Mit Palim-Palim wurde ein Videospiel entwickelt, welches eine Videochat-Applikation mit einem Spiel für Kinder und betagte Personen kombiniert. Es ist ein funktionaler Prototyp entstanden, der weiteren Videochat-Spielen als Inspiration oder sogar als Vorlage für ein entsprechendes Framework dienen kann. Erste Spieletests haben Möglichkeiten offengelegt, die spielerischen Elemente weiter zu verbessern. Die mit der Arbeit verbundene Literaturrecherche zeigte ausserdem auf, dass Spiele mit integriertem Videochat ein hohes Potenzial haben, um Beziehungen zwischen Generationen auch über weite Distanzen zu pflegen. Palim-Palim legt dabei den Grundstein für weitere solche Spiele.\\\\
+Der intergenerationelle Aspekt des Spielens rückte dabei schon in der Konzipierungsphase des Projektes in den Mittelpunkt. Mit Palim-Palim wurde festgestellt, dass ein asymmetrisches Game Design hierzu eine Möglichkeit bietet, den Anforderungen zwei unterschiedlicher Zielgruppen gerecht zu werden.\\\\
+Da die Ergebnisse aus den Spieletests nicht aussagekräftig sind, lässt sich über mögliche Verbesserungsmöglichkeiten bezüglich dem Gameplay von Palim-Palim nur mutmassen. Bezogen auf das Game Design steht Palim-Palim noch am Anfang seines möglichen Weges. Eine Fortführung des Projekts sollte unbedingt regelmässige Tests in den Entwicklungsprozess integrieren. So kann fortlaufendes Feedback der Usergruppen eingeholt und in der Weiterentwicklung berücksichtigt werden.\\\\
+Während der Implementation von Palim-Palim wurden diverse Eigenheiten und Möglichkeiten der verwendeten Technologien exploriert. Es zeigte sich, dass trotz bestehender Frameworks die Integration eines Videochats in ein webbasiertes Spiel nicht trivial ist. WebRTC empfiehlt sich nach wie vor als etablierter Standard. Es bietet sich aber an, ein entsprechendes Framework zu entwickeln, um ein WebRTC-Videochat möglichst einfach in bestehende oder auch neu entwickelte Mehrspieler-Games zu implementieren. Die Server-Infrastruktur für ein Videochat sollte dabei nicht vergessen werden. Sie ist zwar nicht enorm komplex, aber essenziel für die Funktionsweise des Videochats über das Web. Eine solche Infrastruktur könnte aber auch für mehrere Spiele gleichzeitig und direkt in Kombination mit einem Framework genutzt werden.
 
 	\subsection{Mögliche Weiterentwicklungen}
 	Das Videospiel Palim-Palim bietet noch viel Potenzial für Weiterentwicklungen. Mögliche Verbesserungen, Erweiterungen und Ideen sind in diesem Kapitel dokumentiert.\\\\
@@ -571,6 +608,21 @@ Eine weitere Möglichkeit das Spiel aufregender zu gestalten ist die Implementie
 \appendix
 
 \chapter{Ehrlichkeitserklärung}
+
+Hiermit erklären wir, die vorliegende Bachelorthesis selbständig, ohne Hilfe Dritter und nur unter Benutzung der angegebenen Quellen verfasst zu haben.\\\\
+\begin{center}
+\begin{tabular}{p{5cm}p{5cm}}
+\centering
+\includegraphics[width=4cm]{signature_dani}
+Daniel Obrist\\
+Brugg, 20.08.2021	&
+\centering
+\includegraphics[width=4cm]{signature_dani} %TODO Bild Unterschrift Severin
+Severin Peyer\\
+Brugg, 20.08.2021
+\end{tabular}
+\end{center}
+
 
 \chapter{Testprotokolle, weitere Spielkonzepte/Ideenfindung, Readme des Repos... }
 
