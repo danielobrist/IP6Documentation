@@ -216,6 +216,11 @@ Die verwendeten Begriffe Kind und betagte Person werden dabei im Rahmen des Proj
 \subparagraph{Kind} Person zwischen fünf und acht Jahren. 
 \subparagraph{Betagte Person} Person ab einem Alter von 65 Jahren ohne grössere mentale Beeinträchtigung. 
 Diese beiden Personengruppen stellen zugleich die Zielgruppen für die durchzuführenden Spieltests dar.
+
+
+Palim-Palim wird im Rahmen des Forschungsprojekts «Myosotis» entwickelt. Die Videospiele von Myosotis sollen Angehörigen, insbesondere auch Kindern, dabei helfen, mit ihren betagten Angehörigen Zeit zu verbringen [https://myosotis.i4ds.net/computer-spiele-fuer-menschen-in-altersheimen/]. Die Spiele sollen auch helfen, durch positive soziale Interaktionen das Wohlbefinden betagter Menschen zu verbessern \cite{soldati_create_2020}.\\\\
+Das zusammen Zeit verbringen ist in Zeiten von Pandemien, wie beispielsweise der Covid19 Pandemie, oder auch für weit entfernt lebende Verwandte gar nicht so leicht. Immer öfters wird deswegen auf die Videotelefonie zurückgegriffen. In einem Seniorenzentrum in Bielefeld-Senne beispielsweise wird schon seit Juli 2013 auf innovative Technologien gesetzt. Die Videotelefonie wurde dabei von den Bewohnenden sehr schnell rege genutzt, um ihre sozialen Kontakte aufrecht zu erhalten [Michels-Rieß, B., Johnigk, U. Altenhilfe integriert smarte Technik. Heilberufe 69, 44–45 (2017)].\\\\
+
 \chapter{Intergenerationelles Spielen}
 Um zwischen zwei Generationen eine Brücke zu schlagen, bieten sich Videospiele als eine vielversprechende Möglichkeit an. Denn besonders im familiären Umfeld fördert gemeinsames Spielen die Beziehungen untereinander und ruft positive Emotionen bei älteren sowohl als auch jüngeren Generationen hervor \cite{osmanovic_beyond_2016}. Es hat sich gezeigt, dass Personen eine grössere Zuneigung zu ihrem Spielpartner aus einer anderen Altersgruppe entwickeln und sich im Umgang mit der anderen Altersgruppe wohler fühlen, wenn sie regelmässig zusammen spielen \cite{chua_lets_2013}. Eine Literaturstudie von de la Hera et al \cite{de_la_hera_benefits_2017} fasst diverse Erkenntnisse zu dem Thema sehr gut zusammen. Sie identifiziert folgende vier Vorzüge des intergenerationellen Spielens: (1) eine Stärkung der familiären Bindung, (2) eine Förderung des wechselseitigen Lernens, (3) ein grösseres Verständnis für die andere Generation und (4) eine Verringerung sozialer Ängste. Unter Berücksichtigung dieser Faktoren lässt sich argumentieren, dass Spielen eine wirkungsvolle Methode ist, um jüngere und ältere Menschen auf einem emotionalen, aber auch sozialen Level zu verbinden.\\\\
 Durch den gegebenen Altersunterschied zwischen jungen und älteren Spielenden ergibt sich eine besondere Herausforderung. In der Gestaltung von intergenerationellen Spielen müssen stets zwei sehr unterschiedliche Zielgruppen berücksichtigt werden. Denn nicht nur die Werte und Normen sind teilweise zwischen Generationen grundlegend anders. Auch biologische Einflüsse des Älterwerdens sind bei jüngeren Spielenden noch weniger ausgeprägt. Dazu kommen ein unterschiedliches technisches Verständnis sowie divergierende Vorkenntnisse. Personen ab 50 Jahren bevorzugen zum Beispiel Gelegenheitsspiele gegenüber komplexeren und ausdauernden Spielen \cite{schultheiss_entertainment_2012}. Auch Gajadhar et al. \cite{gajadhar_out_2010} kamen zum Schluss, dass Spiele für Senioren eher wenig Fokus auf den sozialen Wettbewerb und einen besonderen Fokus auf das kooperative Spiel legen sollten. Diese Ergebnisse wurden von De Schutter \cite{de_schutter_meaningful_2008} bestätigt, der feststellte, dass soziale Interaktion der wichtigste Prädiktor für die Spieldauer bei älteren Erwachsenen ist. Senioren sind also besonders an Spielerfahrungen interessiert, die eine starke soziale Komponente haben. Diese deckt sich auch mit Empfehlungen aktueller Literatur zur Spieleentwicklung \cite{schell_art_2008}.\\\\
@@ -439,16 +444,34 @@ Mesh-Objekte sind gezeichnete Formen (Geometry) mit einem bestimmten Material. G
 
 
 \chapter{Implementation}
-In diesem Kapitel werden die einzelnen Komponenten von Palim-Palim und deren Implementierung vorgestellt. Als erstes werden beginnend bei \ref{PeerConnectionManager} alle zentralen Client-Komponenten, vorgestellt. In Kapitel \ref{server} wird anschliessend das Server-seitige Backend erklärt.\\
-Die Struktur von Palim-Palim wurde bewusst so aufgebaut, dass die Video-Chat-Funktionalität möglichst von der Gamelogik entkoppelt ist. Dadurch ist es einfacher, den Videochat auch in anderen Spielen zu integrieren. Ebenfalls war die Absicht, dadurch eine möglichst gute Grundlage zur Entwicklung eines entsprechenden Frameworks zu legen. Dies spiegelt sich ebenfalls im Klassndiagramm wieder (siehe Abbildung \ref{fig:AppClassDiagram}), mit einer einzigen Abhängigkeit zur PeerConnectionManager-Klasse, welche der Videochat implementiert.
-\begin{figure}[!htb]
-\includegraphics[width=\textwidth]{AppClassDiagram}\label{fig:AppClassDiagram}
-\caption[Caption for LOF]{Klassendiagramm der wichtigsten Komponenten von Palim-Palim (eigene Darstellung).}
-\end{figure}
+In diesem Kapitel werden die einzelnen Komponenten von Palim-Palim und deren Funktionen vorgestellt. Als erstes wird das Server-seitige Backend erklärt und danach die beiden zentralen Client-Komponenten, der PeerConnectionManager sowie der GameManager vorgestellt. Die Struktur von Palim-Palim wurde bewusst so aufgebaut, dass die Video-Chat-Funktionalität möglichst von der Game-Logik entkoppelt ist. Dadurch ist es einfacher, den Video-Chat auch in anderen Spielen zu integrieren. Ebenfalls war die Absicht, dadurch eine möglichst gute Grundlage zur Entwicklung eines entsprechenden Frameworks zu legen.
+	
+\section{Server}\label{server}
+Da Palim-Palim über das Internet zugänglich sein soll, benötigt das Spiel einen Server, welcher den Client Code zur Verfügung stellt. Der Server-Code im server.js File nutzt daher Express.js \cite{noauthor_express_nodate}, womit der mit Webpack \cite{noauthor_webpack_nodate} gebaute Client-Javascript-Code den Benutzer*innen beim Aufruf der Webapplikation zur Verfügung gestellt wird.\\\\
+Der Server verwaltet zusätzlich alle Videochat-Räume und dient als Vermittler für den Verbindungsaufbau des Video-Calls. Dies wird auch Signaling genannt, wie bereits im Kapitel \ref{signaling-server} erläutert wurde, und funktioniert folgendermassen: Sobald zwei Spielende einem Raum betreten, wird dieser Raum genutzt, um Verbindungsinformationen zwischen den Peers auszutauschen. Dies wurde in Palim-Palim gemäss einem Google Codelab Beispiel mit Socket.io umgesetzt \cite{arrachequesne_socketio_2021} \cite{noauthor_real_nodate}. Socket.io erlaubt eine einfache und bidirektionale Kommunikation zwischen den Clients und dem Server. Mit seinem Room-Konzept eignet sich Socket.io zudem sehr gut für eine Video-Chat-App. Über den Socket.io-Raum kann die Peer-to-Peer-Verbindung zwischen den Clients dann ausgehandelt und erstellt werden. Steht diese direkte Verbindung einmal, wird der Server nicht mehr benötigt. Ab dann läuft die Kommunikation in den meisten Fällen nur noch direkt zwischen den Clients.\\\\
+Um unabhängig zu funktionieren, wurde für Palim-Palim zudem ein eigener TURN-Server aufgesetzt. Der im Projekt Palim-Palim verwendete TURN-Server läuft mit Linux Ubuntu und benutzt Coturn, eine Open-Source Implementierung des TURN-Protokolls \cite{noauthor_coturncoturn_2021}.\\\\
+
+Um selbst ein TURN-Sever bereitzustellen, wird lediglich ein Server mit einer öffentlichen IP-Adresse benötigt. Diesen versieht man idealerweise mit einer ensprechenden Authentifizierung, um unerwünschten Datenverkehr zu unterbinden. Nach der Konfiguration können die Adresse und die Zugangsdaten des TURN-Servers beim Erstellen der PeerConnection im Client-Code von Palim-Palim in der Konfiguration mitgegeben (siehe Codefragment \ref{lst:peerConfig}). Eine Anleitung zum Einrichten und Konfigurieren eines Linux-TURN-Servers inklusive Verweise auf weitere Ressourcen zu dem Thema sind im Anhang dieser Arbeit zu finden.\\\\
+
+	\begin{lstlisting}[caption={Konfiguration der PeerConnection mit der TURN-Server Adresse},label={lst:peerConfig},language=JavaScript]
+this.peerConnectionConfig = {
+	'iceServers': [
+		{
+			'urls': 'stun:stun.l.google.com:19302'
+		},
+		{
+			'urls': 'turn:86.119.43.130:3478',
+			'credential': '*****************',
+			'username': 'palimpalim'
+		}
+	]
+};
+	\end{lstlisting}
 	
 
-\section{PeerConnectionManager}\label{PeerConnectionManager}
-Die Videochat-Funktionalität wurde in Palim-Palim möglichst unabhängig vom Gameplay als eigene Klasse implementiert. Die PeerconnectionManager-Klasse übernimmt hierbei zentrale Funktionen wie das Betreten eines Raumes, die Etablierung der Video-Streams zwischen den Spielern sowie den Aufbau von dedizierten Datenkanälen (sogenannten DataChannels).\\\\ 
+\newpage
+\section{PeerConnectionManager}
+Die Video-Chat-Funktionalität wurde in Palim-Palim möglichst unabhängig vom Gameplay als eigene Klasse implementiert. Die PeerconnectionManager-Klasse übernimmt hierbei zentrale Funktionen wie das Betreten eines Raumes, die Etablierung der Video-Streams zwischen den Spielern sowie den Aufbau von dedizierten Datenkanälen (sogenannten DataChannels).\\\\ 
 In der PeerConnectionManager-Klasse selbst findet der Aufbau der Peer-to-Peer-Verbindung statt. Die Klasse instanziiert hierzu ein PeerConnection-Objekt, welches die RTCPeerConnection erweitert. RTCPeerConnection ist die API, welche von WebRTC-Anwendungen verwendet wird, um eine Verbindung zwischen Peers herzustellen und Audio und Video zu übertragen \cite{noauthor_rtcpeerconnection_nodate-1}. Diese PeerConnection stellt eine WebRTC-Verbindung zwischen dem lokalen Computer und einem entfernten Peer dar. Sie bietet Methoden, um eine Verbindung zu einer Gegenseite herzustellen, die Verbindung aufrechtzuerhalten und zu überwachen sowie die Verbindung zu schließen, wenn sie nicht mehr benötigt wird. Der PeerConnectionManager orchestriert über dieses Objekt den Verbindungsaufbau und dient als einzige Schnittstelle des Video-Chats zum Rest der Applikation.\\\\
 Um alle diese Funktionen innerhalb dieser Klasse möglichst übersichtlich zu umzusetzen, ist die PeerConnectionManager-Klasse von Palim-Palim selbst in einzelne Unterklassen mit den entsprechenden Teil-Verantwortlichkeiten aufgeteilt. Diese Komponenten sind in der Abbildung \ref{fig:PeerConnectionManagerDiagram} dargestellt. Die einzelnen Zuständigkeiten der Klassen werden in den nachfolgenden Kapiteln vorgestellt.
 \begin{figure}[!htb]
@@ -534,28 +557,7 @@ dataChannel.onclose = handleDataChannelStatusChange;
 
 Diese Art der Gameplay-Synchronisation erlaubt es den Clients, total unabhängig von einem Server zu spielen. Da der Server nur fürs Signaling benutzt wird, ist auch eine grosse Skalierung der Spieleranzahl denkbar. Der Server muss die Spieler nur inital vermitteln, was keine grosse Sache ist. Alle anderen Berechnungen sowie der Abgleich der Spielwelt werden auf den Clients direkt vorgenommen. Da kein Umweg über einen Server genommen werden muss, ist auch die Latenz niedrig. (Einziges Manko: es gibt keine zentrale Authorität. Das heisst Spieler könnten den Client-Code manipulieren und sich unfaire Vorteile verschaffen. Da Palim-Palim und sein Publikum aber nicht kompetitiv sind, ist diese Gefahr des Cheatings vernachlässigbar.)
 		
-	
-\section{Server}\label{server}
-Da Palim-Palim über das Internet zugänglich sein soll, benötigt das Spiel einen Server, welcher den Client Code zur Verfügung stellt. Der Server-Code im server.js File nutzt daher Express.js \cite{noauthor_express_nodate}, womit der mit Webpack \cite{noauthor_webpack_nodate} gebaute Client-Javascript-Code den Benutzer*innen beim Aufruf der Webapplikation zur Verfügung gestellt wird.\\\\
-Der Server verwaltet zusätzlich alle Videochat-Räume und dient als Vermittler für den Verbindungsaufbau des Video-Calls. Dies wird auch Signaling genannt, wie bereits im Kapitel \ref{signaling-server} erläutert wurde, und funktioniert folgendermassen: Sobald zwei Spielende einem Raum betreten, wird dieser Raum genutzt, um Verbindungsinformationen zwischen den Peers auszutauschen. Dies wurde in Palim-Palim gemäss einem Google Codelab Beispiel mit Socket.io umgesetzt \cite{arrachequesne_socketio_2021} \cite{noauthor_real_nodate}. Socket.io erlaubt eine einfache und bidirektionale Kommunikation zwischen den Clients und dem Server. Mit seinem Room-Konzept eignet sich Socket.io zudem sehr gut für eine Video-Chat-App. Über den Socket.io-Raum kann die Peer-to-Peer-Verbindung zwischen den Clients dann ausgehandelt und erstellt werden. Steht diese direkte Verbindung einmal, wird der Server nicht mehr benötigt. Ab dann läuft die Kommunikation in den meisten Fällen nur noch direkt zwischen den Clients.\\\\
-Um unabhängig zu funktionieren, wurde für Palim-Palim zudem ein eigener TURN-Server aufgesetzt. Der im Projekt Palim-Palim verwendete TURN-Server läuft mit Linux Ubuntu und benutzt Coturn, eine Open-Source Implementierung des TURN-Protokolls \cite{noauthor_coturncoturn_2021}.\\\\
-
-Um selbst ein TURN-Sever bereitzustellen, wird lediglich ein Server mit einer öffentlichen IP-Adresse benötigt. Diesen versieht man idealerweise mit einer ensprechenden Authentifizierung, um unerwünschten Datenverkehr zu unterbinden. Nach der Konfiguration können die Adresse und die Zugangsdaten des TURN-Servers beim Erstellen der PeerConnection im Client-Code von Palim-Palim in der Konfiguration mitgegeben (siehe Codefragment \ref{lst:peerConfig}). Eine Anleitung zum Einrichten und Konfigurieren eines Linux-TURN-Servers inklusive Verweise auf weitere Ressourcen zu dem Thema sind im Anhang dieser Arbeit zu finden.\\\\
-
-	\begin{lstlisting}[caption={Konfiguration der PeerConnection mit der TURN-Server Adresse},label={lst:peerConfig},language=JavaScript]
-this.peerConnectionConfig = {
-	'iceServers': [
-		{
-			'urls': 'stun:stun.l.google.com:19302'
-		},
-		{
-			'urls': 'turn:86.119.43.130:3478',
-			'credential': '*****************',
-			'username': 'palimpalim'
-		}
-	]
-};
-	\end{lstlisting}			
+			
 			
 \chapter{Fazit}
 	\begin{itemize}
