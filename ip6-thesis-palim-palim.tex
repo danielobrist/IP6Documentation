@@ -20,7 +20,7 @@
 % -- Code blocks --
 \usepackage{listings}
 \usepackage{color}
-\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{lightgray}{rgb}{.9,.9,.9}	
 \definecolor{darkgray}{rgb}{.4,.4,.4}
 \definecolor{purple}{rgb}{0.65, 0.12, 0.82}
 
@@ -534,16 +534,36 @@ Diese Art der Gameplay-Synchronisation erlaubt es den Clients, total unabhängig
 		\item Zusammenfassung des Erreichten / Zielerreichung
 		\item Zentrale Erkenntnisse
 		\item Reflektion
-		\item Mögliche Weiterentwicklungen (bezogen auf die Software)
+		\item Mögliche Weiterentwicklungen (bezogen auf die Software
 		\item Weiterführende Forschung
 	\end{itemize}
 
-	\subsection{Physik als mögliche Weiterentwicklung}
-	\emph{
-		\color{blue}
-	\begin{itemize}
-		\item Versuche mit ammojs und headless Möglichkeiten auf Server 
-	\end{itemize}}
+	\subsection{Mögliche Weiterentwicklungen}
+	Das Videospiel Palim-Palim bietet noch viel Potenzial für Weiterentwicklungen. Mögliche Verbesserungen, Erweiterungen und Ideen sind in diesem Kapitel dokumentiert.\\\\
+Um zwei Spielende in einem virtuellen «Raum» zu versammeln, wurde die Technologie socket.io verwendet, dies wird im Kapitel Technologien genauer erklärt. Dieses Konzept des virtuellen Raumes wird in Palim-Palim auch im Frontend verwendet. Für die Spielenden bietet dies einige Nachteile. Die betagten Testpersonen empfinden das Wort «Raum» und das Wählen einer Nummer als kalt und emotionslos. Sie wünschen sich einen Prozess, welcher näher an die Realität, statt an die Technik angelehnt ist. Durch die Moderierenden wurde während der Spieletests festgestellt, dass auch der Austausch dieser Raumnummer ein Problem darstellt. Die betagte Person, welche die Raumnummer wählen kann, muss diese auf einem zweiten Kommunikationskanal dem Enkelkind übermitteln. Eine mögliche alternative Umsetzung besteht darin, dass die Spielenden sich mit ihrer E-Mail-Adresse einloggen und sich auch durch diese verknüpfen. Im Hintergrund würde dann vom Server ein «Raum» mit einer zufälligen Raumnummer erstellt werden. Zusätzlich kann so auch das Problem umgangen werden, dass man aus Versehen mit einer fremden Person ein Spiel startet (wenn zwei betagte Personen kurz nacheinander die gleiche Raumnummer auswählen). Dieses Problem könnte jedoch auch mit einer zusätzlichen Station im Verbindungsaufbau gelöst werden, indem der Raumerstellende den Raumbeitretenden zuerst akzeptieren muss. Dafür muss sich der Raumbeitretende aber auch zuerst identifizieren, beispielsweise mit einem Login.\\\\
+Die Abbildung mit den Erklärungen war für alle vier Testpersonen verwirrend, weil diese nicht interaktiv ist. Die Spielenden erwarten, dass die beschriebenen Aktionen bereits ausgeführt werden können. Deshalb bietet es sich an, die Erklärungen direkt in die erste Runde des Spiels einzubauen. Dabei würde beispielsweise beim Kind die Anweisung, einen Apfel auf den Tresen zu legen, als Pop up erscheinen und sobald die Aktion ausgeführt wurde, verschwindet das Pop-up beim Kind und es erschiene eine Bestätigungsmeldung, dass die Aktion korrekt ausgeführt wurde. Beim betagten Menschen würde anschliessend die Meldung erscheinen, den Apfel in den Einkaufskorb zu ziehen. Es besteht die Vermutung, dass durch diese Art der Spielerklärung den Spielenden der Start einfacher fällt. Denn diese können die von ihnen verlangten Aktionen ausprobieren und erhalten zusätzlich auch ein Feedback, dass die Aktion korrekt oder nicht ausgeführt wurde.\\\\
+Die Spieletests haben gezeigt, dass die einseitige Implementation der Menüführung dafür sorgt, dass dem Kind während der Auswahl des Spiel- und Videomodus langweilig wird. Um dieses Problem zu beheben, könnte die Auswahl gemeinsam getroffen werden. Dafür müssten die Buttons, welche in der aktuellen Version von Palim-Palim aus Text bestehen, zusätzlich ein Bild beinhalten. Beide Spielende könnten ihren gewünschten Modus auswählen, würden visuell auch sehen, was der Mitspielende ausgewählt hat und sobald die Eingaben übereinstimmen, würde bei der betagten Person ein Bestätigungsbutton erscheinen. Falls die Auswahl nicht übereinstimmt, würde eine Info angezeigt, dass sich abgesprochen werden soll.\\\\
+Betreffend Design und Usability gibt es ebenfalls noch einige Verbesserungsideen. Beispielsweise sollten die Verkaufsobjekte auf einem Regalboden platziert werden, um sie besser ins Spiel zu integrieren und sie nicht in der Luft schweben zu lassen. Der Hintergrund sollte gemäss den Erkenntnissen in den Spieletests überarbeitet werden. Entweder würde sich ein interaktiver Hintergrund anbieten oder es müssten genauere Recherchearbeiten betrieben werden, wie ein Hintergrund als solcher und nicht als Teil des Gameplays erkannt wird. Um im Videomodus 3 den Spielenden noch besser in die Spielszene zu integrieren, ist es angedacht, die Person auf dem Video freizustellen. Dafür wurde bereits Recherchearbeit betrieben und eine Implementation von Zhu und Oved des Frameworks TensorFlow [https://github.com/tensorflow/tfjs-models/tree/master/body-pix] als geeignet erachtet.\\\\
+//todo weitere usability/design verbesserungen dokumentieren\\\\
+Die Analyse des momentanen Standes von Palim-Palim wirft einige Fragen auf: Was soll passieren, wenn zu viele nicht auf der Einkaufsliste stehenden Elemente eingekauft wurden und dadurch kein Platz mehr im Einkaufskorb ist? Momentan werden die Objekte zur virtuellen Liste weiter hinzugefügt, aber nach sechs Objekten nicht mehr visuell im Einkaufskorb angezeigt. So kann das Spiel noch erfolgreich beendet werden. Eine mögliche Lösung ist es, dass das Spiel dann nicht bestanden werden kann und abbricht. Eine andere Idee ist es, dass diese Objekte dann wieder zurückgelegt werden können. Eine weitere Frage ist es, wie sich die Spielenden gegenseitig helfen können, beispielsweise wenn das Kind einen gewünschten Gegenstand nicht findet. Hier ist es denkbar, dass zuerst die betagte Person animiert wird, dem Kind den Gegenstand zu beschreiben und wenn das auch nicht erfolgreich ist, könnte die betagte Person ein Pop-up beim Kind auslösen, auf welchem das gewünschte Objekt ersichtlich ist.\\\\
+Um die Story des Einkaufserlebnisses abzuschliessen ist eine Erweiterung des Gameplays, respektive das Hinzufügen eines zusätzlichen sekundären Gameplayloops, angedacht. Wie in Abb. xy beschrieben, soll dieser soll den Zahlungsprozess in Palim-Palim integrieren. Dieser würde nach dem primären Gameplayloop folgen, das heisst nachdem alle benötigten Objekte und eventuell noch zusätzliche sich im Einkaufskorb befinden, würde der Zahlungsprozess gestartet.\\\\
+//todo Abbildung Gameplay-Loop Zahlung hinzufügen\\\\
+Nicht nur der Zahlungsprozess ist eine mögliche Erweiterung des Spielerlebnisses. Die Frage tritt auf, wie die Motivation der Spielenden, das Spiel erneut zu spielen, gefördert werden kann. Welche Anreize können werden hierfür geschaffen? Drei Möglichkeiten dafür werden kurz beschrieben, viele weitere aber sind denkbar. Zunächst einmal ist bereits die komplette Vorarbeit für verschiedene Spielmodi bewältigt. Die offene Arbeit, um weitere Spielszenarien (zum Beispiel ein Gemüseladen oder eine Bäckerei) zu implementieren, besteht hierbei aus der Suche nach zusätzlichen Assets für die Verkaufsobjekte und der Gestaltung von unterschiedlichen Hintergründen. Diese Spielmodi bieten wiederum weitere Möglichkeiten, wie beispielsweise die Integration einer Waage für das Gemüse oder einer Tüte für die verschiedenen Brötchen. Zweitens könnten verschiedene Ziele zu einem interessanteren Spielerlebnis beitragen. Die betagte Person müsste statt konkreten Gegenständen Zutaten für einen Fruchtsalat oder Festartikel für eine Geburtstagsfeier einkaufen. Dadurch kann auch dem Wunsch der Testpersonen nach Selbstbestimmung der Einkaufsgegenstände Folge geleistet werden. Als dritte Möglichkeit wird die Implementation der Videomodi 4 und 5 beschrieben. Diese Modi ermöglichen die Interaktion mit dem Video des Gegenübers, wodurch im Speziellen das Spielerlebnis des Kindes attraktiver wird. Zwei Vorschläge für mögliche Szenarien sind das Aufsetzen von Verkleidungsgegenständen oder das Beschmieren mit Eis. Diese Ideen sind im Anhang als Designentwurf unter xyz zu finden.\\\\
+//todo einige punkte evtl. mit quellen untermauern («Die Kunst des Game Designs»?)
+
+
+technisch\\
+\begin{itemize}
+		\item Extrahierung der Video-/Room-Komponente in ein Framework
+		\item Gamesync: wenn beide user items draggen können sie sich duplizieren
+		\item Gameover ist noch nicht sauber implementiert
+		\item Feedback, dass der gewählte Raum bereits besetzt ist
+		\item Verlassen des Raums und Zurückkehren funktioniert noch nicht -> wenn Verbindung abbricht, muss ein neuer Raum eröffnet werden
+	\end{itemize}
+
+Eine weitere Möglichkeit das Spiel aufregender zu gestalten ist die Implementierung einer Physik Engine.\\\\
+//todo Dani: Vorarbeit dokumentieren. Versuche mit ammojs und headless Möglichkeiten auf Server. \\\\
+
 
 \chapter{Literaturverzeichnis}
 \printbibliography[heading=none]
