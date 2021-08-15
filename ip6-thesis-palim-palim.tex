@@ -91,14 +91,6 @@
         \Large
         Studiengang Informatik\\
         Profilierung iCompetence\\
-
-        \vspace{0.8cm}
-
-		Betreuende: Marco Soldati, Tabea Iseli\\
-		Im Auftrag der Fachhochschule Nordwestschweiz
-		
-		\vspace{0.8cm}
-        
         Brugg, 20.08.2021\\
         
         \vspace{0.8cm}
@@ -132,10 +124,6 @@ CH-5210 Windisch\\
 +41 56 202 86 53\\
 tabea.iseli@fhnw.ch\\
 
-\paragraphwithnewline{Experte}
-Jonas Weibel\\
-joweibel@microsoft.com
-
 \paragraphwithnewline{Zeitbudget}
 Das Projekt wird im Rahmen des Frühlingssemesters 2021 durchgeführt. Nominell sind für das Projekt 360~Arbeitsstunden pro Teammitglied veranschlagt. 
 
@@ -157,63 +145,18 @@ Ende:	20. August 2021 \\
 \break
 
 \chapter{Einleitung}
-\paragraph{Teil 1 / Was wurde erreicht?}
-\emph{\begin{itemize}
-\color{blue}
- \item Beschreibung des Videospiels Palim-Palim (inkl. Screenshot)
- \item Aufstellung der Forschungsfragen und den Erkenntnissen
-\end{itemize}}
-
-\paragraph{Teil 2 / Warum wurde es gemacht?}
-\emph{\begin{itemize}
-\color{blue}
- \item Ausgangslage inkl. Forschungsstand
- \item Relevanz der Problemstellung
- \item Was ist das Umfeld?
-\end{itemize}}
-
-\paragraph{Teil 3 / Wie wurde es gemacht?}
-\emph{\begin{itemize}
-\color{blue}
- \item Grobe Beschreibung der angewendeten Methodik
- \begin{itemize}
- 	\item Spielentwicklung (Architektur, Technologien)
- 	\item Spieletests (Methoden)
- \end{itemize}
-\end{itemize}}
- 
-\paragraph{Teil 4}
-\emph{\begin{itemize}
-\color{blue}
-	\item Aufbau des Dokuments und Überleitung in den theoretischen Teil
-\end{itemize}}
-Palim-Palim ist ein interaktives Multiplayer-Videospiel für Kinder und betagte Menschen. Zwei Spielende können damit Kinder-Kaufladen in einer virtuellen Umgebung spielen. Es verfügt über einen Video-Chat als inhärente Game-Mechanik, um die Kommunikation zwischen den Spielerinnen und Spielern zu fördern.\\\\
-\begin{figure}
-\includegraphics[width=\textwidth]{PalimPalim_screens}
+Palim-Palim ist ein Mehrspieler-Videospiel für Kinder und betagte Personen. Zwei Spielende können damit in einer virtuellen Umgebung Kaufladen spielen. Es wurde speziell konzipiert, um die Kommunikation zwischen Grosseltern und ihren Enkelkindern zu fördern. Umgesetzt als Tablet-Webapplikation mit integriertem Videochat, ermöglicht das Spiel Interaktionen über weite Distanzen hinweg. Als erster Proof-of-Concept setzt Palim-Palim den Grundstein für ähnliche Spiele und eröffnet die Möglichkeit zur Entwicklung eines entsprechenden Videochat-Spiele-Frameworks.
+\begin{figure}[!htb]
+\includegraphics[width=\textwidth]{PalimPalim_screens_ipad}
 \caption[Caption for LOF]{Das Videospiel Palim-Palim. Perspektive der betagten Person (links) und des Kindes (rechts) (eigene Darstellung).}
-\end{figure}
-Mit dem Spiel wird untersucht, welchen Einfluss ein Video-Chat in Videospielen auf die User Experience und die Kommunikation zwischen den Spielenden hat. Im Speziellen werden die folgenden Fragestellungen untersucht:
-\begin{itemize}
-	\item Welche Wirkung hat ein integrierter Video-Chat auf das Spielerlebnis von betagten Menschen?
-	\item Welche Wirkung hat ein integrierter Video-Chat auf das Spielerlebnis von Kindern? 
-	\item Welche Auswirkungen hat die Art und Weise, wie der Video-Chat in das Spiel integriert ist, auf das Spielerlebnis? 
-	\item Welche Wirkung hat ein integrierter Video-Chat auf die Kommunikation zwischen den Spielenden?
-	\item Wird ein integrierter Video-Chat aktiv als Kommunikationsmittel zur Bewältigung von Spielaufgaben genutzt?
-	\item Welche Auswirkungen hat die Art und Weise, wie der Video-Chat in das Spiel integriert ist, auf die Förderung der Kommunikation?
-\end{itemize}
-Erste Spieletests und ergänzende Literaturrecherchen haben gezeigt, dass Spiele mit Video-Chats ein grosses Potenzial haben, Beziehungen zwischen Generationen auch über weite Distanzen zu fördern. Durch die spielerische Komponente verlieren Kinder weniger schnell das Interesse an der Unterhaltung. Ältere Leute schätzen dabei die sozialen Aspekte des Spielens sehr. Für Kinder hingegen sollte der Fokus eher auf ein spannendes Gameplay gelegt werden, wobei lustige Interaktionen mit dem Video des Gegenübers sich als spannende Weiterentwicklung anbieten.\\\\
-
-Während der Entwicklung von Palim-Palim haben sich zudem diverse Eigenheiten herauskristallisiert, welche bei der Integration von Video-Chats in ein Videospiel eine Rolle spielen. Diese Erkenntnisse wurde festgehalten, um die Entwicklung eines zukünftigen Frameworks für Video-Chat-Spiele zu erleichtern.\\\\
-
-Video-Chats werden heutzutage schon von vielen Familien benutzt, um mit Ihren Verwandten zu kommunizieren. Auch in der Kommunikation mit den Grosseltern wird dabei immer mehr auf Video-Telefonie gesetzt. Dies gilt besonders für Zeiten, in denen Besuche im Alters- oder Pflegeheim auf Grund kursierenden Viren wie Corona schwierig oder unmöglich werden. Betagte Menschen schätzen und nutzen diese moderne Art der Kommunikation mit der Familie auch immer mehr – besonders weil es öfters auf ältere Benutzergruppen angepasste Angebote gibt \cite{glaab_silver_2015}.\\\\
-			Allerdings hat die Video-Telefonie immer noch Grenzen, welche die Interaktionen unnatürlich und teilweise entfremdend wirken lassen. Vor allem für Kinder ist es schwierig, Gesprächsthemen und Kommunikationswege zu finden, die sich so lustig und verbindend anfühlen, wie die Zeit mit der Grossmutter oder dem Grossvater im echten Leben. Oft sind Kinder vom Gespräch schnell gelangweilt – sie würden lieber etwas spielen \cite{tulloch_7_2020}. Spielen kann ein Mittel sein, um Kinder besser einzubeziehen und die Interaktion mit ihnen zu unterstützen, wie bisherige Studien zu dem Thema Video-Calls mit Eltern und Kindern zeigen \cite{follmer_video_2010}.\\\\
-			Ergänzend zum Video-Telefonie-Aspekt gibt es bereits viel Literatur bezüglich generationenübergreifender Computerspiele \cite{chua_lets_2013}, \cite{de_la_hera_benefits_2017}, \cite{soldati_create_2020}. Erkenntnisse aus einer Studie von Derboven et al \cite{derboven_designing_2012} deuten ausserdem drauf hin, dass in einem Multiplayer-Videospiel die zusätzliche Kommunikationsfunktionalität durch einen Video-Chat oft sowohl von älteren als auch von jüngeren Personen begrüsst wird. Allerdings bietet die Forschung bisher keine detaillierte Studie mit Kindern und betagten Personen in diesem Zusammenhang.\\\\
-			Am Institut für Data Science (I4DS) der Fachhochschule Nordwestschweiz wird im Rahmen des Projekts Myosotis schon seit einigen Jahren daran gearbeitet, Video-Spiele zu entwickeln, welche in unterhaltsamer Weise die soziale Interaktion zwischen betagten Menschen und ihren Angehörigen unterstützen \cite{soldati_fhnw_2015}. Dabei wurden schon etliche Spiele umgesetzt und getestet \cite{soldati_create_2020}. Mit einer Integration eines Video-Chats in ein Spiel hat sich jedoch bisher noch kein Team explizit auseinandergesetzt. Palim-Palim schliesst diese Lücke und zeigt wertvolle Erkenntnisse über die Kombination von Video-Chats und Video-Spielen mit Kindern und betagten Personen.\\\\
-			Um die formulierten Fragen zu beantworten, wurden mehrere Varianten eines Videospiels implementiert, in welchen ein Video-Stream zu einem Teil des Spiels wird. Anschliessend wurden mit allen Varianten Spieltests durchgeführt, um herauszufinden, ob die Integration eines Video-Chats in einem Video-Spiel einen positiven oder negativen Einfluss auf die User Experience sowie die Kommunikation zwischen den Spielenden hat. Die Arbeit fokussiert sich speziell auch auf die Art und Weise, wie ein Video-Stream in ein Spiel integriert werden kann.
-
-\paragraph{\emph{\color{blue} Grobe Systemarchitektur, verwendete Methoden und Konzepte}}
-
- 
+\end{figure}\\\\
+Mit dem Spiel wurde untersucht, welchen Einfluss der Videochat in Palim-Palim auf die User Experience und die Kommunikation zwischen den Spielenden hat. Resultate aus den durchgeführten Spieletests deuten darauf hin, dass der Videochat vor allem für die Kinder auch Einsatzmöglichkeiten als Gameplay-Element hat. Ein Einfluss auf die Kommunikation zwischen den Spielenden konnte nicht nachgewiesen werden.\\\\
+Ergänzende Literaturrecherchen haben zudem gezeigt, dass Spiele mit Videochats ein grosses Potenzial haben, Beziehungen zwischen Generationen auch über weite Distanzen zu fördern. Durch die spielerische Komponente verlieren Kinder weniger schnell das Interesse an der Unterhaltung. Ältere Leute schätzen dabei generell die sozialen Aspekte des Spielens.\\\\
+Am Institut für Data Science (I4DS) der Fachhochschule Nordwestschweiz wird im Rahmen des Projekts Myosotis schon seit einigen Jahren daran gearbeitet, Videospiele zu entwickeln, welche in unterhaltsamer Weise die soziale Interaktion zwischen betagten Menschen und ihren Angehörigen unterstützen \cite{soldati_fhnw_2015}. Dabei wurden schon etliche Spiele umgesetzt und getestet \cite{soldati_create_2020}. Mit einer Integration eines Videochats in ein Spiel hat sich jedoch bisher noch kein Projekt explizit auseinandergesetzt. Palim-Palim schliesst diese Lücke und liefert wertvolle erste Erkenntnisse über die Kombination von Videochats und Video-Spielen mit Kindern und betagten Personen.\\\\
+Der Forschungsaspekt von Palim-Palim gewinnt dabei besonders durch den Hintergrund der COVID-19-Pandemie an Relevanz. Eine amerikanische Studie zu dem Thema zeigt zum Beispiel, dass 71\% der Grosseltern von Kindern im Alter bis zu 5 Jahren aufgrund von COVID-19-Massnahmen verstärkt auf Videochats zurückgreifen \cite{kakulla_video_nodate}. Allerdings hat Video-Telefonie immer noch Eigenheiten, welche Interaktionen unnatürlich und teilweise entfremdend wirken lassen. Vor allem für Kinder ist es schwierig, Gesprächsthemen und Kommunikationswege zu finden, die sich so lustig und verbindend anfühlen, wie die Zeit mit der Grossmutter oder dem Grossvater im echten Leben. Oft sind Kinder vom Gespräch schnell gelangweilt – sie würden lieber etwas spielen \cite{tulloch_7_2020}. Palim-Palim als Videospiel bietet hierzu ein Mittel, um Kinder besser in das Gespräch mit ihrem Gegenüber einzubeziehen und die Interaktion mit ihnen zu unterstützen \\\\
+Basierend auf dieser Ausgangslage war die zentrale Aufgabe von Palim-Palim herauszufinden, wie sich ein Videochat mit einem Videospiel kombinieren lässt, damit Kinder und betagte Personen miteinander übers Netz spielen und sich gleichzeitig unterhalten können. Um diese Frage zu beantworten, wurden mehrere Varianten von Palim-Palim implementiert, in welchen der Videochat jeweils immer stärker zu einem Teil des Spiels wird. \\\\
+Die Implementierung von Palim-Palim als Webapplikation erlaubte zusätzlich eine Auseinandersetzung mit den verbundenen Videochat-Technologien. Dadurch wurde eine Wissensbasis für die Entwicklung weiterer Videochat-Spiele oder möglicherweise eines entsprechenden Frameworks geschaffen.\\\\
+Anschliessend an diese einleitenden Worte wird in einigen theoretischen Kapiteln die Ausgangslage und der bisherige Forschungsstand der Thematik dargelegt. Diese theoretischen Teile bilden die Grundlage für die Aufstellung der Forschungsfragen in Kapitel 5. Anschliessend werden die Fragen anhand der durchgeführten Tests beantwortet. Für interessiertere Leser wird danach die ganze Umsetzung vom Game Design bis hin zur Implementierung der Spiellogik detailliert erläutert. In einem Fazit sind dann nochmals alle zentralen Erkenntnisse sowie mögliche Weiterentwicklungen beschrieben.
 
 % -- Theoretischer Teil --
 \chapter{Umfeldanalyse und Zielgruppe}
@@ -230,8 +173,8 @@ Die verwendeten Begriffe Kind und betagte Person werden dabei im Rahmen des Proj
 Diese beiden Personengruppen stellen zugleich die Zielgruppen für die durchzuführenden Spieltests dar.
 
 
-Palim-Palim wird im Rahmen des Forschungsprojekts «Myosotis» entwickelt. Die Videospiele von Myosotis sollen Angehörigen, insbesondere auch Kindern, dabei helfen, mit ihren betagten Angehörigen Zeit zu verbringen \cite{soldati_fhnw_2015}. Die Spiele sollen auch helfen, durch positive soziale Interaktionen das Wohlbefinden betagter Menschen zu verbessern \cite{soldati_create_2020}.\\\\
-Das zusammen Zeit verbringen ist in Zeiten von Pandemien, wie beispielsweise der Covid19 Pandemie, oder auch für weit entfernt lebende Verwandte gar nicht so leicht. Immer öfters wird deswegen auf die Videotelefonie zurückgegriffen. In einem Seniorenzentrum in Bielefeld-Senne beispielsweise wird schon seit Juli 2013 auf innovative Technologien gesetzt. Die Videotelefonie wurde dabei von den Bewohnenden sehr schnell rege genutzt, um ihre sozialen Kontakte aufrecht zu erhalten \cite{michels-ries_altenhilfe_2017}.\\\\
+Palim-Palim wird im Rahmen des Forschungsprojekts «Myosotis» entwickelt. Die Videospiele von Myosotis sollen Angehörigen, insbesondere auch Kindern, dabei helfen, mit ihren betagten Angehörigen Zeit zu verbringen [https://myosotis.i4ds.net/computer-spiele-fuer-menschen-in-altersheimen/]. Die Spiele sollen auch helfen, durch positive soziale Interaktionen das Wohlbefinden betagter Menschen zu verbessern \cite{soldati_create_2020}.\\\\
+Das zusammen Zeit verbringen ist in Zeiten von Pandemien, wie beispielsweise der Covid19 Pandemie, oder auch für weit entfernt lebende Verwandte gar nicht so leicht. Immer öfters wird deswegen auf die Videotelefonie zurückgegriffen. In einem Seniorenzentrum in Bielefeld-Senne beispielsweise wird schon seit Juli 2013 auf innovative Technologien gesetzt. Die Videotelefonie wurde dabei von den Bewohnenden sehr schnell rege genutzt, um ihre sozialen Kontakte aufrecht zu erhalten [Michels-Rieß, B., Johnigk, U. Altenhilfe integriert smarte Technik. Heilberufe 69, 44–45 (2017)].\\\\
 
 \chapter{Intergenerationelles Spielen}
 Um zwischen zwei Generationen eine Brücke zu schlagen, bieten sich Videospiele als eine vielversprechende Möglichkeit an. Denn besonders im familiären Umfeld fördert gemeinsames Spielen die Beziehungen untereinander und ruft positive Emotionen bei älteren sowohl als auch jüngeren Generationen hervor \cite{osmanovic_beyond_2016}. Es hat sich gezeigt, dass Personen eine grössere Zuneigung zu ihrem Spielpartner aus einer anderen Altersgruppe entwickeln und sich im Umgang mit der anderen Altersgruppe wohler fühlen, wenn sie regelmässig zusammen spielen \cite{chua_lets_2013}. Eine Literaturstudie von de la Hera et al \cite{de_la_hera_benefits_2017} fasst diverse Erkenntnisse zu dem Thema sehr gut zusammen. Sie identifiziert folgende vier Vorzüge des intergenerationellen Spielens: (1) eine Stärkung der familiären Bindung, (2) eine Förderung des wechselseitigen Lernens, (3) ein grösseres Verständnis für die andere Generation und (4) eine Verringerung sozialer Ängste. Unter Berücksichtigung dieser Faktoren lässt sich argumentieren, dass Spielen eine wirkungsvolle Methode ist, um jüngere und ältere Menschen auf einem emotionalen, aber auch sozialen Level zu verbinden.\\\\
@@ -290,8 +233,7 @@ Folgende Einezlfragestellungen befassten sich mit den Auswirkungen des Videochat
 \chapter{Methoden}
 Wie Jesse Schell in «The Art of Game Design» beschreibt, ist die Selbstbeobachtung eine wichtige Methode, um sich schnell einen Überblick zu verschaffen, was im entwickelten Spiel funktioniert und was nicht. Dabei sollte jedoch die Gefahr der Subjektivität nicht unterschätzt werden, denn «was nach eigener Erfahrung wahr ist, mag für andere nicht wahr sein» [direktes Zitat]. Aus diesem Grund ist es nützlich und notwendig, anderen, im Speziellen der Zielgruppe des Spiels, sehr gut zuzuhören. Dafür eignen sich Spieletests. Dabei werden Menschen der Zielgruppe eingeladen, das Spiel zu spielen, während sie beobachtet werden und so festgestellt werden kann, ob das beabsichtigte Spielerlebnis vermittelt wird \cite{schell_art_2008}.\\\\
 Palim-Palim setzt auf einen qualitativen statt auf einen quantitativen Testansatz. Einerseits weil die Projektzeit kein vergleichendes Testing mit mindestens 10 Personen \cite{noauthor_how_2009} zuliess, andererseits weil Palim-Palim als ein erster funktionsfähiger Prototyp und nicht als verkaufsfertiges Videospiel verstanden wird. Um Palim-Palim zu testen und die in Kapitel \ref{hauptfragestellung} aufgestellten Hypothesen zu überprüfen wurde ein kontrollierter Feldversuch mit zwei Testpaaren durchgeführt (betagte Menschen: 1 Frau, 1 Mann, Alter: 80+, Kinder: 2 Jungen, 9 und 10 Jahre alt). Die teilnehmenden betagten Menschen wiesen keine grösseren gesundheitlichen Probleme auf. Die Spieletests wurden in drei Phasen gegliedert, in welchen die Videomodi 1 bis 3 (siehe Kapitel \ref{spielvarianten}) in einer zufälligen Reihenfolge gespielt wurden.\\\\
-Die Tests wurden an einem für die Teilnehmenden vertrauten Ort durchgeführt, dadurch kann das Spiel in einer ihm zugedachten natürlichen Umgebung stattfinden, was gemäss Jesse Schell ein grosser Vorteil sein kann \cite{schell_art_2008}. Die eine Spielsequenz dauerte rund 19 Minuten, die andere rund 28 Minuten. Die Teilnehmenden erhielten vor den Spieletests eine kurze Erklärung, was Palim-Palim ist und eine E
-rklärung, wie die Spieletests ablaufen werden [Verweis auf «Information zum Spieletest von Palim-Palim» im Anhang]. Ebenfalls wurden diese über die Freiwilligkeit der Tests und die Möglichkeit, die Tests jederzeit und ohne Konsequenzen abzubrechen, informiert. Alle Teilnehmenden, respektive ihre Erziehungsberechtigten, unterzeichneten auch eine Einverständniserklärung für die Verwendung ihrer Daten im Rahmen von Palim-Palim [Verweis auf die Einverständniserklärungen im Anhang].\\\\
+Die Tests wurden an einem für die Teilnehmenden vertrauten Ort durchgeführt, dadurch kann das Spiel in einer ihm zugedachten natürlichen Umgebung stattfinden, was gemäss Jesse Schell ein grosser Vorteil sein kann \cite{schell_art_2008}. Die eine Spielsequenz dauerte rund 19 Minuten, die andere rund 28 Minuten. Die Teilnehmenden erhielten vor den Spieletests eine kurze Erklärung, was Palim-Palim ist und eine Erklärung, wie die Spieletests ablaufen werden [Verweis auf «Information zum Spieletest von Palim-Palim» im Anhang]. Ebenfalls wurden diese über die Freiwilligkeit der Tests und die Möglichkeit, die Tests jederzeit und ohne Konsequenzen abzubrechen, informiert. Alle Teilnehmenden, respektive ihre Erziehungsberechtigten, unterzeichneten auch eine Einverständniserklärung für die Verwendung ihrer Daten im Rahmen von Palim-Palim [Verweis auf die Einverständniserklärungen im Anhang].\\\\
 Die Spieletests wurden auf Video aufgezeichnet, um die Möglichkeit der Reproduzierbarkeit von Notizen gewisser Aussagen zu haben und diese in einen Kontext stellen zu können. Die Teilnehmenden wurden nach jedem Videomodus gebeten ihr Spielerlebnis zu beurteilen und einige Fragen zu beantworten. Dabei ging es darum Erkenntnisse zu positiven und negativen Gameplay-Elementen zu gewinnen und herauszufinden, ob Palim-Palim der Testperson zusagt oder nicht. Nach den drei gespielten Runden wurde die Testperson zusätzlich nach möglichen Ideen und Wünschen gefragt. Die Fragen wurden sehr offen gehalten, um diese auf den Teilnehmenden anpassen zu können sowie auf das Gespräch einzugehen. Die Fragebögen und die Transkription der Spieletests sind im Anhang zu finden.\\\\
 Für die Auswertung wurden die aufgenommenen Videos zur Hilfe beigezogen. Zentrale Beobachtungen durch die Moderierenden sowie wichtige Aussagen, Ideen und Verbesserungswünsche der Testpersonen sind im Kapitel «Resultate» dokumentiert.
 
@@ -531,7 +473,7 @@ Der \textbf{InteractionManager} sorgt dafür, dass Benutzerinteraktionen in der 
 	\subsection{3D-Objekte laden}
 	Nach Möglichkeit sollte bei Webanwendungen die Datenmenge, welche über den Flaschenhals Netzwerk gesendet werden muss, möglichst geringgehalten werden, um lange Ladezeiten zu verhindern. Da 3D-Objekte bereits eher grosse Dateien sind, ist es gerade bei deren Verwendung wichtig, einige Punkte zu beachten. Nachfolgend wurde dokumentiert welche Optimierungen in Palim-Palim implementiert sind.
 Palim-Palim lädt 3D-Objekte, welche in allen Spielmodi verwendet werden (Tresen, Einkaufskorb), während sich die Spielenden noch in der Gamelobby befinden, weswegen für diese keine Wartezeit entsteht. Die vom Spielmodi abhängigen 3D-Objekte (Einkaufsgegenstände) werden geladen, während die betagte Person die Anleitung liest und das Kind das Spiel erklärt bekommt.\\\\
-Für die 3D-Objekte verwendet Palim-Palim Dateien des Graphics Language Transmission Format (glTF). Dieses Dateiformat kann 3D-Modelle sehr effizient übertragen und laden, weswegen es sich sehr gut für Webapplikationen eignet \cite{noauthor_gltf_2020}. In einer glTF-Datei ist nicht nur die Geometrie eines 3D-Objekts gespeichert, sondern Szenen, Kameras, Materialien, Texturen und auch Animationen (nicht abschliessende Liste) \cite{noauthor_khronosgroupgltf_2021}. Deswegen muss in Palim-Palim beim Laden der 3D-Objekte zuerst die Szene der glTF Datei ausgelesen und danach in dieser nach Meshes (Geometrie eines 3D-Objekts) gesucht werden.\\\\
+Für die 3D-Objekte verwendet Palim-Palim Dateien des Graphics Language Transmission Format (glTF). Dieses Dateiformat kann 3D-Modelle sehr effizient übertragen und laden, weswegen es sich sehr gut für Webapplikationen eignet [https://www.khronos.org/gltf/]. In einer glTF-Datei ist nicht nur die Geometrie eines 3D-Objekts gespeichert, sondern Szenen, Kameras, Materialien, Texturen und auch Animationen (nicht abschliessende Liste) [https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/figures/gltfOverview-2.0.0b.png]. Deswegen muss in Palim-Palim beim Laden der 3D-Objekte zuerst die Szene der glTF Datei ausgelesen und danach in dieser nach Meshes (Geometrie eines 3D-Objekts) gesucht werden.\\\\
 \begin{lstlisting}
 const loadedData = await loader.loadAsync(this.config.models[i].path);
 loadedData.scene.traverse((o) => {
@@ -540,7 +482,7 @@ loadedData.scene.traverse((o) => {
     }
 });
 \end{lstlisting}
-Die in Palim-Palim verwendeten 3D-Objekte wurden mit Blender \cite{foundation_blenderorg_nodate} auf eine möglichst kleine Dateigrösse gebracht, um die Ladezeit, zusätzlich zum optimalen Dateiformat, zu optimieren. Dazu wurde der «Decimate Modifier» angewendet, welcher es erlaubt, die Polygone einer Geometrie zu reduzieren und dabei den ursprünglichen Körper nur minimal zu verändern \cite{noauthor_decimate_nodate}. Für die bessere Verwaltung im Programm wurden in Blender zusätzlich die zwei folgenden Modifikationen an den ursprünglichen glTF-Dateien durchgeführt. Einerseits wurden Objekte, die aus mehreren Meshes bestanden, zu einem Mesh zusammengefügt und anderseits wurde der Mittelpunkt des Meshs auf den Koordinatenursprung gelegt. Die Skalierung des Meshs hingegen kann über einen Parameter in der Konfigurationsdatei von Palim-Palim festgelegt werden, somit können die einzelnen Objekte aufeinander abgestimmt werden.
+Die in Palim-Palim verwendeten 3D-Objekte wurden mit Blender [https://www.blender.org/] auf eine möglichst kleine Dateigrösse gebracht, um die Ladezeit, zusätzlich zum optimalen Dateiformat, zu optimieren. Dazu wurde der «Decimate Modifier» angewendet, welcher es erlaubt, die Polygone einer Geometrie zu reduzieren und dabei den ursprünglichen Körper nur minimal zu verändern [https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/decimate.html]. Für die bessere Verwaltung im Programm wurden in Blender zusätzlich die zwei folgenden Modifikationen an den ursprünglichen glTF-Dateien durchgeführt. Einerseits wurden Objekte, die aus mehreren Meshes bestanden, zu einem Mesh zusammengefügt und anderseits wurde der Mittelpunkt des Meshs auf den Koordinatenursprung gelegt. Die Skalierung des Meshs hingegen kann über einen Parameter in der Konfigurationsdatei von Palim-Palim festgelegt werden, somit können die einzelnen Objekte aufeinander abgestimmt werden.
 	
 	\subsection{Interaktionen}
 Ein Objekt auf einem Screen so zu steuern, dass dieses in einem 3D-Raum bewegt wird, ist nicht intuitiv. Deswegen gibt es verschiedene Lösungsmöglichkeiten, wie dies bewerkstelligt werden kann. Beispielsweise kann das Gyroskop in die Steuerung miteinbezogen werden. Dabei könnte die Dimension in die Tiefe nur angesteuert werden, wenn das Tablet flach liegt (Winkel zur Horizontalen < 20 Grad), die vertikale Dimension nur, wenn das Tablet «steht» (Winkel zur Horizontalen > 20 Grad). Dies ist für Palim-Palim allerdings nicht geeignet, da so die Videoaufnahme sehr unruhig wird. Eine weitere Möglichkeit ist es, die Ansteuerung der dritten Dimension in die Tiefe per Ziehen vom Mittelpunkt zu einer äusseren Ecke zu bewerkstelligen. Das Ziehen von der Mitte zur rechten oberen Ecke würde das Element nach hinten bewegen und das Ziehen zur rechten unteren Ecke würde das Element nach vorne bewegen, dies haben beispielsweise Tseng et al. (EZ Manipulator Designing a mobile fast and ambiqui.pdf // todo severin pdf zotero) in ihrem Forschungsartikel so beschrieben. Die Zielgruppe von Palim-Palim soll nicht mit neuen Gesten überfordert werden, weswegen diese Technologie ebenfalls ungeeignet ist.\\\\
@@ -591,7 +533,7 @@ Während der Implementation von Palim-Palim wurden diverse Eigenheiten und Mögl
 Um zwei Spielende in einem virtuellen «Raum» zu versammeln, wurde die Technologie socket.io verwendet, dies wird im Kapitel Technologien genauer erklärt. Dieses Konzept des virtuellen Raumes wird in Palim-Palim auch im Frontend verwendet. Für die Spielenden bietet dies einige Nachteile. Die betagten Testpersonen empfinden das Wort «Raum» und das Wählen einer Nummer als kalt und emotionslos. Sie wünschen sich einen Prozess, welcher näher an die Realität, statt an die Technik angelehnt ist. Durch die Moderierenden wurde während der Spieletests festgestellt, dass auch der Austausch dieser Raumnummer ein Problem darstellt. Die betagte Person, welche die Raumnummer wählen kann, muss diese auf einem zweiten Kommunikationskanal dem Enkelkind übermitteln. Eine mögliche alternative Umsetzung besteht darin, dass die Spielenden sich mit ihrer E-Mail-Adresse einloggen und sich auch durch diese verknüpfen. Im Hintergrund würde dann vom Server ein «Raum» mit einer zufälligen Raumnummer erstellt werden. Zusätzlich kann so auch das Problem umgangen werden, dass man aus Versehen mit einer fremden Person ein Spiel startet (wenn zwei betagte Personen kurz nacheinander die gleiche Raumnummer auswählen). Dieses Problem könnte jedoch auch mit einer zusätzlichen Station im Verbindungsaufbau gelöst werden, indem der Raumerstellende den Raumbeitretenden zuerst akzeptieren muss. Dafür muss sich der Raumbeitretende aber auch zuerst identifizieren, beispielsweise mit einem Login.\\\\
 Die Abbildung mit den Erklärungen war für alle vier Testpersonen verwirrend, weil diese nicht interaktiv ist. Die Spielenden erwarten, dass die beschriebenen Aktionen bereits ausgeführt werden können. Deshalb bietet es sich an, die Erklärungen direkt in die erste Runde des Spiels einzubauen. Dabei würde beispielsweise beim Kind die Anweisung, einen Apfel auf den Tresen zu legen, als Pop up erscheinen und sobald die Aktion ausgeführt wurde, verschwindet das Pop-up beim Kind und es erschiene eine Bestätigungsmeldung, dass die Aktion korrekt ausgeführt wurde. Beim betagten Menschen würde anschliessend die Meldung erscheinen, den Apfel in den Einkaufskorb zu ziehen. Es besteht die Vermutung, dass durch diese Art der Spielerklärung den Spielenden der Start einfacher fällt. Denn diese können die von ihnen verlangten Aktionen ausprobieren und erhalten zusätzlich auch ein Feedback, dass die Aktion korrekt oder nicht ausgeführt wurde.\\\\
 Die Spieletests haben gezeigt, dass die einseitige Implementation der Menüführung dafür sorgt, dass dem Kind während der Auswahl des Spiel- und Videomodus langweilig wird. Um dieses Problem zu beheben, könnte die Auswahl gemeinsam getroffen werden. Dafür müssten die Buttons, welche in der aktuellen Version von Palim-Palim aus Text bestehen, zusätzlich ein Bild beinhalten. Beide Spielende könnten ihren gewünschten Modus auswählen, würden visuell auch sehen, was der Mitspielende ausgewählt hat und sobald die Eingaben übereinstimmen, würde bei der betagten Person ein Bestätigungsbutton erscheinen. Falls die Auswahl nicht übereinstimmt, würde eine Info angezeigt, dass sich abgesprochen werden soll.\\\\
-Betreffend Design und Usability gibt es ebenfalls noch einige Verbesserungsideen. Beispielsweise sollten die Verkaufsobjekte auf einem Regalboden platziert werden, um sie besser ins Spiel zu integrieren und sie nicht in der Luft schweben zu lassen. Der Hintergrund sollte gemäss den Erkenntnissen in den Spieletests überarbeitet werden. Entweder würde sich ein interaktiver Hintergrund anbieten oder es müssten genauere Recherchearbeiten betrieben werden, wie ein Hintergrund als solcher und nicht als Teil des Gameplays erkannt wird. Um im Videomodus 3 den Spielenden noch besser in die Spielszene zu integrieren, ist es angedacht, die Person auf dem Video freizustellen. Dafür wurde bereits Recherchearbeit betrieben und eine Implementation von Zhu und Oved des Frameworks TensorFlow \cite{noauthor_tfjs-modelsbody-pix_nodate} als geeignet erachtet.\\\\
+Betreffend Design und Usability gibt es ebenfalls noch einige Verbesserungsideen. Beispielsweise sollten die Verkaufsobjekte auf einem Regalboden platziert werden, um sie besser ins Spiel zu integrieren und sie nicht in der Luft schweben zu lassen. Der Hintergrund sollte gemäss den Erkenntnissen in den Spieletests überarbeitet werden. Entweder würde sich ein interaktiver Hintergrund anbieten oder es müssten genauere Recherchearbeiten betrieben werden, wie ein Hintergrund als solcher und nicht als Teil des Gameplays erkannt wird. Um im Videomodus 3 den Spielenden noch besser in die Spielszene zu integrieren, ist es angedacht, die Person auf dem Video freizustellen. Dafür wurde bereits Recherchearbeit betrieben und eine Implementation von Zhu und Oved des Frameworks TensorFlow [https://github.com/tensorflow/tfjs-models/tree/master/body-pix] als geeignet erachtet.\\\\
 //todo weitere usability/design verbesserungen dokumentieren\\\\
 Die Analyse des momentanen Standes von Palim-Palim wirft einige Fragen auf: Was soll passieren, wenn zu viele nicht auf der Einkaufsliste stehenden Elemente eingekauft wurden und dadurch kein Platz mehr im Einkaufskorb ist? Momentan werden die Objekte zur virtuellen Liste weiter hinzugefügt, aber nach sechs Objekten nicht mehr visuell im Einkaufskorb angezeigt. So kann das Spiel noch erfolgreich beendet werden. Eine mögliche Lösung ist es, dass das Spiel dann nicht bestanden werden kann und abbricht. Eine andere Idee ist es, dass diese Objekte dann wieder zurückgelegt werden können. Eine weitere Frage ist es, wie sich die Spielenden gegenseitig helfen können, beispielsweise wenn das Kind einen gewünschten Gegenstand nicht findet. Hier ist es denkbar, dass zuerst die betagte Person animiert wird, dem Kind den Gegenstand zu beschreiben und wenn das auch nicht erfolgreich ist, könnte die betagte Person ein Pop-up beim Kind auslösen, auf welchem das gewünschte Objekt ersichtlich ist.\\\\
 Um die Story des Einkaufserlebnisses abzuschliessen ist eine Erweiterung des Gameplays, respektive das Hinzufügen eines zusätzlichen sekundären Gameplayloops, angedacht. Wie in Abb. xy beschrieben, soll dieser soll den Zahlungsprozess in Palim-Palim integrieren. Dieser würde nach dem primären Gameplayloop folgen, das heisst nachdem alle benötigten Objekte und eventuell noch zusätzliche sich im Einkaufskorb befinden, würde der Zahlungsprozess gestartet.\\\\
@@ -637,57 +579,5 @@ Brugg, 20.08.2021
 
 \chapter{Testprotokolle, weitere Spielkonzepte/Ideenfindung, Readme des Repos... }
 
-
-\section{Weitere Ideen für intergenerationelle Videospiele mit integriertem Videochat}
-
-\paragraph{Bombe entschärfen} Die betagte Person sieht nur die Anleitung und nicht die Bombe, das Kind sieht nur die Bombe und kann mit dieser interagieren. Zusammen soll die Bombe dann entschärft werden. Das Spielprinzip ist auch für andere Use Cases denkbar.
-
-\paragraph{«Brain Out»} Viele kleine Levels mit kniffligen Denksportaufgaben. Diese könnten zusätzlich mit Sensoren des Smartphones (Magnetometer, Rotationssensor...) und nur gemeinsam von beiden Mitspielenden gelöst werden.
-
-\paragraph{Dr. Bibber mit Filter} Der eine Spielende muss virtuelle Objekte aus dem Gesicht/Video des anderen herausoperieren, indem das Objekt beispielsweise einer Linie entlang in einen Zielbereich gezogen wird. Die Person, welche den Patient spielt, muss dabei möglichst ruhig halten.
-
-\paragraph{«Drecksau»} Simples Kartenspiel mit der «Realität entsprechenden» Kartenhandlungen. Ein Beispiel für so ein Spiel ist «Drecksau», bei welchem eine Regenkarte das dreckige Schweinchen wieder sauber wäscht \cite{noauthor_drecksau_nodate}.
-
-\paragraph{Escape Room} Lorem ipsum dolor sit amet.
-
-\paragraph{FaceAPI} Lorem ipsum dolor sit amet.
-
-\paragraph{Filter-Mania} Lorem ipsum dolor sit amet.
-
-\paragraph{Filter-Tabu} Lorem ipsum dolor sit amet.
-
-\paragraph{Gesicht zusammensetzen} Lorem ipsum dolor sit amet.
-
-\paragraph{Gesichtsberührungen} Lorem ipsum dolor sit amet.
-
-\paragraph{Grössen-/Gewichtsverhältnisse} Lorem ipsum dolor sit amet.
-
-\paragraph{Ich sehe was, was du nicht siehst} Lorem ipsum dolor sit amet.
-
-\paragraph{Karikatur (Körperknickbilder)} Lorem ipsum dolor sit amet.
-
-\paragraph{Kooperatives Tetris} Lorem ipsum dolor sit amet.
-
-\paragraph{Labyrinth} Lorem ipsum dolor sit amet.
-
-\paragraph{Live Puzzle} Lorem ipsum dolor sit amet.
-
-\paragraph{Montagsmaler} Lorem ipsum dolor sit amet.
-
-\paragraph{Moorhuhn} Lorem ipsum dolor sit amet.
-
-\paragraph{Pokerface} Lorem ipsum dolor sit amet.
-
-\paragraph{Schere - Stein - Papier} Lorem ipsum dolor sit amet.
-
-\paragraph{Schweizer Reise} Lorem ipsum dolor sit amet.
-
-\paragraph{Turm bauen} Lorem ipsum dolor sit amet.
-
-\paragraph{Virtuelles Bilderbuch} Lorem ipsum dolor sit amet.
-
-\paragraph{Wimmelbild} Lorem ipsum dolor sit amet.
-
-\paragraph{Zaubersprüche} Lorem ipsum dolor sit amet.
 
 \end{document}
