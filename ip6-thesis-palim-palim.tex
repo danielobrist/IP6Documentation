@@ -60,6 +60,12 @@
 
 \newcommand{\paragraphwithnewline}[1]{\paragraph{#1}\mbox{}\\}
 
+% -- comments/todos --
+\usepackage{xcolor}
+\newcommand\todo[1]{\textcolor{red}{#1}}
+
+
+
 \begin{document}
 
 \begin{titlepage}
@@ -308,12 +314,12 @@ Für die Beantwortung der Forschungsfragen wurde das Videospiel Palim-Palim entw
 Parallel zur Entstehung erster Ideen für Palim-Palim wurden etwa 25 weitere Ansätze für intergenerationelle Spiele mit einem Videochat ausgearbeitet. Diese sind im Anhang inklusive einer kurzen Beschreibung aufgelistet. Bei der Entwicklung dieser Spielkonzepte galt es dabei mehrheitlich immer wieder die gleichen Faktoren zu berücksichtigen. Einerseits sollte der Videochat ein zentrales Element des Spiels sein. Die Spielenden sollen mit dem Videoelement interagieren können und es als Teil der Spielumgebung wahrnehmen. Andererseits musste bei der Erarbeitung der Ideen berücksichtigt werden, dass es sich um zwei sehr unterschiedliche Zielgruppen handelt, welche zusammen etwas spielen.\\\\
 Nebst dem umgesetzten Konzept «Kinder-Einkaufsladen», auf welchem Palim-Palim beruht, wurde beispielsweise die Idee für ein «virtuelles Bilderbuch» in Erwägung gezogen. Die Grosseltern und ihr Enkelkind sollten sich dabei als virtuelle Avatare durch ein Bilderbuch hindurchbewegen. Mit Hilfe des Videochats sollen die Avatare die Gesichter der Grosseltern und des Kindes erhalten. Der betagten Person würde der Text der Geschichte zum Vorlesen angezeigt werden, während das Kind nur die Bilder sieht. Über die Videochat-Verbindung könnten die beiden Spielenden so die Geschichte gemeinsam entdecken.\\\\
 Im Allgemeinen wurde festgestellt, dass es innvoll ist, wenn die ältere Person die Kontrolle über das Spiel übernimmt. Um dies umzusetzen eignet sich eine asymmetrische Gestaltung der Spielmechanik, wie zum Beispiel das Verteilen von spezifischen Rollen. Gleichzeitig können so auch die unterschiedlichen Ansprüche der beiden Zielgruppen an das Game Design angegangen werden. Dies war ebenfalls ein Grund für die Entscheidung eines rollenbasierten Spieles wie Palim-Palim.\\\\
-
 Weiters begründet der Entscheid für Palim-Palim darin, dass das Prinzip eines Kaufladens beiden Spielenden bereits aus dem realen Leben bekannt ist. Damit sollte eine tiefere Lernkurve für die Spielmechanik sowie ein gewisser Wiedererkennungswert geschaffen werden. Ausserdem verspricht dieses Konzept sehr viele Ausbaumöglichkeiten in Bezug auf die Spielmechanik und die Story. Von der ästhetischen und technologischen Seite her, bietet Palim-Palim mit seiner Sicht über den Tresen die Möglichkeit, den Videochat in unterschiedlichsten Ausprägungen in die Szene zu integrieren, ohne dabei die Spielmechanik grundlegend zu verändern.
 
 	\section{Spielkonzept}
 	\label{spielkonzept}
-		Das dem Videospiel zugrunde liegende Spielkonzept lehnt sich dem Kinder-Kaufladen-Spielprinzip aus dem echten Leben an. Das Kind und die betagte Person schlüpfen dabei in einem virtuellen Einkaufsladen in die entsprechenden Rollen von Verkaufspersonal und Kundschaft. Die Spieleenden sehen dabei jeweils einen gemeinsamen Tresen aus der Perspektive ihrer Rolle (siehe Abbildung 1). Beide Seiten können Objekte auf dem Tresen platzieren, beziehungsweise Objekte vom Tresen wegziehen. Zusätzlich besteht die Möglichkeit, die Objekte auf den Video-Stream des Gegenübers zu ziehen. Durch all diese Aktionen können je nach Objekt diverse Animationen, Filter-Effekte und Gameplay-Events ausgelöst werden.
+		Das dem Videospiel zugrunde liegende Spielkonzept lehnt sich dem Kinder-Kaufladen-Spielprinzip aus dem echten Leben an. Das Kind und die betagte Person schlüpfen dabei in einem virtuellen Einkaufsladen in die entsprechenden Rollen von Verkaufspersonal und Kundschaft. Initial nimmt die betagte Person die Rolle des Kunden oder der Kundin ein, dies begründet darauf, dass das Kind die Einkaufsliste eventuell noch nicht lesen kann und so auch die Merkfähigkeit der älteren Person trainiert werden kann. In einer späteren Version von Palim-Palim könnte die Verteilung der Rollen wählbar sein und die Einkaufsliste zusätzlich mit Bildern ergänzt werden. Dies könnte die Kommunikation fördern, da das Kind eventuell Dinge beschreiben muss, welche es noch nicht kennt. Die Spielenden sehen in Palim-Palim jeweils einen gemeinsamen Tresen aus der Perspektive ihrer Rolle (siehe Abbildung 1). Beide Seiten können Objekte auf dem Tresen platzieren, beziehungsweise Objekte vom Tresen wegziehen. Zusätzlich besteht die Möglichkeit, die Objekte auf den Video-Stream des Gegenübers zu ziehen.\\\\
+		Durch all diese Aktionen können je nach Objekt diverse Animationen, Filter-Effekte und Gameplay-Events ausgelöst werden. \todo{entweder in mögliche Weiterentwicklungen oder weglassen}
 		\subsection{Gameplay-Loops}
 		Durch die Aufteilung in die beiden Rollen lassen sich für beide Spielenden verschiedene Aktionen und somit ein unterschiedliches Gameplay definieren. Diese Art der Unterteilung eignet sich hervorragend, um das Gameplay jeweils auf die spezifischen Anforderungen von Kindern beziehungsweise betagten Personen anpassen zu können.\\\\
 		Der Gameplay-Loop ist in der nachfolgenden Abbildung \ref{fig:PalimPalimGameplayloop} skizziert. Die Haupt-Interaktionen zwischen den beiden Spielenden bestehen aus der Kommunikation der Einkaufsliste und dem Hin- und Herreichen von Objekten auf der gemeinsamen Tresen-Fläche.\\\\
@@ -324,7 +330,7 @@ Weiters begründet der Entscheid für Palim-Palim darin, dass das Prinzip eines 
 \label{fig:PalimPalimGameplayloop}
 \end{figure}
 				
-		Dieses übergeordnete Gameplay soll als Leitfaden für den Spielverlauf dienen. Allerdings bietet das Spiel durch die gemeinsame Tresen-Fläche und dem interaktiven Video-Stream bewusst Möglichkeiten für sonstige Interaktionen mit dem Gegenüber. Damit soll für die Benutzenden ein gewisser Freiraum entstehen, in welchem sie den Verlauf des Spiels auf spielerische Art und Weise beeinflussen können. Dies soll das Spiel besonders für das Kind interessanter machen, um eine aktive und lustige Kommunikation mit der betagten Person zu fördern.\\\\ 
+		Dieses übergeordnete Gameplay soll als Leitfaden für den Spielverlauf dienen. Allerdings bietet das Spiel durch die gemeinsame Tresenfläche und dem interaktiven Video-Stream bewusst Möglichkeiten für sonstige Interaktionen mit dem Gegenüber. Damit soll für die Benutzenden ein gewisser Freiraum entstehen, in welchem sie den Verlauf des Spiels auf spielerische Art und Weise beeinflussen können. Dies soll das Spiel besonders für das Kind interessanter machen, um eine aktive und lustige Kommunikation mit der betagten Person zu fördern.\\\\ 
 		
 	\section{Videomodi}\label{spielvarianten}
 Damit der Einfluss der Videotelefonie als Teil des Spiels messbar wird, implementiert Palim-Palim unterschiedliche Videomodi. Dabei sind die ersten drei der folgenden Modi im aktuellen Stand bereits umgesetzt, die letzten beiden nur angedacht: 
@@ -352,7 +358,7 @@ Der Screenshot des zweiten Videomodus (Abbildung \ref{fig:PalimPalimVideomodus2}
 \label{fig:PalimPalimVideomodus2}
 \end{figure}
 
-Der Videomodus 3 rendert die Videos der Spielenden an die Position der ein- und verkaufenden Person. Dadurch soll der Eindruck entstehen, das Kind stünde hinter dem Tresen und verkauft Objekte und die Grossmutter oder der Grossvater des Kindes stünde auf der anderen Seite des Tresens und ist die Kundschaft. Diese Szenerie wird auf der Abbildung \ref{fig:PalimPalimVideomodus3} gezeigt.\\\\
+Der Videomodus 3 rendert die Videos der Spielenden an die Position der ein- und verkaufenden Person. Dadurch soll der Eindruck entstehen, das Kind stünde hinter dem Tresen und verkauft Objekte und die Grossmutter oder der Grossvater des Kindes stünde auf der anderen Seite des Tresens und ist die Kundschaft. Diese Szenerie wird auf der Abbildung \ref{fig:PalimPalimVideomodus3} gezeigt.
 
 \begin{figure}[!htb]
 \includegraphics[width=\textwidth]{PalimPalim_Videomodus_3}
@@ -475,10 +481,9 @@ Der \textbf{GameLobbyManager} dient zur Verwaltung der Game-Lobby. Er besitzt di
 Der \textbf{GameSyncManager} hält die beiden Peers synchron. Vom GameLobbyManager oder vom GameManager aus, können über ihn Nachrichten an den anderen Peer gesendet werden. Bei einkommenden Nachrichten entscheidet der GameSyncManager, welche Events dadurch ausgelöst werden. Wie die genaue Synchronisation der Spielobjekte funktioniert, ist im Kapitel \ref{gameplaySync} beschrieben.\\\\
 Der \textbf{SceneManager} ist die zentrale Steuereinheit der Game-Scene, alle Änderungen an der Scene geschehen darüber. Das Laden der 3D-Objekte, welches ebenfalls vom SceneManager übernommen wird, ist im nachfolgenden Kapitel \ref{3DObjekteLaden} genauer erklärt.\\\\
 Der \textbf{AudioManager} ist befähigt Audio-Dateien abzuspielen.\\\\
-Über den \textbf{ShoppingListManager} wird die Einkaufsliste zufällig generiert. Dabei werden zwischen drei und fünf (BemSev: Vielleicht wissenschaftlich belegen, dass man sich so viele Objekte gut merken kann?) Verkaufsobjekte aus den möglichen Objekten ausgewählt, in einer Map gespeichert und über den SceneManager dem Benutzer angezeigt.\\\\
-Der \textbf{GameStateManager} überprüft, ob das Ziel des Spiels bereits erreicht wurde. Dabei wird die Map mit der Einkaufsliste mit den Objekten im virtuellen Einkaufskorb (Basket) abgeglichen. Dies erfolgt jeweils beim Hinzufügen eines Objekts in den Einkaufskorb. Im Erfolgsfall, wird über den gameSyncManager eine Nachricht an den Peer verschickt und über den EventDispatcher eine lokale Nachricht versendet. \\\\
-Der \textbf{InteractionManager} sorgt dafür, dass Benutzerinteraktionen in der 3D-Welt zu einer Aktion führen. Das genaue Handling dieser Interaktionen wird im Kapitel \ref{interaktionen} beschrieben.\\\\
-(BemSev: Sequenzdiagramme aus dem Anhang erwähnen)
+Über den \textbf{ShoppingListManager} wird die Einkaufsliste zufällig generiert. Dabei werden zwischen drei und fünf \todo{Vielleicht wissenschaftlich belegen, dass man sich so viele Objekte gut merken kann?} Verkaufsobjekte aus den möglichen Objekten ausgewählt, in einer Map gespeichert und über den SceneManager dem Benutzer angezeigt.\\\\
+Der \textbf{GameStateManager} überprüft, ob das Ziel des Spiels bereits erreicht wurde. Dabei wird die Map mit der Einkaufsliste mit den Objekten im virtuellen Einkaufskorb (Basket) abgeglichen. Dies erfolgt jeweils beim Hinzufügen eines Objekts in den Einkaufskorb. Im Erfolgsfall, wird über den gameSyncManager eine Nachricht an den Peer verschickt und über den EventDispatcher eine lokale Nachricht versendet. Der gesamte Prozess vom Ziehen eines Objekts in den Einkaufskorb bis zum Spielende wird auf dem Sequenzdiagramm im Anhang \ref{Sequenzdiagramme} auf Abbildung \ref{fig:SequenzdiagrammEinkaufskorbSpielEnde} gezeigt. \\\\
+Der \textbf{InteractionManager} sorgt dafür, dass Benutzerinteraktionen in der 3D-Welt zu einer Aktion führen. Das genaue Handling dieser Interaktionen wird im Kapitel \ref{interaktionen} beschrieben. In welchen Klassen dabei welche Methoden und Funktionen aufgerufen werden und was alles mit dem Verschieben eines Objekts zusammenhängt, zeigt das Squenzdiagramm im Anhang \ref{Sequenzdiagramme} auf Abbildung \ref{fig:SequenzdiagrammVorratTresen}.\\\\
 	
 	\subsection{3D-Objekte laden}
 	\label{3DObjekteLaden}
@@ -497,12 +502,16 @@ Die in Palim-Palim verwendeten 3D-Objekte wurden mit Blender \cite{foundation_bl
 	
 	\subsection{Interaktionen}
 	\label{interaktionen}
-Ein Objekt auf einem Screen so zu steuern, dass dieses in einem 3D-Raum bewegt wird, ist nicht intuitiv. Deswegen gibt es verschiedene Lösungsmöglichkeiten, wie dies bewerkstelligt werden kann. Beispielsweise kann das Gyroskop in die Steuerung miteinbezogen werden. Dabei könnte die Dimension in die Tiefe nur angesteuert werden, wenn das Tablet flach liegt (Winkel zur Horizontalen < 20 Grad), die vertikale Dimension nur, wenn das Tablet «steht» (Winkel zur Horizontalen > 20 Grad). Dies ist für Palim-Palim allerdings nicht geeignet, da so die Videoaufnahme sehr unruhig wird. Eine weitere Möglichkeit ist es, die Ansteuerung der dritten Dimension in die Tiefe per Ziehen vom Mittelpunkt zu einer äusseren Ecke zu bewerkstelligen. Das Ziehen von der Mitte zur rechten oberen Ecke würde das Element nach hinten bewegen und das Ziehen zur rechten unteren Ecke würde das Element nach vorne bewegen, dies haben beispielsweise Tseng et al. (EZ Manipulator Designing a mobile fast and ambiqui.pdf // todo severin pdf zotero) in ihrem Forschungsartikel so beschrieben. Die Zielgruppe von Palim-Palim soll nicht mit neuen Gesten überfordert werden, weswegen diese Technologie ebenfalls ungeeignet ist.\\\\
-Palim-Palim setzt auf eine simple 2D-Steuerung, welche sich jedoch auf einer gekippten Ebene abspielt. Diese Ebene, genannt Interaktionsebene, ist vom Bildschirm aus gesehen um 45 Grad nach hinten gekippt. Das gelbe Linienkonstrukt auf der Abbildung abc zeigt die Interaktionsebene des Verkaufspersonals. Die Interaktionsebene des Kaufenden ist an der xy-Ebene in der Mitte des Tresens gespiegelt. Wird nun ein Objekt angetippt, wird die Methode onPointerDown des InteractionManager aufgerufen. Anhand eines Raycasts (BemSev: Quelle für Beschreibung?) wird das Element ausgewählt, welches am nächsten an der Kamera des Interagierenden ist. Dieses wird «aufgenommen» und kann nun in der Interaktionsebene bewegt werden und gewinnt oder verliert abhängig von der Höhe an Tiefe.\\\\
-Wie im Kapitel \ref{DesignUndUsability} beschrieben, benötigen die Verkaufsobjekte für eine einfachere Bedienung eine grössere Touch-Fläche. Dies ist mit einer einfachen Hitbox in Form einer Kugel realisiert. Die Kugel ist eine möglichst kleine Begrenzungskugel um den ebenfalls möglichst kleinen Begrenzungsquader um die Geometrie des Objekts. Three.js stellt dafür die Methoden getBoundingSphere und getBoundingBox zur Verfügung. Für den Einkaufskorb ist ebenfalls eine Hitbox vorhanden (roter Linienquader auf Abb. abc).\\\\
-Um alle Verkaufsobjekte herum ist ebenfalls eine Box (blauer Linienquader auf Abb. abc) vorhanden. Werden Objekte innerhalb diese Bereichs gezogen, werden diese wieder an ihre Ursprungsposition gesetzt.
-	
+Ein Objekt auf einem Screen so zu steuern, dass dieses in einem 3D-Raum bewegt wird, ist nicht intuitiv. Deswegen gibt es verschiedene Lösungsmöglichkeiten, wie dies bewerkstelligt werden kann. Beispielsweise kann das Gyroskop in die Steuerung miteinbezogen werden. Dabei könnte die Dimension in die Tiefe nur angesteuert werden, wenn das Tablet flach liegt (Winkel zur Horizontalen kleiner als 20 Grad), die vertikale Dimension nur, wenn das Tablet «steht» (Winkel zur Horizontalen grösser als 20 Grad). Dies ist für Palim-Palim allerdings nicht geeignet, da so die Videoaufnahme sehr unruhig wird. Eine weitere Möglichkeit ist es, die Ansteuerung der dritten Dimension in die Tiefe per Ziehen vom Mittelpunkt zu einer äusseren Ecke zu bewerkstelligen. Das Ziehen von der Mitte zur rechten oberen Ecke würde das Element nach hinten bewegen und das Ziehen zur rechten unteren Ecke würde das Element nach vorne bewegen, dies haben beispielsweise Tseng et al. 2018 \cite{tseng_ez-manipulator_2018} in ihrem Forschungsartikel so beschrieben. Die Zielgruppe von Palim-Palim soll nicht mit neuen Gesten überfordert werden, weswegen diese Technologie ebenfalls ungeeignet ist.\\\\
+Palim-Palim setzt auf eine simple 2D-Steuerung, welche sich jedoch auf einer gekippten Ebene abspielt. Diese Ebene, genannt Interaktionsebene, ist vom Bildschirm aus gesehen um 45 Grad nach hinten gekippt. Das gelbe Linienkonstrukt auf der Abbildung \ref{fig:SpielszeneMitHilfslinien} zeigt die Interaktionsebene des Verkaufspersonals. Die Interaktionsebene des Kaufenden ist an der xy-Ebene in der Mitte des Tresens gespiegelt. Wird nun ein Objekt angetippt, wird die Methode onPointerDown des InteractionManager aufgerufen. Anhand eines Raycasts \todo{Quelle für Beschreibung?} wird das Element ausgewählt, welches am nächsten an der Kamera des Interagierenden ist. Dieses wird «aufgenommen» und kann nun in der Interaktionsebene bewegt werden und gewinnt oder verliert abhängig von der Höhe an Tiefe.\\\\
+Wie im Kapitel \ref{DesignUndUsability} beschrieben, benötigen die Verkaufsobjekte für eine einfachere Bedienung eine grössere Touch-Fläche. Dies ist mit einer einfachen Hitbox in Form einer Kugel realisiert. Die Kugel ist eine möglichst kleine Begrenzungskugel um den ebenfalls möglichst kleinen Begrenzungsquader um die Geometrie des Objekts. Three.js stellt dafür die Methoden getBoundingSphere und getBoundingBox zur Verfügung. Für den Einkaufskorb ist ebenfalls eine Hitbox vorhanden (roter Linienquader auf Abbildung \ref{fig:SpielszeneMitHilfslinien}).\\\\
+Um alle Verkaufsobjekte herum ist ebenfalls eine Box (blauer Linienquader auf Abbildung \ref{fig:SpielszeneMitHilfslinien}) vorhanden. Werden Objekte innerhalb diese Bereichs gezogen, werden diese wieder an ihre Ursprungsposition gesetzt.
 
+\begin{figure}[!htb]
+\includegraphics[width=0.6\textwidth]{Spielszene_mit_Hilfslinien}
+\caption[Caption for LOF]{Die Spielszene des Verkaufspersonals inklusive Hilfslinien, um virtuelle Ebenen und Quader zu sehen (eigene Darstellung).}
+\label{fig:SpielszeneMitHilfslinien}
+\end{figure}
 		
 	\newpage
 	\subsection{Gampeplay-Synchronisation}
@@ -581,12 +590,12 @@ Betreffend Design und Usability gibt es ebenfalls noch einige Verbesserungsideen
 Die Analyse des momentanen Standes von Palim-Palim wirft einige Fragen auf: Was soll passieren, wenn zu viele nicht auf der Einkaufsliste stehenden Elemente eingekauft wurden und dadurch kein Platz mehr im Einkaufskorb ist? Momentan werden die Objekte zur virtuellen Liste weiter hinzugefügt, aber nach sechs Objekten nicht mehr visuell im Einkaufskorb angezeigt. So kann das Spiel noch erfolgreich beendet werden. Eine mögliche Lösung ist es, dass das Spiel dann nicht bestanden werden kann und abbricht. Eine andere Idee ist es, dass diese Objekte dann wieder zurückgelegt werden können. Eine weitere Frage ist es, wie sich die Spielenden gegenseitig helfen können, beispielsweise wenn das Kind einen gewünschten Gegenstand nicht findet. Hier ist es denkbar, dass zuerst die betagte Person animiert wird, dem Kind den Gegenstand zu beschreiben und wenn das auch nicht erfolgreich ist, könnte die betagte Person ein Pop-up beim Kind auslösen, auf welchem das gewünschte Objekt ersichtlich ist.\\\\
 Um die Story des Einkaufserlebnisses abzuschliessen ist eine Erweiterung des Gameplays, respektive das Hinzufügen eines zusätzlichen sekundären Gameplayloops, angedacht. Wie in Abbildung \ref{fig:PalimPalimGameplayloopBezahlen} im Anhang beschrieben, soll dieser den Zahlungsprozess in Palim-Palim integrieren. Dieser würde nach dem primären Gameplayloop folgen, das heisst nachdem alle benötigten und eventuell noch zusätzliche Objekte sich im Einkaufskorb befinden, würde der Zahlungsprozess gestartet.\\\\
 Nicht nur der Zahlungsprozess ist eine mögliche Erweiterung des Spielerlebnisses. Die Frage tritt auf, wie die Motivation der Spielenden, das Spiel erneut zu spielen, gefördert werden kann. Welche Anreize können werden hierfür geschaffen? Drei Möglichkeiten dafür werden kurz beschrieben, viele weitere aber sind denkbar. Zunächst einmal ist bereits die komplette Vorarbeit für verschiedene Spielmodi bewältigt. Die offene Arbeit, um weitere Spielszenarien (zum Beispiel ein Gemüseladen oder eine Bäckerei) zu implementieren, besteht hierbei aus der Suche nach zusätzlichen Assets für die Verkaufsobjekte und der Gestaltung von unterschiedlichen Hintergründen. Diese Spielmodi bieten wiederum weitere Möglichkeiten, wie beispielsweise die Integration einer Waage für das Gemüse oder einer Tüte für die verschiedenen Brötchen. Zweitens könnten verschiedene Ziele zu einem interessanteren Spielerlebnis beitragen. Die betagte Person müsste statt konkreten Gegenständen Zutaten für einen Fruchtsalat oder Festartikel für eine Geburtstagsfeier einkaufen. Dadurch kann auch dem Wunsch der Testpersonen nach Selbstbestimmung der Einkaufsgegenstände Folge geleistet werden. Als dritte Möglichkeit wird die Implementation der Videomodi 4 und 5 beschrieben. Diese Modi ermöglichen die Interaktion mit dem Video des Gegenübers, wodurch im Speziellen das Spielerlebnis des Kindes attraktiver wird. Zwei Vorschläge für mögliche Szenarien sind das Aufsetzen von Verkleidungsgegenständen oder das Beschmieren mit Eis. Diese Ideen sind im Anhang als Designentwurf unter xyz zu finden.\\\\
-//todo einige punkte evtl. mit quellen untermauern («Die Kunst des Game Designs»?)
+\todo{einige punkte evtl. mit quellen untermauern («Die Kunst des Game Designs»?)}
 
-//todo im milanote hat es ja auch noch ganz viele ideen... ganz vergessen. entweder hier mehr schreiben oder in den anhang
+\todo{im milanote hat es ja auch noch ganz viele ideen... ganz vergessen. entweder hier mehr schreiben oder in den anhang}
 
 Eine weitere Möglichkeit das Spiel aufregender zu gestalten ist die Implementierung einer Physik Engine.\\\\
-//todo Dani: Vorarbeit dokumentieren. Versuche mit ammojs und headless Möglichkeiten auf Server. \\\\
+\todo{Dani: Vorarbeit dokumentieren. Versuche mit ammojs und headless Möglichkeiten auf Server.} \\\\
 
 Von der technischen Seite her gibt es ebenfalls einige Punkte, welche noch beachtet werden sollten. Wird die Seite neu geladen, kann man zwar den Raum erneut beitreten und auch die Videokommunikation funktioniert noch einwandfrei, jedoch kehrt man nicht zum gestarteten Spiel zurück. Da der andere Spielende das Spiel nicht allein abschliessen kann und auch keine Möglichkeit für die Rückkehr in die Gamelobby oder für einen Neustart des Spiels existiert, besteht ein ungewollter Zustand ohne Rückkehrmöglichkeit. Da der Zustand des Spiels verteilt auf beiden Clients liegt, kann dieser nach einem Reload nicht wiederhergestellt werden. Die effektivste Lösung ist es, das Spiel neu zu starten. Der Neustart des Spiels muss ebenfalls noch sauber implementiert werden, dafür fehlt noch das Aufräumen der Gamescene, also das Löschen der 3D-Elemente. Ein weiteres noch unbehandeltes Problem ist ein Fehler, welcher beim Verschieben von Objekten auftreten kann. Wenn beide Spielenden gleichzeitig ein Objekt verschieben, führt dies teilweise dazu, dass das Objekt dupliziert wird.\\\\
 
@@ -649,4 +658,32 @@ Brugg, 20.08.2021
 \caption[Caption for LOF]{Der angedachte Gameplayloop des Videospiels Palim-Palim für den Zahlungsprozess (eigene Darstellung).}
 \label{fig:PalimPalimGameplayloopBezahlen}
 \end{figure}
+
+% -- single page landscape --
+%\usepackage{lscape}
+%\usepackage{pdflscape}
+%\usepackage{geometry}
+%\newgeometry{margin=1cm} % Ränder kleiner
+%\begin{landscape}
+%\end{landscape}
+%\restoregeometry % Wieder die alten Ränder
+%\includegraphics[width=\paperwidth]
+
+\section{Sequenzdiagramme}
+\label{Sequenzdiagramme}
+
+\todo{grösser, damit lesbar, wie?}
+
+\begin{figure}[!htb]
+\includegraphics[width=\textwidth]{Sequenzdiagramm_Objekt_vom_Vorrat_auf_den_Tresen}
+\caption[Caption for LOF]{Sequenzdiagramm für die Aktion, wenn ein Objekt vom Vorrat auf den Tresen gezogen wird.  (eigene Darstellung).}
+\label{fig:SequenzdiagrammVorratTresen}
+\end{figure}
+
+\begin{figure}[!htb]
+\includegraphics[width=\textwidth]{Sequenzdiagramm_Objekt_in_den_Einkaufskorb_und_Ende_des_Spiels}
+\caption[Caption for LOF]{Sequenzdiagramm für die Aktion, wenn ein Objket in den Einkaufskorb gelegt wird und das Spiel danach eventuell beendet ist (eigene Darstellung).}
+\label{fig:SequenzdiagrammEinkaufskorbSpielEnde}
+\end{figure}
+
 \end{document}
