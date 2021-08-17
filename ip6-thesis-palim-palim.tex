@@ -453,7 +453,7 @@ Ein typischer Nachrichtenfluss ist in Abbildung \ref{fig:sequenzJoinRoom} darges
 
 \subsection{VideoChatManager}\label{videoChatManager}
 Sobald der Spielende einen Raum betritt, wird via VideoChatManager der lokale Video- und Audiostream initiiert. Dies geschieht via Navigator \cite{noauthor_navigator_nodate}, wodurch der Browser um die Erlaubnis zur Verwendung des Mikrofons und der Kamera bittet. Erst wenn diese Erlaubnis gegeben wurde, kann auf die Daten von Kamera und Mikrofon zugegriffen werden. Der VideoChatManager fügt dann den Stream dem entsprechenden DOM-Element (Document Object Model) hinzu, wodurch die Spielenden ihr eigenes Video sehen können. Ebenfalls löst dies in Palim-Palim ein «got user media»-Event aus, wodurch der PeerConnectionManager sowie der Signaling-Server informiert werden, dass dieser Client jetzt Zugriff auf lokale Video- und Audio-Daten hat. Diese Daten werden als MediaStreamTrack-Objekt \cite{noauthor_media_nodate} der PeerConnection hinzugefügt.\\\\
-Auf der Gegenseite wird durch das Hinzufügen des Tracks ein "trackAdded"-Event ausgelöst \cite{noauthor_webrtc_nodate-1}. Aus diesem Event extrahiert der VideoChatManager den Remotevideo-Stream. Dieser wird dem DOM hinzugefügt, wodurch eine Videokonferenz zwischen den beiden Mitspielenden entsteht. Dieser Prozess ist als Sequenzdiagramm in Abbildung \ref{fig:videoSequenz} veranschaulicht.
+Auf der Gegenseite wird durch das Hinzufügen des Tracks ein «trackAdded»-Event ausgelöst \cite{noauthor_webrtc_nodate-1}. Aus diesem Event extrahiert der VideoChatManager den Remotevideo-Stream. Dieser wird dem DOM hinzugefügt, wodurch eine Videokonferenz zwischen den beiden Mitspielenden entsteht. Dieser Prozess ist als Sequenzdiagramm in Abbildung \ref{fig:videoSequenz} veranschaulicht.
 \begin{figure}[!h]
 \includegraphics[width=\textwidth]{VideoChatManager}
 \caption[Caption for LOF]{Sequenzdiagramm zur Erstellung der Video-Verbindung.}
@@ -650,10 +650,10 @@ Brugg, 20.08.2021
 \paragraph{«Brain Out»} Viele kleine Levels mit kniffligen Denksportaufgaben. Diese könnten zusätzlich mit Sensoren des Smartphones (Magnetometer, Rotationssensor...) und nur gemeinsam von beiden Mitspielenden gelöst werden.
 \paragraph{Dr. Bibber mit Filter} Der eine Spielende muss virtuelle Objekte aus dem Gesicht/Video des anderen herausoperieren, indem das Objekt beispielsweise einer Linie entlang in einen Zielbereich gezogen wird. Die Person, welche den Patienten spielt, muss dabei möglichst ruhig halten.
 \paragraph{«Drecksau»} Simples Kartenspiel mit der «Realität entsprechenden» Kartenhandlungen. Ein Beispiel für so ein Spiel ist «Drecksau» \cite{noauthor_drecksau_nodate}, bei welchem eine Regenkarte das dreckige Schweinchen wieder sauber wäscht.
-\paragraph{Escape Room} Die beiden Spielenden müssen Rätsel lösen, um aus einem Level zu entkommen. Dabei sieht jeder Spielende nur seinen "Teil" des Rätsels.
+\paragraph{Escape Room} Die beiden Spielenden müssen Rätsel lösen, um aus einem Level zu entkommen. Dabei sieht jeder Spielende nur seinen «Teil» des Rätsels.
 \paragraph{FaceAPI} Ein Spiel das mittels Gesichtsausdrücken gespielt wird. Verschiedene Möglichkeiten sind: Try not to laugh challenge, Gesichtsausdrücke von einem Foto nachmachen, usw. Mittels face-api.js könnte die Gesischtserkennung implementiert werden.
-\paragraph{Filter-Mania} Das Gegenüber kann einem das Gesicht mit Filter "verschönern".
-\paragraph{Filter-Tabu} Eine Person bekommt ein zufälliges Objekt als Gesichts-Filter. Die andere Person muss es beschreiben, ohne gewisse Wörter zu verwenden, während die "befilterte" Person erraten muss, was sie ist.
+\paragraph{Filter-Mania} Das Gegenüber kann einem das Gesicht mit Filter «verschönern».
+\paragraph{Filter-Tabu} Eine Person bekommt ein zufälliges Objekt als Gesichts-Filter. Die andere Person muss es beschreiben, ohne gewisse Wörter zu verwenden, während die «befilterte» Person erraten muss, was sie ist.
 \paragraph{Gesicht zusammensetzen} Aus einem Webcamscreenshot werden automatisch die Gesichtsteile ausgeschnitten. Diese müssen nun in einem sinnvollen Grössenverhältnis wieder zusammengesetzt werden.
 \paragraph{Gesichtsberührungen} Ein Spiel mit Bewegungen: Zufällig wird Nase, Mund, Wange, Stirn angezeigt/angesagt und dieser Gesichtsteil muss dann berührt werden.
 \paragraph{Grössen-/Gewichtsverhältnisse} Die Spieler müssen zusammen diverse Gegenstände  gemäss dem Gewicht ordnen (Baum, Elefant, Katze, Haus, Fernseher…). Das eigene Webcam-Bild kann auch einer dieser Gegenstände sein.
