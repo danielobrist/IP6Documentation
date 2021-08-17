@@ -65,6 +65,8 @@
 \usepackage{xcolor}
 \newcommand\todo[1]{\textcolor{red}{#1}}
 
+% -- pdf imports --
+\usepackage{pdfpages}
 
 
 \begin{document}
@@ -598,11 +600,48 @@ Brugg, 20.08.2021
 \end{center}
 
 
-\chapter{Weitere Dokumente}
+\chapter{Readme}\label{readme}
 
-\section{Readme}\label{readme}
+\chapter{Sequenzdiagramme}
+\label{Sequenzdiagramme}
+\begin{figure}[!h]
+\includegraphics[width=\textwidth]{Sequenzdiagramm_Objekt_vom_Vorrat_auf_den_Tresen}
+\caption[Caption for LOF]{Sequenzdiagramm für die Aktion, wenn ein Objekt vom Vorrat auf den Tresen gezogen wird.}
+\label{fig:SequenzdiagrammVorratTresen}
+\end{figure}
+\begin{figure}[!h]
+\includegraphics[width=\textwidth]{Sequenzdiagramm_Objekt_in_den_Einkaufskorb_und_Ende_des_Spiels}
+\caption[Caption for LOF]{Sequenzdiagramm für die Aktion, wenn ein Objket in den Einkaufskorb gelegt wird und das Spiel danach eventuell beendet ist.}
+\label{fig:SequenzdiagrammEinkaufskorbSpielEnde}
+\end{figure}
 
-\section{Weitere Ideen für intergenerationelle Videospiele mit integriertem Videochat}\label{WeitereIdeen}
+\todo{grösser, damit lesbar, wie?}
+
+
+\chapter{Ideenfindung und Game Design}
+\newpage
+\section{Gameplayloop «Bezahlen»}
+\begin{figure}[!ht]
+\includegraphics[width=\textwidth]{PalimPalim_Gameplayloop_Bezahlen}
+\caption[Caption for LOF]{Der angedachte Gameplayloop des Videospiels Palim-Palim für den Zahlungsprozess.}
+\label{fig:PalimPalimGameplayloopBezahlen}
+\end{figure}
+\newpage
+\section{Designentwürfe zu Videomodi 4 und 5}
+\label{designEntwurfVideomodi4und5}
+\begin{figure}[!ht]
+\includegraphics[width=0.8\textwidth]{Designentwurf_Videomodi45_Glace}
+\caption[Caption for LOF]{Designentwurf «Glacé» für Videomodi 4 und 5. Perspektive des Kindes (links) und der betagten Person (rechts).}
+\label{fig:DesignentwurfGlace}
+\end{figure}
+
+\begin{figure}[!ht]
+\includegraphics[width=0.8\textwidth]{Designentwurf_Videomodi45_Verkleidung}
+\caption[Caption for LOF]{Designentwurf «Verkleidung» für Videomodi 4 und 5. Perspektive des Kindes.}
+\label{fig:DesignentwurfVerkleidung}
+\end{figure}
+
+\section{Weitere Spielideen}\label{WeitereIdeen}
 \paragraph{Bombe entschärfen} Die betagte Person sieht nur die Anleitung und nicht die Bombe, das Kind sieht nur die Bombe und kann mit dieser interagieren. Zusammen soll die Bombe dann entschärft werden. Das Spielprinzip ist auch für andere Use Cases denkbar.
 \paragraph{«Brain Out»} Viele kleine Levels mit kniffligen Denksportaufgaben. Diese könnten zusätzlich mit Sensoren des Smartphones (Magnetometer, Rotationssensor...) und nur gemeinsam von beiden Mitspielenden gelöst werden.
 \paragraph{Dr. Bibber mit Filter} Der eine Spielende muss virtuelle Objekte aus dem Gesicht/Video des anderen herausoperieren, indem das Objekt beispielsweise einer Linie entlang in einen Zielbereich gezogen wird. Die Person, welche den Patienten spielt, muss dabei möglichst ruhig halten.
@@ -630,57 +669,16 @@ Brugg, 20.08.2021
 \paragraph{Wimmelbild} Ein animiertes Wimmelbild, auf dem man sich selbst und den Gesprächspartner suchen muss.
 \paragraph{Zaubersprüche} Mittels Computer Vision werden Handbewegungen auf dem Videostream erkannt. In Kombination mit Audio-Erkennung könnte man so ein Repertoire an Zaubersprüchen aufbauen. Hat man diese gelernt, lassen sich lustige Filter auf den Video-Stream des Gegenüber «zaubern».
 
+\chapter{Spieletests}
 
-\section{Gameplayloop «Bezahlen»}
+\section{Informationen zu den Spieletests}
+\section{Einverständniserklärung}
+\section{Testprotokoll}
+\section{Transkription Spieletests}
 
-\begin{figure}[!htb]
-\includegraphics[width=\textwidth]{PalimPalim_Gameplayloop_Bezahlen}
-\caption[Caption for LOF]{Der angedachte Gameplayloop des Videospiels Palim-Palim für den Zahlungsprozess.}
-\label{fig:PalimPalimGameplayloopBezahlen}
-\end{figure}
-
-% -- single page landscape --
-%\usepackage{lscape}
-%\usepackage{pdflscape}
-%\usepackage{geometry}
-%\newgeometry{margin=1cm} % Ränder kleiner
-%\begin{landscape}
-%\end{landscape}
-%\restoregeometry % Wieder die alten Ränder
-%\includegraphics[width=\paperwidth]
-
-\section{Sequenzdiagramme}
-\label{Sequenzdiagramme}
-
-\todo{grösser, damit lesbar, wie?}
-
-\begin{figure}[!htb]
-\includegraphics[width=\textwidth]{Sequenzdiagramm_Objekt_vom_Vorrat_auf_den_Tresen}
-\caption[Caption for LOF]{Sequenzdiagramm für die Aktion, wenn ein Objekt vom Vorrat auf den Tresen gezogen wird.}
-\label{fig:SequenzdiagrammVorratTresen}
-\end{figure}
-
-\begin{figure}[!htb]
-\includegraphics[width=\textwidth]{Sequenzdiagramm_Objekt_in_den_Einkaufskorb_und_Ende_des_Spiels}
-\caption[Caption for LOF]{Sequenzdiagramm für die Aktion, wenn ein Objket in den Einkaufskorb gelegt wird und das Spiel danach eventuell beendet ist.}
-\label{fig:SequenzdiagrammEinkaufskorbSpielEnde}
-\end{figure}
-
-\section{Designentwürfe zu Videomodi 4 und 5}
-\label{designEntwurfVideomodi4und5}
-
-\todo{sind glaubs keine lizenzfreien bilder, was sollen wir da machen?}
-
-\begin{figure}[!htb]
-\includegraphics[width=\textwidth]{Designentwurf_Videomodi45_Glace}
-\caption[Caption for LOF]{Designentwurf «Glacé» für Videomodi 4 und 5. Perspektive des Kindes (links) und der betagten Person (rechts).}
-\label{fig:DesignentwurfGlace}
-\end{figure}
-
-\begin{figure}[!htb]
-\includegraphics[width=\textwidth]{Designentwurf_Videomodi45_Verkleidung}
-\caption[Caption for LOF]{Designentwurf «Verkleidung» für Videomodi 4 und 5. Perspektive des Kindes.}
-\label{fig:DesignentwurfVerkleidung}
-\end{figure}
+\includepdf[page=-]{informationen-spieletests}
+\includepdf[page=-]{einverstaendniserklaerung}
+\includepdf[page=-]{testprotokoll}
+\includepdf[page=-]{transkription-spieletest}
 
 \end{document}
