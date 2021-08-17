@@ -328,7 +328,7 @@ Der Gameplay-Loop von Palim-Palim ist in der nachfolgenden Abbildung \ref{fig:Pa
 		
 \begin{figure}[!htb]
 \includegraphics[width=\textwidth]{PalimPalim_Gameplayloop}
-\caption[Caption for LOF]{Der Gameplayloop des Videospiels Palim-Palim (eigene Darstellung).}
+\caption[Caption for LOF]{Der Gameplayloop des Videospiels Palim-Palim.}
 \label{fig:PalimPalimGameplayloop}
 \end{figure}
 		
@@ -344,19 +344,19 @@ Damit der Einfluss der Videotelefonie als Teil des Spiels messbar wird, implemen
 In der ersten Variante sehen sich die Spielenden nicht. Sie können aber per Audio miteinander kommunizieren. Wie in der Abbildung \ref{fig:PalimPalimVideomodus1} ersichtlich ist, werden die Verkaufsperson sowie die einkaufende Person durch Illustrationen dargestellt.
 \begin{figure}[!h]
 \includegraphics[width=\textwidth]{PalimPalim_Videomodus_1}
-\caption[Caption for LOF]{Das Videospiel Palim-Palim im Videomodus 1. Perspektive der betagten Person (links) und des Kindes (rechts) (eigene Darstellung).}
+\caption[Caption for LOF]{Das Videospiel Palim-Palim im Videomodus 1. Perspektive der betagten Person (links) und des Kindes (rechts).}
 \label{fig:PalimPalimVideomodus1}
 \end{figure}\\
 Der Screenshot des zweiten Videomodus (Abbildung \ref{fig:PalimPalimVideomodus2}) zeigt, dass in diesem Modus die Videos der Spielenden unabhängig von der Gameszene in einer Ecke des Bildschirms dargestellt werden. Identisch zum ersten Modus werden die Personen durch Illustrationen ersetzt.\\\\
 \begin{figure}[!h]
 \includegraphics[width=\textwidth]{PalimPalim_Videomodus_2}
-\caption[Caption for LOF]{Das Videospiel Palim-Palim im Videomodus 2. Perspektive der betagten Person (links) und des Kindes (rechts) (eigene Darstellung).}
+\caption[Caption for LOF]{Das Videospiel Palim-Palim im Videomodus 2. Perspektive der betagten Person (links) und des Kindes (rechts).}
 \label{fig:PalimPalimVideomodus2}
 \end{figure}\\
 Der Videomodus 3 rendert die Videos der Spielenden an die Position der ein- und verkaufenden Person. Dadurch soll der Eindruck entstehen, das Kind stünde hinter dem Tresen und verkauft Objekte. Die Grossmutter oder der Grossvater des Kindes ist analog auf der anderen Seite des Tresens platziert und spielt die Kundschaft. Diese Szenerie wird in Abbildung \ref{fig:PalimPalimVideomodus3} gezeigt.
 \begin{figure}[!h]
 \includegraphics[width=\textwidth]{PalimPalim_Videomodus_3}
-\caption[Caption for LOF]{Das Videospiel Palim-Palim im Videomodus 3. Perspektive der betagten Person (links) und des Kindes (rechts) (eigene Darstellung).}
+\caption[Caption for LOF]{Das Videospiel Palim-Palim im Videomodus 3. Perspektive der betagten Person (links) und des Kindes (rechts).}
 \label{fig:PalimPalimVideomodus3}
 \end{figure}\\
 
@@ -399,7 +399,7 @@ Als Fallback-Verbindung wird im produktiven Betrieb einer WebRTC-Anwendung unbed
 Gemäss Auswertungen des WebRTC Call Quality Dienstleisters callstats.io haben im Durchschnitt etwa 30 Prozent aller WebRTC-Sessions einen Client, der sich über einen TURN-Server verbindet \cite{callstats_why_nodate}. Das heisst in etwa 70 Prozent der Fälle kann die Peer-to-Peer-Verbindung direkt aufgebaut werden. In diesem Fall wird ein TURN-Server überhaupt nicht benötigt. Trotzdem muss bei jeder Verbindung mindestens eine TURN-Serveraddresse angegeben werden. So kann garantiert werden, dass alle Clients in der Lage sind, miteinander zu kommunizieren.\\\\
 \begin{figure}[h!]
 \includegraphics[width=\textwidth]{WebRTC_nat_stun_firewall_turn_black}
-\caption[Caption for LOF]{STUN, TURN, und Signaling in WebRTC (eigene Darstellung).}
+\caption[Caption for LOF]{STUN, TURN, und Signaling in WebRTC (Quelle: \cite{connect_introducing_2018} - teilweise modifiziert).}
 \end{figure}
 			
 \subsection{Sicherheit}
@@ -411,7 +411,7 @@ Somit lässt sich WebRTC als eigenständiges Framework für Videotelefonie als s
 Three.js ist eine 3D-Bibliothek, welche die Web Graphics Library (WebGL) \cite{noauthor_notitle_nodate} verwendet, um 3D-Inhalte im Browser darzustellen \cite{noauthor_threejs_nodate}. WebGL ist eine Rasterisierungs-Engine, das bedeutet, dass sie nur Punkte, Linien und Dreiecke zeichnet. Erst auf Basis des Codes entstehen dreidimensionale Objekte \cite{noauthor_webgl_nodate}. In Three.js stehen primitive 3D-Objekte genauso wie beispielsweise Lichter, Schatten, Materialien oder Texturen als vorgefertigte Ressourcen zur Verfügung \cite{noauthor_threejs_nodate}. Diese werden in einer Struktur angeordnet, welche beispielhaft in Abbildung \ref{fig:threejsstructure} ersichtlich ist.\\\\
 \begin{figure}[h!]
 \includegraphics[width=\textwidth]{threejs_structure}
-\caption[Caption for LOF]{Die Struktur einer typischen three.js-Anwendung (Quelle \cite{noauthor_threejs_nodate}).}
+\caption[Caption for LOF]{Die Struktur einer typischen three.js-Anwendung (Quelle: \cite{noauthor_threejs_nodate}).}
 \label{fig:threejsstructure}
 \end{figure}
 Das oberste Element einer Three.js-Struktur ist der Renderer. Dieser nimmt eine Szene (Scene) und eine Kamera (Camera) entgegen. Er zeichnet den im Blickfeld befindlichen Teil der 3D-Scene auf eine 2D-Leinwand. In der Scene werden Lichter (Light), 3D-Objekte (Object3D) und Kameras (Camera) platziert. Die Scene ist die Wurzel einer Baumstruktur, in welcher Kinder relativ zu ihren Eltern ausgerichtet werden. Mesh-Objekte sind gezeichnete Formen (Geometry) mit einem bestimmten Material. Geometry- und Material-Objekte können von verschiedenen Mesh-Objekten verwendet werden. Three.js bietet bereits einige primitive Geometry-Objekte an, wie beispielsweise Würfel (Cube), Zylinder (Cylinder) oder Kegel (Cone). Es können aber auch eigene Formen erstellt oder aus einer Datei importiert werden. Material-Objekte repräsentieren die Oberflächenbeschaffenheit eines Objekts, wie zum Beispiel die Farbe oder wie fest ein Objekt spiegelt \cite{noauthor_threejs_nodate}.
@@ -421,7 +421,7 @@ In diesem Kapitel werden die einzelnen Komponenten von Palim-Palim und deren Imp
 Die Struktur von Palim-Palim ist bewusst so aufgebaut, dass die Videochat-Funktionalität möglichst von der Gamelogik entkoppelt ist. Dadurch ist es einfacher, den Videochat auch in anderen Spielen zu integrieren. Ebenfalls wurde damit eine möglichst solide Grundlage zur Entwicklung eines entsprechenden Frameworks gelegt. Dies spiegelt sich auch im Klassndiagramm wieder (siehe Abbildung \ref{fig:AppClassDiagram}). Das Spiel hat dabei nur eine einzige Abhängigkeit zur PeerConnectionManager-Klasse, welche den Videochat implementiert.
 \begin{figure}[!h]
 \includegraphics[width=\textwidth]{AppClassDiagram}
-\caption[Caption for LOF]{Klassendiagramm der wichtigsten Komponenten von Palim-Palim (eigene Darstellung).}
+\caption[Caption for LOF]{Klassendiagramm der wichtigsten Komponenten von Palim-Palim.}
 \label{fig:AppClassDiagram}
 \end{figure}
 
@@ -430,7 +430,7 @@ Die PeerconnectionManager-Klasse übernimmt zentrale Funktionen wie das Betreten
 Um alle diese Funktionen innerhalb dieser Klasse möglichst übersichtlich umzusetzen, ist die PeerConnectionManager-Klasse von Palim-Palim selbst in einzelne Unterklassen mit den entsprechenden Teilverantwortlichkeiten aufgeteilt. Diese Komponenten sind in der Abbildung \ref{fig:PeerConnectionManagerDiagram} dargestellt. Die einzelnen Zuständigkeiten der Klassen werden in den nachfolgenden Kapiteln \ref{roomManager}, \ref{videoChatManager} und \ref{dataChannelManager} vorgestellt.
 \begin{figure}[!htb]
 \includegraphics[width=\textwidth]{PeerConnectionManagerDiagram}
-\caption[Caption for LOF]{Klassendiagramm der PeerConnectionManager-Klasse und deren Subklassen (eigene Darstellung).}
+\caption[Caption for LOF]{Klassendiagramm der PeerConnectionManager-Klasse und deren Subklassen.}
 \label{fig:PeerConnectionManagerDiagram}
 \end{figure}\\\\
 In der PeerConnectionManager-Klasse selbst findet der Aufbau der Peer-to-Peer-Verbindung statt. Die Klasse instanziiert hierzu ein PeerConnection-Objekt, welches die RTCPeerConnection erweitert. RTCPeerConnection ist die API, welche von WebRTC-Anwendungen verwendet wird, um eine Verbindung zwischen Peers herzustellen sowie Audio und Video zu übertragen \cite{noauthor_rtcpeerconnection_nodate-1}. Dieses PeerConnection-Objekt stellt eine WebRTC-Verbindung zwischen dem lokalen Computer und einem entfernten Client dar. Sie bietet Methoden, um eine Verbindung zur Gegenseite herzustellen, die Verbindung aufrechtzuerhalten und zu überwachen sowie die Verbindung zu schliessen, wenn sie nicht mehr benötigt wird. Der PeerConnectionManager orchestriert über dieses Objekt den Verbindungsaufbau und dient als einzige Schnittstelle des Videochats zum Rest der Applikation.
@@ -439,7 +439,7 @@ In der PeerConnectionManager-Klasse selbst findet der Aufbau der Peer-to-Peer-Ve
 \subsection{RoomManager}\label{roomManager}
 Der RoomManager ist die einzige Schnittstelle zum Server und für das Signaling zuständig. Er besitzt die Verantwortung über die clientseitige Socket.io-Verbindung. Der RoomManager ermöglicht es somit einem Client via Socket.io einem Raum beizutreten. Ebenfalls wird er vom PeerConnectionManager verwendet, um Signaling-Nachrichten an den Server zu versenden sowie diese zu empfangen. Auf dem Server werden die Anfragen der einzelnen Clients verarbeitet, wie in Kapitel \ref{server} beschrieben ist.\begin{figure}[!h]
 \includegraphics[width=\textwidth]{RoomManagerSd_noFrame}
-\caption[Caption for LOF]{Nachrichtenfluss beim Betreten eines Raumes (eigene Darstellung).}
+\caption[Caption for LOF]{Nachrichtenfluss beim Betreten eines Raumes.}
 \label{fig:sequenzJoinRoom}
 \end{figure}\\\\
 Ein typischer Nachrichtenfluss ist in Abbildung \ref{fig:sequenzJoinRoom} dargestellt. Client A beginnt denn Prozess mittels einer «create or join»-Nachricht. Diese bewirkt das Erstellen eines neuen Raumes auf dem Signaling-Server. Die Nachricht enthält zusätzlich einen Identifikator des Raumes. Der Server erstellt diesen Socket.io-Raum und bestätigt dies Client A mit einer «created»-Nachricht. Client B möchte nun dem Raum mit dem gleichen Identifikator beitreten. Der Server erkennt, dass dieser Raum bereits existiert. Er schickt daher eine «joinRequest»-Nachricht an Client A. An diesem Punkt könnte von Client A die Authentifizierung des potenziellen Peers stattfinden. Palim-Palim implementiert hierzu allerdings noch keine Logik. Client B wird automatisch dem Raum von Client A zugewiesen. Über den gemeinsamen Socket.io-Raum wird anschliessend der typische WebRTC-Signaling-Prozess \cite{noauthor_webrtc_nodate-4} durchgeführt.
@@ -449,7 +449,7 @@ Sobald der Spielende einen Raum betritt, wird via VideoChatManager der lokale Vi
 Auf der Gegenseite wird durch das Hinzufügen des Tracks ein "trackAdded"-Event ausgelöst \cite{noauthor_webrtc_nodate-1}. Aus diesem Event extrahiert der VideoChatManager den Remotevideo-Stream. Dieser wird dem DOM hinzugefügt, wodurch eine Videokonferenz zwischen den beiden Mitspielenden entsteht. Dieser Prozess ist als Sequenzdiagramm in Abbildung \ref{fig:videoSequenz} veranschaulicht.
 \begin{figure}[!h]
 \includegraphics[width=\textwidth]{VideoChatManager}
-\caption[Caption for LOF]{Sequenzdiagramm zur Erstellung der Video-Verbindung (eigene Darstellung).}
+\caption[Caption for LOF]{Sequenzdiagramm zur Erstellung der Video-Verbindung.}
 \label{fig:videoSequenz}
 \end{figure}\\\\
 
@@ -491,7 +491,7 @@ Wie im Kapitel \ref{DesignUndUsability} beschrieben, benötigen die Verkaufsobje
 Als virtuelles Regal dient eine Box (blauer Linienquader in Abbildung \ref{fig:SpielszeneMitHilfslinien}) auf der Seite des Verkaufspersonals. Werden Objekte in den Bereich dieser Box gezogen, werden sie wieder an ihre Ursprungsposition im vituellen Regal gesetzt.
 \begin{figure}[!htb]
 \includegraphics[width=0.6\textwidth]{Spielszene_mit_Hilfslinien}
-\caption[Caption for LOF]{Die Spielszene des Verkaufspersonals inklusive Hilfslinien, um virtuelle Ebenen und Quader zu sehen (eigene Darstellung).}
+\caption[Caption for LOF]{Die Spielszene des Verkaufspersonals inklusive Hilfslinien, um virtuelle Ebenen und Quader zu sehen.}
 \label{fig:SpielszeneMitHilfslinien}
 \end{figure}\\\\
 
@@ -626,7 +626,7 @@ Brugg, 20.08.2021
 
 \begin{figure}[!htb]
 \includegraphics[width=\textwidth]{PalimPalim_Gameplayloop_Bezahlen}
-\caption[Caption for LOF]{Der angedachte Gameplayloop des Videospiels Palim-Palim für den Zahlungsprozess (eigene Darstellung).}
+\caption[Caption for LOF]{Der angedachte Gameplayloop des Videospiels Palim-Palim für den Zahlungsprozess.}
 \label{fig:PalimPalimGameplayloopBezahlen}
 \end{figure}
 
@@ -647,13 +647,13 @@ Brugg, 20.08.2021
 
 \begin{figure}[!htb]
 \includegraphics[width=\textwidth]{Sequenzdiagramm_Objekt_vom_Vorrat_auf_den_Tresen}
-\caption[Caption for LOF]{Sequenzdiagramm für die Aktion, wenn ein Objekt vom Vorrat auf den Tresen gezogen wird.  (eigene Darstellung).}
+\caption[Caption for LOF]{Sequenzdiagramm für die Aktion, wenn ein Objekt vom Vorrat auf den Tresen gezogen wird.}
 \label{fig:SequenzdiagrammVorratTresen}
 \end{figure}
 
 \begin{figure}[!htb]
 \includegraphics[width=\textwidth]{Sequenzdiagramm_Objekt_in_den_Einkaufskorb_und_Ende_des_Spiels}
-\caption[Caption for LOF]{Sequenzdiagramm für die Aktion, wenn ein Objket in den Einkaufskorb gelegt wird und das Spiel danach eventuell beendet ist (eigene Darstellung).}
+\caption[Caption for LOF]{Sequenzdiagramm für die Aktion, wenn ein Objket in den Einkaufskorb gelegt wird und das Spiel danach eventuell beendet ist.}
 \label{fig:SequenzdiagrammEinkaufskorbSpielEnde}
 \end{figure}
 
@@ -664,13 +664,13 @@ Brugg, 20.08.2021
 
 \begin{figure}[!htb]
 \includegraphics[width=\textwidth]{Designentwurf_Videomodi45_Glace}
-\caption[Caption for LOF]{Designentwurf «Glacé» für Videomodi 4 und 5. Perspektive des Kindes (links) und der betagten Person (rechts) (eigene Darstellung).}
+\caption[Caption for LOF]{Designentwurf «Glacé» für Videomodi 4 und 5. Perspektive des Kindes (links) und der betagten Person (rechts).}
 \label{fig:DesignentwurfGlace}
 \end{figure}
 
 \begin{figure}[!htb]
 \includegraphics[width=\textwidth]{Designentwurf_Videomodi45_Verkleidung}
-\caption[Caption for LOF]{Designentwurf «Verkleidung» für Videomodi 4 und 5. Perspektive des Kindes (eigene Darstellung).}
+\caption[Caption for LOF]{Designentwurf «Verkleidung» für Videomodi 4 und 5. Perspektive des Kindes.}
 \label{fig:DesignentwurfVerkleidung}
 \end{figure}
 
