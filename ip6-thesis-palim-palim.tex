@@ -433,14 +433,13 @@ In der PeerConnectionManager-Klasse selbst findet der Aufbau der Peer-to-Peer-Ve
 
 \newpage
 \subsection{RoomManager}\label{roomManager}
-Der RoomManager ist die einzige Schnittstelle zum Server und für das Signaling zuständig. Er besitzt die Verantwortung über die clientseitige Socket.io-Verbindung. Der RoomManager ermöglicht es somit einem Client via Socket.io einem Raum beizutreten. Ebenfalls wird er vom PeerConnectionManager verwendet, um Signaling-Nachrichten an den Server zu versenden sowie diese zu empfangen. Auf dem Server werden die Anfragen der einzelnen Clients verarbeitet, wie in Kapitel \ref{server} beschrieben ist.\\\\
-
-\begin{figure}[!htb]
+Der RoomManager ist die einzige Schnittstelle zum Server und für das Signaling zuständig. Er besitzt die Verantwortung über die clientseitige Socket.io-Verbindung. Der RoomManager ermöglicht es somit einem Client via Socket.io einem Raum beizutreten. Ebenfalls wird er vom PeerConnectionManager verwendet, um Signaling-Nachrichten an den Server zu versenden sowie diese zu empfangen. Auf dem Server werden die Anfragen der einzelnen Clients verarbeitet, wie in Kapitel \ref{server} beschrieben ist.\begin{figure}[!h]
 \includegraphics[width=\textwidth]{RoomManagerSd_noFrame}
 \caption[Caption for LOF]{Nachrichtenfluss beim Betreten eines Raumes (eigene Darstellung).}
-\end{figure}
+\label{fig:sequenzJoinRoom}
+\end{figure}\\\\
+Ein typischer Nachrichtenfluss ist in Abbildung \ref{fig:sequenzJoinRoom} dargestellt. Client A beginnt denn Prozess mittels einer «create or join»-Nachricht. Diese bewirkt das Erstellen eines neuen Raumes auf dem Signaling-Server. Die Nachricht enthält zusätzlich einen Identifikator des Raumes. Der Server erstellt diesen Socket.io-Raum und bestätigt dies Client A mit einer «created»-Nachricht. Client B möchte nun dem Raum mit dem gleichen Identifikator beitreten. Der Server erkennt, dass dieser Raum bereits existiert. Er schickt daher eine «joinRequest»-Nachricht an Client A. An diesem Punkt könnte von Client A die Authentifizierung des potenziellen Peers stattfinden. Palim-Palim implementiert hierzu allerdings noch keine Logik. Client B wird automatisch dem Raum von Client A zugewiesen. Über den gemeinsamen Socket.io-Raum wird anschliessend der typische WebRTC-Signaling-Prozess \cite{noauthor_webrtc_nodate-4} durchgeführt.
 
-\newpage 
 \subsection{VideoChatManager}\label{videoChatManager}
 Sobald der Spielende einen Raum betritt, wird via VideoChatManager der lokale Video- und Audiostream initiiert. Dies geschieht via Navigator \cite{noauthor_navigator_nodate}, wodurch der Browser um die Erlaubnis zur Verwendung des Mikrofons und der Kamera bittet. Erst wenn diese Erlaubnis gegeben wurde, kann auf die Daten von Kamera und Mikrofon zugegriffen werden. Der VideoChatManager fügt dann den Stream dem entsprechenden DOM-Element (Document Object Model) hinzu, wodurch die Spielenden ihr eigenes Video sehen können. Ebenfalls löst dies in Palim-Palim ein «got user media»-Event aus, wodurch der PeerConnectionManager sowie der Signaling-Server informiert werden, dass dieser Client jetzt Zugriff auf lokale Video- und Audio-Daten hat. Diese Daten werden als MediaStreamTrack-Objekt \cite{noauthor_media_nodate} der PeerConnection hinzugefügt.\\\\
 Auf der Gegenseite wird durch das Hinzufügen des Tracks ein "trackAdded"-Event ausgelöst \cite{noauthor_webrtc_nodate-1}. Aus diesem Event extrahiert der VideoChatManager den Remotevideo-Stream. Dieser wird dem DOM hinzugefügt, wodurch eine Videokonferenz zwischen den beiden Mitspielenden entsteht. Dieser Prozess ist als Sequenzdiagramm in Abbildung \ref{fig:videoSequenz} veranschaulicht.
