@@ -67,7 +67,8 @@
 
 % -- pdf imports --
 \usepackage{pdfpages}
-
+\usepackage{lscape}
+\usepackage{pdflscape}
 
 \begin{document}
 
@@ -462,8 +463,8 @@ Der \textbf{GameSyncManager} hält die beiden Clients synchron. Vom GameLobbyMan
 Der \textbf{SceneManager} ist die zentrale Steuereinheit der 3D-Spielszene. Alle Änderungen an der Scene geschehen über ihn. Das Laden der 3D-Objekte, welches ebenfalls vom SceneManager übernommen wird, ist im nachfolgenden Kapitel \ref{3DObjekteLaden} genauer erklärt.\\\\
 Der \textbf{AudioManager} ist befähigt Audio-Dateien abzuspielen.\\\\
 Über den \textbf{ShoppingListManager} wird die Einkaufsliste zufällig generiert. Dabei werden zwischen drei und fünf Verkaufsobjekte aus den möglichen Objekten ausgewählt, in einer Map gespeichert und über den SceneManager im Spiel angezeigt.\\\\
-Der \textbf{GameStateManager} überprüft, ob das Ziel des Spiels bereits erreicht wurde. Dabei wird die Einkaufslisten-Map mit den Objekten im virtuellen Einkaufskorb (Instanz der Basket-Klasse) abgeglichen. Dies erfolgt jeweils beim Hinzufügen eines Objekts in den Einkaufskorb. Im Erfolgsfall wird über den GameSyncManager eine Nachricht an den anderen Client verschickt. Gleichzeitig wird lokal ein entsprechendes Event ausgelöst. Der gesamte Prozess vom Ziehen eines Objekts in den Einkaufskorb bis zum Ende des Spiels wird auf dem Sequenzdiagramm im Anhang \ref{Sequenzdiagramme} auf Abbildung \ref{fig:SequenzdiagrammEinkaufskorbSpielEnde} gezeigt.\\\\
-Der \textbf{InteractionManager} sorgt dafür, dass Benutzerinteraktionen in der 3D-Welt zu einer Aktion führen. Das genaue Handling dieser Interaktionen wird im Kapitel \ref{interaktionen} beschrieben. In welchen Klassen dabei welche Methoden und Funktionen aufgerufen werden und was alles mit dem Verschieben eines Objekts zusammenhängt, zeigt das Squenzdiagramm im Anhang \ref{Sequenzdiagramme} auf Abbildung \ref{fig:SequenzdiagrammVorratTresen}.\\\\
+Der \textbf{GameStateManager} überprüft, ob das Ziel des Spiels bereits erreicht wurde. Dabei wird die Einkaufslisten-Map mit den Objekten im virtuellen Einkaufskorb (Instanz der Basket-Klasse) abgeglichen. Dies erfolgt jeweils beim Hinzufügen eines Objekts in den Einkaufskorb. Im Erfolgsfall wird über den GameSyncManager eine Nachricht an den anderen Client verschickt. Gleichzeitig wird lokal ein entsprechendes Event ausgelöst. Der gesamte Prozess vom Ziehen eines Objekts in den Einkaufskorb bis zum Ende des Spiels wird auf dem Sequenzdiagramm «Objekt in den Einkaufskorb und Ende des Spiels» im Anhang \ref{Sequenzdiagramme} gezeigt.\\\\
+Der \textbf{InteractionManager} sorgt dafür, dass Benutzerinteraktionen in der 3D-Welt zu einer Aktion führen. Das genaue Handling dieser Interaktionen wird im Kapitel \ref{interaktionen} beschrieben. In welchen Klassen dabei welche Methoden und Funktionen aufgerufen werden und was alles mit dem Verschieben eines Objekts zusammenhängt, zeigt das Squenzdiagramm «Objekt vom Vorrat auf den Tresen» im Anhang \ref{Sequenzdiagramme}.\\\\
 	
 \subsection{3D-Objekte}
 \label{3DObjekteLaden}
@@ -659,24 +660,18 @@ Brugg, 20.08.2021
 
 \chapter{Implementation}
 
-\section{Readme}\label{readme}
+\section{Readme}
+\label{readme}
+
 \section{Sequenzdiagramme}
+\label{Sequenzdiagramme}
 
 \includepdf[page=-]{README}
 
-\label{Sequenzdiagramme}
-\begin{figure}[!h]
-\includegraphics[width=\textwidth]{Sequenzdiagramm_Objekt_vom_Vorrat_auf_den_Tresen}
-\caption[Caption for LOF]{Sequenzdiagramm für die Aktion, wenn ein Objekt vom Vorrat auf den Tresen gezogen wird.}
-\label{fig:SequenzdiagrammVorratTresen}
-\end{figure}
-\begin{figure}[!h]
-\includegraphics[width=\textwidth]{Sequenzdiagramm_Objekt_in_den_Einkaufskorb_und_Ende_des_Spiels}
-\caption[Caption for LOF]{Sequenzdiagramm für die Aktion, wenn ein Objket in den Einkaufskorb gelegt wird und das Spiel danach eventuell beendet ist.}
-\label{fig:SequenzdiagrammEinkaufskorbSpielEnde}
-\end{figure}
-
-\todo{grösser, damit lesbar, wie?}
+\begin{landscape}
+\includepdf[page=-]{sequenzdiagram-einkaufskorb-ende}
+\includepdf[page=-]{sequenzdiagram-interaktion}
+\end{landscape}
 
 \chapter{Administratives}
 
