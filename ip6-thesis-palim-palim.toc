@@ -1,166 +1,218 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\babel@toc {german}{}
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Titelblatt}{1}{}%
+\babel@toc {ngerman}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Projekt-Team}{1}{}%
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Auftraggeber und Betreuung FHNW}{1}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Zeitbudget}{1}{}%
+\contentsline {paragraph}{Experte}{1}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Zeitbudget}{2}{}%
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Wichtigste Daten}{2}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Einleitung}{3}{}%
+\contentsline {chapter}{\numberline {1}Einleitung}{4}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Teil 1 / Was wurde erreicht?}{3}{}%
+\contentsline {chapter}{\numberline {2}Umfeldanalyse}{7}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Teil 2 / Warum wurde es gemacht?}{3}{}%
+\contentsline {chapter}{\numberline {3}Intergenerationelles Spielen}{8}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Teil 3 / Wie wurde es gemacht?}{3}{}%
+\contentsline {chapter}{\numberline {4}Videochats in Videospielen}{10}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Teil 4}{3}{}%
+\contentsline {chapter}{\numberline {5}Aufstellung der Forschungsfragen}{12}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\emph {\color {blue} Erkenntnisse}}{4}{}%
+\contentsline {section}{\numberline {5.1}Hauptfragestellung}{12}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\emph {\color {blue} Grobe Systemarchitektur, verwendete Methoden und Konzepte}}{5}{}%
+\contentsline {paragraph}{Kind: }{12}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Umfeldanalyse und Zielgruppe}{6}{}%
+\contentsline {paragraph}{Betagte Person:}{13}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Kind}{6}{}%
+\contentsline {section}{\numberline {5.2}Einzelfragestellungen im thematischen Zusammenhang}{13}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Betagte Person}{6}{}%
+\contentsline {subsection}{\numberline {5.2.1}Fragestellungen zur User Experience}{13}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Intergenerationelles Spielen}{7}{}%
+\contentsline {subsection}{\numberline {5.2.2}Fragestellungen zur Kommunikation}{14}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Videochats in Videospielen}{8}{}%
+\contentsline {chapter}{\numberline {6}Methoden}{15}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Aufstellung der Forschungsfragen}{9}{}%
+\contentsline {chapter}{\numberline {7}Spieletests und Resultate}{17}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Hauptfragestellung}{9}{}%
+\contentsline {section}{\numberline {7.1}Resultate der Spieletests mit betagten Menschen}{17}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Einzelfragen im thematischen Zusammenhang}{10}{}%
+\contentsline {section}{\numberline {7.2}Resultate der Spieletests mit Kindern}{19}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}Spezifische Fragestellung zur User Experience:}{10}{}%
+\contentsline {section}{\numberline {7.3}Beantwortung der Forschungsfragen}{20}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{1. Wie beeinflusst die Einbindung von Video-Telefonie die User Experience in Videospielen?}{10}{}%
+\contentsline {subsubsection}{Fragestellung 1a: Welche Wirkung hat ein integrierter Videochat auf das Spielerlebnis von betagten Menschen?}{20}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Fragestellung 1a:}{10}{}%
+\contentsline {subsubsection}{Hypothese 1a: Ein integrierter Videochat hat eine positive Wirkung auf das Spielerlebnis von betagten Menschen.}{20}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Hypothese 1a:}{10}{}%
+\contentsline {subsubsection}{Fragestellung 1b: Welche Wirkung hat ein integrierter Videochat auf das Spielerlebnis von Kindern?}{21}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Fragestellung 1b:}{10}{}%
+\contentsline {subsubsection}{Hypothese 1b: Ein integrierter Videochat hat eine positive Wirkung auf das Spielerlebnis von Kindern.}{21}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Hypothese 1b:}{10}{}%
+\contentsline {subsubsection}{Fragestellung 1c: Welche Auswirkungen hat die Art und Weise, wie der Videochat in das Spiel integriert ist, auf das Spielerlebnis?}{22}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Fragestellung 1c:}{10}{}%
+\contentsline {subsubsection}{Hypothese 1c: Je stärker der Videochat ins Gameplay integriert ist, desto positiver ist das Spielerlebnis.}{22}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Hypothese 1c:}{10}{}%
+\contentsline {subsubsection}{Fragestellung 2a: Welche Wirkung hat ein integrierter Videochat auf die Kommunikation zwischen den Spielenden?}{22}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.2}Fragestellung zur Kommunikation:}{10}{}%
+\contentsline {subsubsection}{Hypothese 2a: Ein im Spiel integrierter Videochat fördert die Kommunikation zwischen den Spielenden.}{22}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{2. Wie beeinflusst die Einbindung von Video-Telefonie die Kommunikation in Videospielen?}{10}{}%
+\contentsline {subsubsection}{Fragestellung 2b: Wird ein integrierter Videochat aktiv als Kommunikationsmittel zur Bewältigung von Spielaufgaben genutzt?}{23}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Fragestellung 2a:}{10}{}%
+\contentsline {subsubsection}{Hypothese 2b: Der Videochat wird aktiv als Kommunikationsmittel zur Bewältigung der Spielaufgabe verwendet.}{23}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Hypothese 2a:}{11}{}%
+\contentsline {subsubsection}{Fragestellung 2c: Welche Auswirkungen hat die Art und Weise, wie der Videochat in das Spiel integriert ist, auf die Förderung der Kommunikation?}{23}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Fragestellung 2b:}{11}{}%
+\contentsline {subsubsection}{Hypothese 2c: Je stärker der Videochat ins Spiel integriert ist, desto angeregter ist der Austausch zwischen den Spielenden.}{23}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Hypothese 2b:}{11}{}%
+\contentsline {chapter}{\numberline {8}Game Design}{24}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Fragestellung 2c:}{11}{}%
+\contentsline {section}{\numberline {8.1}Ideenfindung}{24}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{Hypothese 2c:}{11}{}%
+\contentsline {section}{\numberline {8.2}Spielkonzept}{25}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Methoden}{12}{}%
+\contentsline {section}{\numberline {8.3}Videomodi}{26}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Spieletests und Resultate}{13}{}%
+\contentsline {section}{\numberline {8.4}Design und Usability}{28}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Resultate}{13}{}%
+\contentsline {chapter}{\numberline {9}Technologien}{30}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.1}Erkenntnisse von Seiten der betagten Menschen}{13}{}%
+\contentsline {section}{\numberline {9.1}Technologiewahl}{30}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Allgemein}{13}{}%
+\contentsline {section}{\numberline {9.2}WebRTC}{31}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Menu und Spielführung}{13}{}%
+\contentsline {subsection}{\numberline {9.2.1}Signaling-Server}{31}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Anleitung}{14}{}%
+\contentsline {subsection}{\numberline {9.2.2}STUN- und TURN-Server}{32}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Spiel}{14}{}%
+\contentsline {subsection}{\numberline {9.2.3}Sicherheit}{34}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Was funktioniert gut}{15}{}%
+\contentsline {section}{\numberline {9.3}Three.js}{34}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Ideen/Wünsche:}{16}{}%
+\contentsline {chapter}{\numberline {10}Implementation}{36}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.2}Erkenntnisse von Seiten der Kinder}{18}{}%
+\contentsline {section}{\numberline {10.1}PeerConnectionManager}{37}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.3}Allgemeine Erkenntnisse}{18}{}%
+\contentsline {subsection}{\numberline {10.1.1}RoomManager}{38}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.4}Notizen zur Beantwortung der Forschungsfragen}{18}{}%
+\contentsline {subsection}{\numberline {10.1.2}VideoChatManager}{39}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{1a}{18}{}%
+\contentsline {subsection}{\numberline {10.1.3}DataChannelManager}{40}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{1b}{18}{}%
+\contentsline {section}{\numberline {10.2}Game}{40}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{1c}{18}{}%
+\contentsline {subsection}{\numberline {10.2.1}3D-Objekte}{42}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{2a}{19}{}%
+\contentsline {subsection}{\numberline {10.2.2}Interaktionen}{43}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{2b}{19}{}%
+\contentsline {subsection}{\numberline {10.2.3}Gampeplay-Synchronisation}{44}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{2c}{19}{}%
+\contentsline {section}{\numberline {10.3}Server}{45}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Planung und Durchführung der Spieletests}{19}{}%
+\contentsline {chapter}{\numberline {11}Fazit}{47}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Gamedesign}{21}{}%
+\contentsline {section}{\numberline {11.1}Reflexion}{48}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.1}Spielkonzept}{21}{}%
+\contentsline {section}{\numberline {11.2}Mögliche Weiterentwicklungen von Palim-Palim}{49}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1.1}Gameplay-Loops}{21}{}%
+\contentsline {subsection}{\numberline {11.2.1}Überarbeitung Raumkonzept}{49}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.2}Spielvarianten}{22}{}%
+\contentsline {subsection}{\numberline {11.2.2}Interaktives Tutorial}{49}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.3}Design und Usability}{22}{}%
+\contentsline {subsection}{\numberline {11.2.3}Gemeinsame Menuführung}{50}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Technologien}{23}{}%
+\contentsline {subsection}{\numberline {11.2.4}Verbesserung Design und Usability}{50}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.1}WebRTC}{23}{}%
+\contentsline {subsection}{\numberline {11.2.5}Umsetzung Videomodi 4 und 5}{50}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1.1}Signaling-Server}{23}{}%
+\contentsline {subsection}{\numberline {11.2.6}Mögliche Gameplay-Erweiterungen}{50}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1.2}STUN- und TURN-Server}{25}{}%
+\contentsline {subsection}{\numberline {11.2.7}Offene Probleme und Bugs}{52}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1.3}Sicherheit}{27}{}%
+\contentsline {chapter}{\numberline {12}Literaturverzeichnis}{53}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.2}Three.js}{28}{}%
+\contentsline {chapter}{\numberline {A}Ehrlichkeitserklärung}{61}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.2.1}Struktur}{28}{}%
+\contentsline {chapter}{\numberline {B}Ideenfindung und Game Design}{62}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {10}Implementation}{29}{}%
+\contentsline {section}{\numberline {B.1}Gameplayloop «Bezahlen»}{63}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.1}WebRTC}{29}{}%
+\contentsline {section}{\numberline {B.2}Designentwürfe zu Videomodi 4 und 5}{64}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.2}Three.js}{29}{}%
+\contentsline {section}{\numberline {B.3}Weitere Spielideen}{65}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.2.1}3D-Objekte laden}{29}{}%
+\contentsline {paragraph}{Bombe entschärfen}{65}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.2.2}Interaktionen}{29}{}%
+\contentsline {paragraph}{«Brain Out»}{65}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.2.3}Physik}{29}{}%
+\contentsline {paragraph}{Dr. Bibber mit Filter}{65}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.3}Architektur}{30}{}%
+\contentsline {paragraph}{«Drecksau»}{65}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.3.1}Gampeplay-Synchronisation}{30}{}%
+\contentsline {paragraph}{Escape Room}{65}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.4}Testing}{31}{}%
+\contentsline {paragraph}{FaceAPI}{65}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.5}Deployment und Betrieb (Anhang?)}{31}{}%
+\contentsline {paragraph}{Filter-Mania}{65}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {11}Fazit}{32}{}%
+\contentsline {paragraph}{Filter-Tabu}{65}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {12}Literaturverzeichnis}{33}{}%
+\contentsline {paragraph}{Gesicht zusammensetzen}{65}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Ehrlichkeitserklärung}{36}{}%
+\contentsline {paragraph}{Gesichtsberührungen}{66}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Testprotokolle, weitere Spielkonzepte/Ideenfindung... }{37}{}%
+\contentsline {paragraph}{Grössen-/Gewichtsverhältnisse}{66}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Ich sehe was, was du nicht siehst}{66}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Karikatur (Körperknickbilder)}{66}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Komponieren}{66}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Kooperatives Tetris}{66}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Labyrinth}{66}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Live Puzzle}{66}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Montagsmaler}{66}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Moorhuhn}{66}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Pokerface}{67}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Schere - Stein - Papier}{67}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Schweizer Reise}{67}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Turm bauen}{67}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Virtuelles Bilderbuch}{67}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Wimmelbild}{67}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Zaubersprüche}{67}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {C}Spieletests}{68}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {C.1}Informationen zu den Spieletests}{68}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {C.2}Einverständniserklärung}{68}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {C.3}Testprotokoll}{68}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {C.4}Transkription Spieletests}{68}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {D}Implementation}{86}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {D.1}Readme}{86}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {D.2}Sequenzdiagramme}{86}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {E}Administratives}{90}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {E.1}Projektklärung}{90}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {E.2}Projektänderungsantrag}{90}{}%
