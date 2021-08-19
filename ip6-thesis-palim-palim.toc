@@ -131,88 +131,90 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.2.7}Offene Probleme und Bugs}{52}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {12}Literaturverzeichnis}{53}{}%
+\contentsline {chapter}{Literaturverzeichnis}{53}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Ehrlichkeitserklärung}{61}{}%
+\contentsline {chapter}{Anhang}{61}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Ideenfindung und Game Design}{62}{}%
+\contentsline {chapter}{\numberline {A}Ehrlichkeitserklärung}{62}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.1}Gameplayloop «Bezahlen»}{63}{}%
+\contentsline {chapter}{\numberline {B}Ideenfindung und Game Design}{63}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.2}Designentwürfe zu Videomodi 4 und 5}{64}{}%
+\contentsline {section}{\numberline {B.1}Gameplayloop «Bezahlen»}{64}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.3}Weitere Spielideen}{65}{}%
+\contentsline {section}{\numberline {B.2}Designentwürfe zu Videomodi 4 und 5}{65}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Bombe entschärfen}{65}{}%
+\contentsline {section}{\numberline {B.3}Weitere Spielideen}{66}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{«Brain Out»}{65}{}%
+\contentsline {paragraph}{Bombe entschärfen}{66}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Dr. Bibber mit Filter}{65}{}%
+\contentsline {paragraph}{«Brain Out»}{66}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{«Drecksau»}{65}{}%
+\contentsline {paragraph}{Dr. Bibber mit Filter}{66}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Escape Room}{65}{}%
+\contentsline {paragraph}{«Drecksau»}{66}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{FaceAPI}{65}{}%
+\contentsline {paragraph}{Escape Room}{66}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Filter-Mania}{65}{}%
+\contentsline {paragraph}{FaceAPI}{66}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Filter-Tabu}{65}{}%
+\contentsline {paragraph}{Filter-Mania}{66}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Gesicht zusammensetzen}{65}{}%
+\contentsline {paragraph}{Filter-Tabu}{66}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Gesichtsberührungen}{66}{}%
+\contentsline {paragraph}{Gesicht zusammensetzen}{66}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Grössen-/Gewichtsverhältnisse}{66}{}%
+\contentsline {paragraph}{Gesichtsberührungen}{67}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Ich sehe was, was du nicht siehst}{66}{}%
+\contentsline {paragraph}{Grössen-/Gewichtsverhältnisse}{67}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Karikatur (Körperknickbilder)}{66}{}%
+\contentsline {paragraph}{Ich sehe was, was du nicht siehst}{67}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Komponieren}{66}{}%
+\contentsline {paragraph}{Karikatur (Körperknickbilder)}{67}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Kooperatives Tetris}{66}{}%
+\contentsline {paragraph}{Komponieren}{67}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Labyrinth}{66}{}%
+\contentsline {paragraph}{Kooperatives Tetris}{67}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Live Puzzle}{66}{}%
+\contentsline {paragraph}{Labyrinth}{67}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Montagsmaler}{66}{}%
+\contentsline {paragraph}{Live Puzzle}{67}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Moorhuhn}{66}{}%
+\contentsline {paragraph}{Montagsmaler}{67}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Pokerface}{67}{}%
+\contentsline {paragraph}{Moorhuhn}{67}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Schere - Stein - Papier}{67}{}%
+\contentsline {paragraph}{Pokerface}{68}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Schweizer Reise}{67}{}%
+\contentsline {paragraph}{Schere - Stein - Papier}{68}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Turm bauen}{67}{}%
+\contentsline {paragraph}{Schweizer Reise}{68}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Virtuelles Bilderbuch}{67}{}%
+\contentsline {paragraph}{Turm bauen}{68}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Wimmelbild}{67}{}%
+\contentsline {paragraph}{Virtuelles Bilderbuch}{68}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Zaubersprüche}{67}{}%
+\contentsline {paragraph}{Wimmelbild}{68}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {C}Spieletests}{68}{}%
+\contentsline {paragraph}{Zaubersprüche}{68}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C.1}Informationen zu den Spieletests}{68}{}%
+\contentsline {chapter}{\numberline {C}Spieletests}{69}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C.2}Einverständniserklärung}{68}{}%
+\contentsline {section}{\numberline {C.1}Informationen zu den Spieletests}{69}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C.3}Testprotokoll}{68}{}%
+\contentsline {section}{\numberline {C.2}Einverständniserklärung}{69}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C.4}Transkription Spieletests}{68}{}%
+\contentsline {section}{\numberline {C.3}Testprotokoll}{69}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {D}Implementation}{86}{}%
+\contentsline {section}{\numberline {C.4}Transkription Spieletests}{69}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {D.1}Readme}{86}{}%
+\contentsline {chapter}{\numberline {D}Implementation}{87}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {D.2}Sequenzdiagramme}{86}{}%
+\contentsline {section}{\numberline {D.1}Readme}{87}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {E}Administratives}{90}{}%
+\contentsline {section}{\numberline {D.2}Sequenzdiagramme}{87}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {E.1}Projektklärung}{90}{}%
+\contentsline {chapter}{\numberline {E}Administratives}{92}{}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {E.2}Projektänderungsantrag}{90}{}%
+\contentsline {section}{\numberline {E.1}Projektklärung}{92}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {E.2}Projektänderungsantrag}{92}{}%
