@@ -1,4 +1,5 @@
 \documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
 
 % -- Imports biblatex and defines bib file --
 \usepackage[backend=bibtex,style=numeric,language=german,sorting=none]{biblatex}
@@ -114,7 +115,7 @@
 
     \end{center}
 \end{titlepage}
-
+\pagenumbering{gobble}
 \chapter*{Projektinformationen}
 Titel: Palim-Palim\\
 Projektnummer: 21FS\_I4DS08
@@ -144,7 +145,6 @@ tabea.iseli@fhnw.ch\\
 \paragraphwithnewline{Experte}
 Jonas Weibel\\
 joweibel@microsoft.com
-
 \paragraphwithnewline{Zeitbudget}
 Das Projekt wird im Rahmen des Frühlingssemesters 2021 durchgeführt. Nominell sind für das Projekt 360~Arbeitsstunden pro Teammitglied veranschlagt. 
 
@@ -153,13 +153,15 @@ Beginn:	22. Februar 2021\\
 Ende:	20. August 2021 \\
 
 \begin{abstract}	
-Palim-Palim ist ein Videospiel für Kinder und betagte Menschen. Das Spiel beinhaltet einen Videochat und dient primär der Kommunikation zwischen Grosseltern und ihren Enkelkindern. Es schafft eine solide Basis für weitere Videospiele mit integriertem Videochat. Mit dem Spiel wurde der Einfluss des Videochats auf die Kommunikation und das Spielerlebnis erforscht. Dabei zeigte sich das grosse Potenzial von Videochat-Spielen, Beziehungen zwischen Generationen auch über weite Distanzen zu fördern. Spieletests mit Kindern weisen darauf hin, dass sich Videos als Gameplay-Elemente eignen.
+Palim-Palim ist ein Videospiel für Kinder und betagte Menschen. Das Spiel beinhaltet einen Videochat und dient primär der Kommunikation zwischen Grosseltern und ihren Enkelkindern. Es schafft eine solide Basis für weitere Videospiele mit integriertem Videochat. Mit dem Spiel wurde der Einfluss des Videochats auf die Kommunikation und das Spielerlebnis erforscht. Spieletests mit Kindern weisen darauf hin, dass sich Videos als Gameplay-Elemente eignen. Dabei zeigte sich das grosse Potenzial von Videochat-Spielen, Beziehungen zwischen Generationen auch über weite Distanzen zu fördern.
 \end{abstract}
+\pagenumbering{roman}
 
 
 \tableofcontents
 
 \break
+\pagenumbering{arabic}
 
 \chapter{Einleitung}
 Palim-Palim ist ein Videospiel mit integriertem Videochat für Kinder und betagte Menschen. Zwei Personen können damit in einer virtuellen Kaufladen-Umgebung spielen. Umgesetzt als Webanwendung für Tablets, ermöglicht das Spiel Grosseltern sich mit ihren Enkelkindern über weite Distanzen hinweg auszutauschen und gleichzeitig etwas zu spielen. Als Proof of Concept setzt Palim-Palim den Grundstein zur Entwicklung eines entsprechenden Videochat-Spiele-Frameworks. Die Abbildung \ref{PalimPalimScreens} zeigt Palim-Palim aus den Perspektiven beider Spielenden. Diese übernehmen im Spiel jeweils die Rolle der einkaufenden respektive verkaufenden Person. Das Ziel des Spiels ist es, alle Objekte einer Einkaufsliste im Warenkorb zu deponieren.
@@ -167,12 +169,16 @@ Palim-Palim ist ein Videospiel mit integriertem Videochat für Kinder und betagt
 \includegraphics[width=\textwidth]{PalimPalim_screens_ipad}\label{PalimPalimScreens}
 \caption[Caption for LOF]{Das Videospiel Palim-Palim. Perspektive der betagten Person (links) und des Kindes (rechts).}
 \end{figure}\\\\
-Mit dem Spiel wurde untersucht, welchen Einfluss der Videochat in Palim-Palim auf die User Experience und die Kommunikation zwischen den Spielenden hat. Resultate aus den durchgeführten Spieletests deuten darauf hin, dass der Videochat vor allem für die Kinder auch Einsatzmöglichkeiten als Gameplay-Element hat. Ein Einfluss auf die Kommunikation zwischen den Spielenden konnte nicht nachgewiesen werden.\\\\
+
+
+\newpage
+\noindent Mit dem Spiel wurde untersucht, welchen Einfluss der Videochat in Palim-Palim auf die User Experience und die Kommunikation zwischen den Spielenden hat. Resultate aus den durchgeführten Spieletests deuten darauf hin, dass der Videochat vor allem für die Kinder auch Einsatzmöglichkeiten als Gameplay-Element hat. Ein Einfluss auf die Kommunikation zwischen den Spielenden konnte nicht nachgewiesen werden.\\\\
 Ergänzende Literaturrecherchen haben zudem gezeigt, dass Spiele mit Videochats ein grosses Potenzial haben, Beziehungen zwischen Generationen auch über weite Distanzen zu fördern. Durch die spielerische Komponente verlieren Kinder weniger schnell das Interesse an der Unterhaltung. Ältere Leute schätzen dabei generell die sozialen Aspekte des Spielens.\\\\
 Videospiele für betagte Menschen und ihre Angehörigen werden an der Fachhochschule Nordwestschweiz im Rahmen des Projekts \flqq Myosotis\frqq{} schon seit einigen Jahren untersucht \cite{soldati_fhnw_2015}. Dabei wurden bereits einige Spiele umgesetzt und mit betagten Menschen getestet \cite{soldati_create_2020}. Jedoch hat sich bisher noch kein Projekt explizit mit der Integration eines Videochats in ein Spiel auseinandergesetzt. Palim-Palim schliesst diese Lücke und liefert wertvolle erste Erkenntnisse über die Kombination von Videochats und Videosspielen mit Kindern und betagten Personen.\\\\
 Der Forschungsaspekt von Palim-Palim gewinnt dabei zusätzlich durch den Hintergrund der COVID-19-Pandemie an Relevanz. Eine amerikanische Studie zu dem Thema zeigt, dass 71 Prozent der Grosseltern von Kindern im Alter bis zu fünf Jahren aufgrund von COVID-19-Massnahmen verstärkt auf Videochats zurückgreifen \cite{kakulla_video_nodate}. Forschung von Strouse et al. \cite{strouse_zooming_2021} bestätigt ausserdem, dass Viedeochats dazu beitragen können, Grosseltern-Enkelkind-Verbindungen besser zu pflegen.\\\\
 Für Eltern und Grosseltern kann es teilweise emotional anstrengend sein, wenn Kinder trotz bester Bemühungen ihrerseits im Videochat unbeteiligt erscheinen \cite{share_displaying_2017}. Denn oft sind Kinder vom Gespräch schnell gelangweilt. Für sie ist es schwierig, Gesprächsthemen und Kommunikationswege zu finden, die sich so lustig und verbindend anfühlen, wie die persönliche Zeit mit der Grossmutter oder dem Grossvater \cite{tulloch_7_2020}. Ein Videospiel wie Palim-Palim bietet hierzu ein Mittel, um Kinder besser in das Gespräch mit ihrem Gegenüber einzubeziehen.\\\\
-Um die Einflüsse eines Videochats in einem intergenerationellen Spiel zu untersuchen, implementiert Palim-Palim mehrere Varianten. Diese unterscheiden sich in der Art und Weise der Integration des Videochats. Mittels Spieletests dieser Varianten wurden deren Einflüsse auf das Spielerlebnis sowie die Kommunikation der Spielenden evaluiert und verglichen.\\\\
+\newpage
+\noindent Um die Einflüsse eines Videochats in einem intergenerationellen Spiel zu untersuchen, implementiert Palim-Palim mehrere Varianten. Diese unterscheiden sich in der Art und Weise der Integration des Videochats. Mittels Spieletests dieser Varianten wurden deren Einflüsse auf das Spielerlebnis sowie die Kommunikation der Spielenden evaluiert und verglichen.\\\\
 Die Implementierung von Palim-Palim als Webanwendung erlaubte zusätzlich die Auseinandersetzung mit den entsprechenden Videochat-Technologien. Dadurch wurde eine Wissensbasis für die Entwicklung weiterer Videochat-Spiele oder eines betreffenden Frameworks geschaffen.\\\\
 Anschliessend an diese einleitenden Worte werden die theoretischen Grundlagen beschrieben. Dabei wird in Kapitel \ref{Umfeldanalyse} das Umfeld von Palim-Palim analysiert. Der Forschungsstand von intergenerationellen Spielen und Videochats in Videospielen wird in den Kapiteln \ref{IntergenerationellesSpielen} und \ref{VideochatsInVideospielen} behandelt. Dieser theoretische Teil bildet die Grundlage für die Aufstellung der Forschungsfragen in Kapitel \ref{Forschungsfragen}. Das nachfolgende Kapitel \ref{Methoden} erklärt die Spieletests. Die erzielten Resultate sind in Kapitel \ref{spieletestsUndResultate} beschrieben. Die Kapitel \ref{GameDesign}, \ref{Technologien} und \ref{Implementation} erläutern die verwendeten Technologien sowie die Umsetzung von Palim-Palim. Abschliessend werden in Kapitel \ref{Fazit} alle zentralen Erkenntnisse zusammengefasst und mögliche Weiterentwicklungen beschrieben.
 
@@ -205,7 +211,8 @@ Palim-Palim untersucht, wie ein Videospiel mit Videotelefonie kombiniert werden 
 \begin{quote}
 \textbf{Wie lässt sich Videotelefonie mit Videospielen kombinieren, damit Kinder und betagte Personen übers Internet miteinander spielen und sich gleichzeitig unterhalten können?}\\
 \end{quote}
-Die verwendeten Begriffe «Kind» und «betagte Person» werden im Rahmen von Palim-Palim wie folgt definiert:
+\newpage
+\noindent Die verwendeten Begriffe «Kind» und «betagte Person» werden im Rahmen von Palim-Palim wie folgt definiert:
 \paragraph{Kind: }Eine Person zwischen fünf und acht Jahren.
 \paragraph{Betagte Person:}Eine Person ab einem Alter von 65 Jahren ohne grössere mentale Beeinträchtigung.\\\\
 Diese beiden Personengruppen stellen zugleich die Zielgruppen für die Spieletests dar.
@@ -220,6 +227,8 @@ Folgende Einzelfragestellungen befassen sich mit den Auswirkungen des Videochats
 \textbf{Hypothese 1a:} Ein integrierter Videochat hat eine positive Wirkung auf das Spielerlebnis von betagten Menschen.\\\\
 \textbf{Fragestellung 1b:} Welche Wirkung hat ein integrierter Videochat auf das Spielerlebnis von Kindern?\\
 \textbf{Hypothese 1b:} Ein integrierter Videochat hat eine positive Wirkung auf das Spielerlebnis von Kindern.\\\\
+\newpage
+\noindent 
 \textbf{Fragestellung 1c:} Welche Auswirkungen hat die Art und Weise, wie der Videochat in das Spiel integriert ist, auf das Spielerlebnis?\\
 \textbf{Hypothese 1c:} Je stärker der Videochat ins Gameplay integriert ist, desto positiver ist das Spielerlebnis.\\\\
 
@@ -247,11 +256,11 @@ Für die Auswertung wurden die Videoaufnahmen transkribiert und analysiert. Die 
 In diesem Kapitel werden die Ergebnisse der Spieletests von Palim-Palim präsentiert. Dabei ist sehr wichtig, diese Resultate mit besonderer Vorsicht zu geniessen. Die sehr kleine Anzahl der Testpersonen lässt es nicht zu, aussagekräftige Schlüsse aus den Resultaten zu ziehen. Es werden daher die zentralsten Aussagen und Beobachtungen zusammengefasst und mit Erkenntnisse aus der Literatur ergänzt.\\\\
 Als erstes werden die Resultate aus den Spieletests mit den betagen Menschen beleuchtet. Anschliessend wird die Seite der Kinder betrachtet. Abschliessend werden die gestellten Forschungsfragen beantwortet.
 
-\section{Resultate der Spieletests mit betagten Menschen}
-\label{resultateBetagteMenschen}
+\section{Resultate der Spieletests mit betagten\\ Menschen}\label{resultateBetagteMenschen}
 Bereits in der gemeinsamen Gamelobby sowie auf dem Erklärungsscreen ist aufgefallen, dass die betagten Menschen eher viel Zeit für das Lesen der Anweisungen benötigen. Liu et al. \cite{liu_age-related_2017} bestätigen hierzu, dass ältere Personen einiges langsamer lesen als jüngere Menschen.\\\\
 Die Verbindung zwischen den zwei Spielenden findet über eine gemeinsame Raumnummer statt. Die Formulierung «Raum» ist für die Testpersonen undeutlich und wurde als unschön sowie kalt bezeichnet. Bei der Auswahl des Spielmodus verstand die eine betagte Person nicht, dass diese Entscheidung zusammen mit dem Kind getroffen werden kann.\\\\
-Für beide Testpersonen ist unklar, dass die Abbildung mit den Erklärungen noch nicht zum Spiel gehört. Sie versuchten bereits das Einkaufsobjekt zu verschieben und die Einkaufsliste zu öffnen. Die Anweisung «Frag dein Enkelkind nach Objekten» war für eine Person unklar, denn sie fragte das Kind, was dieses gerne hätte, obwohl sie nach einem Gegenstand ihrer Einkaufsliste fragen müsste. Die Senior:innen waren sich uneinig, ob es sinnvoll ist, die Anleitung vor jedem Spielstart anzuzeigen. Eine Testperson findet dies wichtig, damit klar ist, was gemacht werden soll, die andere Person ist der Meinung, dass es mühsam sei und sie in dieser kurzen Zeit die simplen Funktionalitäten nicht vergessen habe.\\\\
+\newpage
+\noindent Für beide Testpersonen ist unklar, dass die Abbildung mit den Erklärungen noch nicht zum Spiel gehört. Sie versuchten bereits das Einkaufsobjekt zu verschieben und die Einkaufsliste zu öffnen. Die Anweisung «Frag dein Enkelkind nach Objekten» war für eine Person unklar, denn sie fragte das Kind, was dieses gerne hätte, obwohl sie nach einem Gegenstand ihrer Einkaufsliste fragen müsste. Die Senior:innen waren sich uneinig, ob es sinnvoll ist, die Anleitung vor jedem Spielstart anzuzeigen. Eine Testperson findet dies wichtig, damit klar ist, was gemacht werden soll, die andere Person ist der Meinung, dass es mühsam sei und sie in dieser kurzen Zeit die simplen Funktionalitäten nicht vergessen habe.\\\\
 Zu Beginn des Gameloops ist es für die Testpersonen trotz des vorab angezeigten Erklärungsscreens unklar, dass sie nach einem Gegenstand fragen sollen, welcher auf der Einkaufsliste zu finden ist. Stattdessen fragten sie nach einem beliebigen Produkt.\\\\
 Der illustrierte und zu 70 Prozent transparente Hintergrund sorgte für Unklarheiten. Einerseits wurde von den Senior:innen bemängelt, dass dieser thematisch zu wenig auf den Spielmodus abgestimmt ist. Andererseits sei es schwierig, diesen als Hintergrund zu erkennen. Der niedrige Kontrast, welcher durch die hohe Transparenz entsteht, führt bei den betagten Personen zu Schwierigkeiten, die einzelnen Hintergrundobjekte auseinanderzuhalten. Dass ältere Personen Mühe mit dem Kontrastsehen haben, bestätigen auch Ijsselsteijn et al. \cite{ijsselsteijn_digital_2007}.\\\\
 Zu den Interaktionen konnten die drei folgenden Beobachtungen gemacht werden. Einmal war es unklar, dass ein Objekt mit Ziehen verschoben werden kann. Stattdessen wurde zuerst auf das Objekt und danach an den gewünschten Zielort getippt. Als zwei gleiche Objekte sehr nah nebeneinander platziert waren, wurden diese als Gruppe wahrgenommen. Es wurde versucht, diese zusammen an den gewünschten Zielort zu ziehen — was jedoch nicht funktioniert. Des Weiteren hat eine Testperson die Einkaufsliste zuerst mit Ziehen statt mit Tippen versucht zu öffnen.\\\\
@@ -277,7 +286,8 @@ Aus diesen Beobachtungen sowie dem qualitativen Feedback der Kinder lässt sich 
 \subsubsection{Fragestellung 1a: Welche Wirkung hat ein integrierter Videochat auf das Spielerlebnis von betagten Menschen?}
 \subsubsection{Hypothese 1a: Ein integrierter Videochat hat eine positive Wirkung auf das Spielerlebnis von betagten Menschen.}
 Die zwei Spieletests konnten diese Hypothese nicht belegen. Aber auch zum Widerlegen der Hypothese fehlen entsprechende Daten. Für den einen Probanden braucht es das Video nicht unbedingt:
-\begin{quote}
+\newpage
+\noindent \begin{quote}
 \textit{«Jetzt hast du den Thommy gar nicht gesehen, sein Bild nicht gesehen. Hast du das jetzt schlechter oder besser gefunden? Oder hat dich das gestört?» - «Nein, spielt eigentlich keine Rolle.» - «Also musst du ihn nicht unbedingt sehen?» - «Nicht unbedingt.»} (Name geändert)
 \end{quote}
 Gemäss der anderen Probandin hat der integrierte Videochat ebenfalls keine grosse Auswirkung auf ihr Spielerlebnis. Jedoch findet sie den dritten Modus niedlich, da das Kind hinter dem Tresen zu stehen scheint.\\\\
@@ -290,14 +300,15 @@ Ebenfalls bewerteten beide Kinder das Spielerlebnis der Durchgänge mit Video h�
 
 \subsubsection{Fragestellung 1c: Welche Auswirkungen hat die Art und Weise, wie der Videochat in das Spiel integriert ist, auf das Spielerlebnis?}
 \subsubsection{Hypothese 1c: Je stärker der Videochat ins Gameplay integriert ist, desto positiver ist das Spielerlebnis.}
-Die Spieltests zeigten keine unterschiedliche Wahrnehmung der Spielerlebnisse, ob der Videostream in die Spielszene integriert oder unabhängig davon ist. Da Palim-Palim über keinen interaktiven Videochat verfügt, unterschieden sich die gespielten Videomodi aber auch nur geringfügig. Von den Probanden wurde nicht gross bemerkt oder angesprochen, dass sich beim Videomodus 2 das Video als simples Overlay präsentiert und Videomodus 3 das Video auf eine Ebene in der 3D-Szene hinter dem virtuellen Tresen projiziert. Es wurde lediglich bemerkt, dass die Person hinter dem Tresen zu stehen scheint, was als «niedlich» bezeichnet wurde.\\\\
+Die Spieltests zeigten keine unterschiedliche Wahrnehmung der Spielerlebnisse, ob der Video-Stream in die Spielszene integriert oder unabhängig davon ist. Da Palim-Palim über keinen interaktiven Videochat verfügt, unterschieden sich die gespielten Videomodi aber auch nur geringfügig. Von den Probanden wurde nicht gross bemerkt oder angesprochen, dass sich beim Videomodus 2 das Video als simples Overlay präsentiert und Videomodus 3 das Video auf eine Ebene in der 3D-Szene hinter dem virtuellen Tresen projiziert. Es wurde lediglich bemerkt, dass die Person hinter dem Tresen zu stehen scheint, was als «niedlich» bezeichnet wurde.\\\\
 Dies lässt darauf schliessen, dass das Video noch stärker als Teil der Gameplay-Szene gestaltet sein sollte, um eine solche Frage beantworten zu können. Ein mögliches Freistellen des Videos, oder sogar das Erweitern eines virtuellen Avatars mit einem Ausschnitt des Videos bieten sich als Möglichkeiten an. Da Palim-Palim diese Funktionalitäten noch nicht besitzt, kann die Fragestellung 1c also auch nicht abschliessend beantwortet werden.\\\\
 
 
 \subsubsection{Fragestellung 2a: Welche Wirkung hat ein integrierter Videochat auf die Kommunikation zwischen den Spielenden?}
 \subsubsection{Hypothese 2a: Ein im Spiel integrierter Videochat fördert die Kommunikation zwischen den Spielenden.}
 Beobachtungen der Testpersonen haben gezeigt, dass beim Betreten des Videochats jedes Mal eine initiale Kommunikation in Form von «Hallo hörst du mich?» oder «Bist du bereit?» verwendet wurde. In den Testfällen mit Video haben sich die Probanden zudem gegenseitig zugewinkt. Diese Art der nonverbalen Begrüssung wurde auch schon von Derboven et al. \cite{derboven_designing_2012} in ihrer Studie festgestellt. Dieses Verhalten deutet darauf hin, dass ein Videochat bei der Kontaktaufnahme zum Gegenüber einen persönlicheren Eindruck vermitteln kann.\\\\
-Im Spiel selbst konnte aber auch bei dieser Fragestellung kein signifikanter Unterschied zwischen den beiden Modi mit und ohne Video festgestellt werden. Der Videochat in Palim-Palim hat die Kommunikation zwischen den Spielenden also nicht gefördert. Es muss allerdings erwähnt werden, dass Palim-Palim sehr wenige Spielelemente besitzt, welche eine Kommunikation zwischen den Spielenden erfordern. Es wäre angebracht, mehr kommunikationsfördernde Teile in das Gameplay zu integrieren, bevor hierzu eine repräsentative Aussage gemacht werden kann.\\\\
+\newpage
+\noindent Im Spiel selbst konnte aber auch bei dieser Fragestellung kein signifikanter Unterschied zwischen den beiden Modi mit und ohne Video festgestellt werden. Der Videochat in Palim-Palim hat die Kommunikation zwischen den Spielenden also nicht gefördert. Es muss allerdings erwähnt werden, dass Palim-Palim sehr wenige Spielelemente besitzt, welche eine Kommunikation zwischen den Spielenden erfordern. Es wäre angebracht, mehr kommunikationsfördernde Teile in das Gameplay zu integrieren, bevor hierzu eine repräsentative Aussage gemacht werden kann.\\\\
 
 \subsubsection{Fragestellung 2b: Wird ein integrierter Videochat aktiv als Kommunikationsmittel zur Bewältigung von Spielaufgaben genutzt?}
 \subsubsection{Hypothese 2b: Der Videochat wird aktiv als Kommunikationsmittel zur Bewältigung der Spielaufgabe verwendet.}
@@ -329,14 +340,15 @@ Der Gameplay-Loop von Palim-Palim ist in der nachfolgenden Abbildung \ref{fig:Pa
 \label{fig:PalimPalimGameplayloop}
 \end{figure}
 		
+\newpage
 \section{Videomodi}\label{spielvarianten}
 Damit der Einfluss der Videotelefonie als Teil des Spiels messbar wird, implementiert Palim-Palim unterschiedliche Videomodi. Dabei sind die ersten drei der folgenden Modi in Palim-Palim umgesetzt, die letzten beiden nur angedacht:
 \begin{enumerate}
 	\item Spiel ohne Videochat 
 	\item Spiel mit Videochat, aber getrennt von der Spielszene 
 	\item Spiel mit Videochat, in die Spielumgebung integriert 
-	\item Spiel mit Videochat, in die Spielumgebung integriert und optionale Interaktionsmöglichkeiten mit dem Videostream 
-	\item Spiel mit Videochat, in die Spielumgebung integriert und zum Spielerfolg notwendige Interaktionsmöglichkeiten mit dem Videostream
+	\item Spiel mit Videochat, in die Spielumgebung integriert und optionale Interaktionsmöglichkeiten mit dem Video-Stream 
+	\item Spiel mit Videochat, in die Spielumgebung integriert und zum Spielerfolg notwendige Interaktionsmöglichkeiten mit dem Video-Stream
 \end{enumerate}
 In der ersten Variante sehen sich die Spielenden nicht. Sie können aber per Audio miteinander kommunizieren. Wie in der Abbildung \ref{fig:PalimPalimVideomodus1} ersichtlich ist, werden die Verkaufsperson sowie die einkaufende Person durch Illustrationen dargestellt.
 \begin{figure}[!h]
@@ -344,7 +356,8 @@ In der ersten Variante sehen sich die Spielenden nicht. Sie können aber per Aud
 \caption[Caption for LOF]{Das Videospiel Palim-Palim im Videomodus 1. Perspektive der betagten Person (links) und des Kindes (rechts).}
 \label{fig:PalimPalimVideomodus1}
 \end{figure}\\
-Der Screenshot des zweiten Videomodus (Abbildung \ref{fig:PalimPalimVideomodus2}) zeigt, dass in diesem Modus die Videos der Spielenden unabhängig von der Gameszene in einer Ecke des Bildschirms dargestellt werden. Identisch zum ersten Modus werden die Personen durch Illustrationen ersetzt.\\\\
+\newpage
+\noindent Der Screenshot des zweiten Videomodus (Abbildung \ref{fig:PalimPalimVideomodus2}) zeigt, dass in diesem Modus die Videos der Spielenden unabhängig von der Gameszene in einer Ecke des Bildschirms dargestellt werden. Identisch zum ersten Modus werden die Personen durch Illustrationen ersetzt.
 \begin{figure}[!h]
 \includegraphics[width=\textwidth]{PalimPalim_Videomodus_2}
 \caption[Caption for LOF]{Das Videospiel Palim-Palim im Videomodus 2. Perspektive der betagten Person (links) und des Kindes (rechts).}
@@ -390,19 +403,22 @@ WebRTC ist bewusst darauf ausgelegt, auch mit komplexeren Netzwerken zurechtzuko
   \item \textit{STUN} (Session Traversal Utilities for NAT), um die öffentliche IP-Adresse (Internet Protocol) und Portnummer für den direkten Kontaktaufbau zu ermitteln  \cite{matthews_session_2008}.
   \item \textit{TURN} (Traversal Using Relay NAT), welches die Kommunikation über NAT- oder Firewallgrenzen hinweg ermöglicht und als Fallback-Relay genutzt werden kann, falls eine Peer-to-Peer-Verbindung nicht aufgebaut werden kann \cite{matthews_traversal_2010}.
 \end{itemize}
-Für beide Protokolle müssen Server bereitgestellt werden, welche den WebRTC-Clients bekannt sein müssen. Die Adressen dieser STUN- und TURN-Server müssen beim Aufbau der Peer-Connection der Clients an den Signaling-Server übermittelt werden \cite{noauthor_webrtc_nodate}. Wie dies in Palim-Palim umgesetzt wurde, ist im Kapitel \ref{server} genauer beschrieben.\\\\
+\newpage
+\noindent Für beide Protokolle müssen Server bereitgestellt werden, welche den WebRTC-Clients bekannt sein müssen. Die Adressen dieser STUN- und TURN-Server müssen beim Aufbau der Peer-Connection der Clients an den Signaling-Server übermittelt werden \cite{noauthor_webrtc_nodate}. Wie dies in einer Videochat-Anwendung umgesetzt wird, ist in Abbildung \ref{webrtcNatStunFirewall} ersichtlich.\\\\
 Als Fallback-Verbindung wird im produktiven Betrieb einer Anwendung wie Palim-Palim unbedingt ein eigener TURN-Server mit einer öffentlich sichtbaren IP-Adresse benötigt \cite{noauthor_webrtc_2020}. Da der Netzwerkverkehr über einen solchen Server sehr stark ansteigen kann, werden keine zuverlässigen, kostenlosen, öffentlich gehosteten TURN-Server angeboten.\\\\
 Gemäss Auswertungen des WebRTC-Dienstleisters callstats.io haben im Durchschnitt etwa 30 Prozent aller WebRTC-Sessions einen Client, der sich über einen TURN-Server verbindet \cite{noauthor_why_nodate}. Das heisst in etwa 70 Prozent der Fälle kann die Peer-to-Peer-Verbindung direkt aufgebaut werden. In diesem Fall wird ein TURN-Server überhaupt nicht benötigt. Trotzdem muss bei jeder Verbindung mindestens eine TURN-Serveraddresse angegeben werden. So kann garantiert werden, dass alle Clients in der Lage sind, miteinander zu kommunizieren.\\\\
 \begin{figure}[h!]
 \includegraphics[width=\textwidth]{WebRTC_nat_stun_firewall_turn_black}
 \caption[Caption for LOF]{STUN, TURN, und Signaling in WebRTC (Quelle: \cite{noauthor_introducing_2018} - teilweise modifiziert).}
+\label{webrtcNatStunFirewall}
 \end{figure}
 			
 \subsection{Sicherheit}
 Auf der Protokollebene gilt WebRTC als sehr sicherer und auch etablierter Standard. Verschlüsselung ist für alle WebRTC-Komponenten obligatorisch und seine JavaScript-APIs können nur von sicheren Quellen wie HTTPS (Hypertext Transfer Protocol Secure) \cite{rescorla_http_2000} oder localhost aus verwendet werden \cite{noauthor_webrtc_2020-1}. Das verwendete Verschlüsselungsprotokoll hängt dabei vom Kanaltyp ab. Datenkanäle werden mit Datagram Transport Layer Security (DTLS) \cite{rescorla_datagram_2012} und Medienkanäle mit Secure Real-time Transport Protocol (SRTP) \cite{norrman_secure_2004} verschlüsselt. Die Verbindung zum Signaling-Server ist allerdings nicht standardmässig verschlüsselt. Bei Anwendungen mit Schwerpunkt auf die Vertraulichkeit sollte deshalb für die Kommunikation mit dem Signaling-Server ein sicheres Protokoll wie SIPS (Session Initiation Protocol Secure) \cite{schooler_sip_2002}, OpenSIP \cite{noauthor_opensips_nodate}, HTTPS oder WSS (WebSocket Secure) \cite{melnikov_websocket_2011} verwendet werden \cite{noauthor_study_nodate}.\\\\
 Bei der Umleitung des Datenverkehrs über den TURN-Server werden die Daten nicht interpretiert oder modifiziert. Dies ist so im TURN-Standard definiert. Das heisst, die Verwendung eines TURN-Servers fügt dem WebRTC-Datenverkehr keine Sicherheitsschwachstellen hinzu.\\\\
 WebRTC lässt sich somit als eigenständiges Framework für Videotelefonie als sehr sicher bezeichnen. Allerdings hängt diese Sicherheit auch von der umliegenden Webanwendung und diese wiederum vom verwendeten Browser ab. Ein im Internet zugängliches Spiel sollte deshalb über eine entsprechende Benutzerauthentifizierung verfügen, wenn es dauerhaft produktiv betrieben wird. Eine solche Authentifizierung darf nicht über den Signaling-Server laufen, denn der Datenverkehr zu ihm könnte abgefangen werden. Jede Client-Anwendung muss in der Lage sein, die Authentifizierung der potenziellen Gesprächspartner unabhängig vom Signaling-Server durchzuführen. Dies kann durch die Verwendung eines webbasierten Identitätsanbieters erreicht werden, wie zum Beispiel Facebook Connect \cite{noauthor_facebook_nodate} oder OAuth \cite{noauthor_oauth_nodate}. Ebenfalls empfiehlt es sich, die WebRTC-Bibliothek und andere Abhängigkeiten aktuell zu halten \cite{noauthor_study_nodate}.
-	
+
+\newpage	
 \section{Three.js}\label{threejs}
 Three.js ist eine 3D-Bibliothek, welche die Web Graphics Library (WebGL) \cite{noauthor_webgl_nodate-1} verwendet, um 3D-Inhalte im Browser darzustellen \cite{noauthor_threejs_nodate}. WebGL ist eine Rasterisierungs-Engine, das bedeutet, dass sie nur Punkte, Linien und Dreiecke zeichnet. Erst auf Basis des Codes entstehen dreidimensionale Objekte \cite{noauthor_webgl_nodate}. In Three.js stehen primitive 3D-Objekte genauso wie beispielsweise Lichter, Schatten, Materialien oder Texturen als vorgefertigte Ressourcen zur Verfügung \cite{noauthor_threejs_nodate}. Diese werden in einer Struktur angeordnet, welche beispielhaft in Abbildung \ref{fig:threejsstructure} ersichtlich ist.
 \begin{figure}[h!]
@@ -468,7 +484,7 @@ Der \textbf{InteractionManager} sorgt dafür, dass Benutzerinteraktionen in der 
 \label{3DObjekteLaden}
 Um lange Ladezeiten zu verhindern, sollte in Webanwendungen die Datenmenge möglichst gering gehalten werden. Da 3D-Objekte eher grosse Dateien sind, ist es gerade bei deren Verwendung wichtig, einige Punkte zu beachten. Nachfolgend ist dokumentiert welche Optimierungen in Palim-Palim diesbezüglich implementiert sind.\\\\
 Während sich die Spielenden noch in der Gamelobby befinden, lädt Palim-Palim alle Spielmodi-übergreifenden 3D-Objekte wie den Tresen oder den Einkaufskorb. Die vom Spielmodi abhängigen Einkaufsgegenstände werden geladen, während die betagte Person die Anleitung liest und das Kind das Spiel erklärt bekommt.\\\\
-Für die 3D-Objekte verwendet Palim-Palim Dateien des Graphics Language Transmission Formats (glTF). Dieses Dateiformat kann 3D-Modelle sehr effizient übertragen und laden, weswegen es sich sehr gut für Webapplikationen eignet \cite{noauthor_gltf_2020}. In einer glTF-Datei können nicht nur die Geometrie eines 3D-Objekts gespeichert werden, sondern auch Szenen, Kameras, Materialien, Texturen oder Animationen (nicht abschliessende Liste) \cite{noauthor_khronosgroupgltf_2021}. Deswegen muss in Palim-Palim beim Laden der 3D-Objekte zuerst die Szene der glTF-Datei ausgelesen und danach in dieser nach Meshes gesucht werden (Siehe Codefragment \ref{lst:loadGLTF}).
+Für die 3D-Objekte verwendet Palim-Palim Dateien des Graphics Language Transmission Formats (glTF). Dieses Dateiformat kann 3D-Modelle sehr effizient übertragen und laden, weswegen es sich sehr gut für Webapplikationen eignet \cite{noauthor_gltf_2020}. In einer glTF-Datei können nicht nur die Geometrie eines 3D-Objekts gespeichert werden, sondern auch Szenen, Kameras, Materialien, Texturen oder Animationen (nicht abschliessende Liste) \cite{noauthor_khronosgroupgltf_2021}. Deswegen muss in Palim-Palim beim Laden der 3D-Objekte zuerst die Szene der glTF-Datei ausgelesen und danach in dieser nach Meshes gesucht werden (Siehe Codefragment \ref{lst:loadGLTF}).\\\\
 \begin{lstlisting}[caption={glTF-3D-Dateien laden durch traversieren der glTF-Szene.},label={lst:loadGLTF},language=JavaScript]
 const loadedData = await loader.loadAsync(model);
 loadedData.scene.traverse((node) => {
@@ -477,7 +493,8 @@ loadedData.scene.traverse((node) => {
     }
 });
 \end{lstlisting}
-Die in Palim-Palim verwendeten 3D-Objekte wurden mit Blender \cite{noauthor_blender_nodate} auf eine möglichst kleine Dateigrösse reduziert, um die Ladezeit zu optimieren. Dazu wurde der «Decimate Modifier» angewendet, welcher erlaubt, die Polygone einer Geometrie zu reduzieren und dabei den ursprünglichen Körper nur minimal zu verändern \cite{noauthor_decimate_nodate}. Zur besseren Verwaltung in Palim-Palim wurden in Blender zusätzlich die zwei folgenden Modifikationen an den ursprünglichen glTF-Dateien durchgeführt. Einerseits wurden Objekte, die aus mehreren Meshes bestanden, zu einem Mesh zusammengefügt. Anderseits wurde der Mittelpunkt des Meshes auf den Koordinatenursprung gelegt. Die Skalierung des Meshes hingegen kann über einen Parameter in der Konfigurationsdatei von Palim-Palim festgelegt werden. Somit können die Grössenverhältnisse der einzelnen Objekte aufeinander abgestimmt werden.
+\bigskip
+\noindent Die in Palim-Palim verwendeten 3D-Objekte wurden mit Blender \cite{noauthor_blender_nodate} auf eine möglichst kleine Dateigrösse reduziert, um die Ladezeit zu optimieren. Dazu wurde der «Decimate Modifier» angewendet, welcher erlaubt, die Polygone einer Geometrie zu reduzieren und dabei den ursprünglichen Körper nur minimal zu verändern \cite{noauthor_decimate_nodate}. Zur besseren Verwaltung in Palim-Palim wurden in Blender zusätzlich die zwei folgenden Modifikationen an den ursprünglichen glTF-Dateien durchgeführt. Einerseits wurden Objekte, die aus mehreren Meshes bestanden, zu einem Mesh zusammengefügt. Anderseits wurde der Mittelpunkt des Meshes auf den Koordinatenursprung gelegt. Die Skalierung des Meshes hingegen kann über einen Parameter in der Konfigurationsdatei von Palim-Palim festgelegt werden. Somit können die Grössenverhältnisse der einzelnen Objekte aufeinander abgestimmt werden.
 	
 \subsection{Interaktionen}
 \label{interaktionen}
@@ -494,7 +511,8 @@ Als virtuelles Regal dient eine Box (blauer Linienquader in Abbildung \ref{fig:S
 \subsection{Gampeplay-Synchronisation}
 \label{gameplaySync}
 Um die Interaktionen der beiden Spielenden zu synchronisieren, nutzt Palim-Palim seine Peer-to-Peer-Funktionalität aus. Das Spiel kreiert dazu zwei spezifische DataChannels. Der eine Channel wird genutzt, um die Objektpositionen beider Clients zu synchronisieren. Jede Interaktion mit einem Verkaufsgegenstand bewirkt den Versand eines JSON-Objekts. Dieses beinhaltet den Objektschlüssel und die Positionsdaten des Verkaufsobjekts. Das JSON-Objekt wird vom anderen Client empfangen und über den GameSyncManager verarbeitet. Der zweite DataChannel sendet Spielevents wie «startGame», «basketAdd» oder «gameOver». Diese werden im Gegensatz zu den Objektpositionen nur punktuell versendet.\\\\
-Diese Art der Gameplay-Synchronisation erlaubt es den Clients, total unabhängig von einem Server zu spielen. Da der Server nur fürs Signaling zuständig ist, wird eine Skalierung der Spieleranzahl vereinfacht. Der Server muss die Spielenden nur inital vermitteln. Alle Spieleinscheidungen sowie der Abgleich der Spielwelt werden von den Clients direkt vorgenommen.
+\newpage
+\noindent Diese Art der Gameplay-Synchronisation erlaubt es den Clients, total unabhängig von einem Server zu spielen. Da der Server nur fürs Signaling zuständig ist, wird eine Skalierung der Spieleranzahl vereinfacht. Der Server muss die Spielenden nur inital vermitteln. Alle Spieleinscheidungen sowie der Abgleich der Spielwelt werden von den Clients direkt vorgenommen.
 		
 \section{Server}\label{server}
 Da Palim-Palim über das Internet zugänglich ist, wird ein Server benötigt, welcher den Client-Code zur Verfügung stellt. Der Palim-Palim-Server nutzt dafür Express.js \cite{noauthor_express_nodate}. Damit wird der JavaScript-Code den Benutzer:innen beim Aufruf der Webapplikation zur Verfügung gestellt.\\\\
@@ -545,7 +563,8 @@ Betreffend Design und Usability gibt es ebenfalls noch einige Verbesserungsideen
 Die im Konzept von Palim-Palim angedachten Videomodi 4 und 5 ermöglichen die Interaktion mit dem Video des Gegenübers. Dadurch würde im Speziellen das Spielerlebnis des Kindes attraktiver werden. Zwei Vorschläge für mögliche Szenarien sind das Aufsetzen von Verkleidungsgegenständen oder das Beschmieren mit Eis. Diese Ideen sind als Designentwurf im Anhang \ref{designEntwurfVideomodi4und5} zu finden.
 \subsection{Mögliche Gameplay-Erweiterungen}
 Als zusätzliche Weiterentwicklungen bieten sich einige Erweiterungen des Gameplays an. Damit soll die Motivation der Spielenden, das Spiel erneut zu spielen, gefördert werden. Einige Möglichkeiten dazu sind folgende:\\\\
-\textbf{Hinzufügen des Zahlungsprozesses}\\
+\newpage
+\noindent \textbf{Hinzufügen des Zahlungsprozesses}\\
 Wie in Abbildung \ref{fig:PalimPalimGameplayloopBezahlen} im Anhang beschrieben, soll Palim-Palim mit dem Zahlungsprozess einen zusätzlichen Gameplayloop erhalten. Dieser würde auf den primären Gameplayloop folgen. Das heisst, nachdem sich alle benötigten Objekte im Einkaufskorb befänden, würde der Zahlungsprozess gestartet werden.\\\\
 \textbf{Weitere Spielszenarien}\\
 Palim-Palim bietet bereits die Möglichkeit zum Auswählen verschiedener Spielmodi. Zusätzliche Assets für die Verkaufsobjekte können via Konfigurationsdateien definiert und geladen werden. So könnte zum Beispiel ein Gemüseladen oder eine Bäckerei umgesetzt werden.\\\\
@@ -577,6 +596,7 @@ Wenn beide Spielende gleichzeitig ein Objekt verschieben, führt dies teilweise 
 \printbibliography[heading=none]
 
 \chapter*{Anhang}
+
 \addcontentsline{toc}{chapter}{Anhang}  
 \appendix
 
@@ -588,11 +608,11 @@ Hiermit erklären wir, die vorliegende Bachelorthesis selbständig, ohne Hilfe D
 \centering
 \includegraphics[width=4cm]{signature_dani}
 Daniel Obrist\\
-Brugg, 20.08.2021	&
+Brugg, 19.08.2021	&
 \centering
 \includegraphics[width=4cm]{signature_severin}
 Severin Peyer\\
-Brugg, 20.08.2021
+Brugg, 19.08.2021
 \end{tabular}
 \end{center}
 
@@ -631,12 +651,12 @@ Brugg, 20.08.2021
 \paragraph{Filter-Tabu} Eine Person bekommt ein zufälliges Objekt als Gesichts-Filter. Die andere Person muss es beschreiben, ohne gewisse Wörter zu verwenden, während die «befilterte» Person erraten muss, was sie ist.
 \paragraph{Gesicht zusammensetzen} Aus einem Webcamscreenshot werden automatisch die Gesichtsteile ausgeschnitten. Diese müssen nun in einem sinnvollen Grössenverhältnis wieder zusammengesetzt werden.
 \paragraph{Gesichtsberührungen} Ein Spiel mit Bewegungen: Zufällig wird Nase, Mund, Wange, Stirn angezeigt/angesagt und dieser Gesichtsteil muss dann berührt werden.
-\paragraph{Grössen-/Gewichtsverhältnisse} Die Spieler müssen zusammen diverse Gegenstände  gemäss dem Gewicht ordnen (Baum, Elefant, Katze, Haus, Fernseher…). Das eigene Webcam-Bild kann auch einer dieser Gegenstände sein.
+\paragraph{Grössen-/Gewichtsverhältnisse} Die Spielenden müssen zusammen diverse Gegenstände  gemäss dem Gewicht ordnen (Baum, Elefant, Katze, Haus, Fernseher…). Das eigene Webcam-Bild kann auch einer dieser Gegenstände sein.
 \paragraph{Ich sehe was, was du nicht siehst} Eine Person kann auf einem Bild etwas markieren. Die andere Person muss dieses Objekt finden. Es kann nach Hinweisen gefragt werden.
 \paragraph{Karikatur (Körperknickbilder)} Die Spielenden setzen zusammen eine Karikatur zusammen. Der Kopf ist immer sichtbar und besteht aus dem Webcambild eines Partizipanden. Jeder baut oder zeichnet dann unterschiedliche Körperteile für die Karikatur. Am Schluss wird das hoffentlich lustige kombinierte Ergebnis präsentiert.
 \paragraph{Komponieren} Es werden auch wie bei Gesichtsberührungen Teile des Gesichts angefasst. Dabei entstehen unterschiedliche Töne. Als freie Komponierversion oder als Herausforderung mit Nachspielen denkbar. 
 \paragraph{Kooperatives Tetris} Tetris spielen, aber zusammen im Videochat.
-\paragraph{Labyrinth} Ein halb-transparentes Labyrinth auf dem Screen und beide Spieler starten auf verschiedenen Seiten. Mit dem Finger wird ein Pfad gezeichnet, und die Spielenden treffen müssen sich treffen.
+\paragraph{Labyrinth} Ein halb-transparentes Labyrinth auf dem Screen und beide Spielende starten auf verschiedenen Seiten. Mit dem Finger wird ein Pfad gezeichnet, und die Spielenden treffen müssen sich treffen.
 \paragraph{Live Puzzle} Das Webcam-Video des Gegenübers muss als Puzzle gelöst werden.
 \paragraph{Montagsmaler} Montagsmaler spielen, aber zusammen im Videochat.
 \paragraph{Moorhuhn} Gemeinsam müssen z.B. Ballone zerplatzt oder sonstige Gegenstände abgewehrt werden. Mit dem Videochat als Hintergrund.
@@ -646,18 +666,20 @@ Brugg, 20.08.2021
 \paragraph{Turm bauen} Zusammen wird ein Turm aus Klötzchen gebaut. Dieser muss zum Beispiel auf der Hand des Gegenübers balanciert werden.
 \paragraph{Virtuelles Bilderbuch} Ein virtuelles Bilderbuch, das zusammen angeschaut wird. Das Kind hat dabei die Möglichkeit, mit den Szenen zu interagieren. Die ältere Person kann sich Zusatz-Informationen anzeigen lassen, und diese dem Kind vorlesen. Denkbar wären zwei Avatare, die das freigestellte Gesicht der Spielenden aus dem Videochat besitzen.
 \paragraph{Wimmelbild} Ein animiertes Wimmelbild, auf dem die Spielenden sich selbst und den Gesprächspartner suchen müssen.
-\paragraph{Zaubersprüche} Mittels Computer Vision werden Handbewegungen auf dem Videostream erkannt. In Kombination mit Audio-Erkennung könnte so ein Repertoire an Zaubersprüchen aufbaut werden. Haben die Spielenden diese gelernt, können sie lustige Filter auf den Video-Stream des Gegenüber «zaubern».
+\paragraph{Zaubersprüche} Mittels Computer Vision werden Handbewegungen auf dem Video-Stream erkannt. In Kombination mit Audio-Erkennung könnte so ein Repertoire an Zaubersprüchen aufbaut werden. Haben die Spielenden diese gelernt, können sie lustige Filter auf den Video-Stream des Gegenüber «zaubern».
 
 \chapter{Spieletests}\label{AnhangSpieletests}
 
 \section{Informationen zu den Spieletests}\label{InformationenZuDenSpieletests}
-\section{Einverständniserklärung}\label{Einverständniskeitserklärung}
-\section{Testprotokoll}\label{Testprotokoll}
-\section{Transkription Spieletests}\label{Transkription}
-
 \includepdf[page=-]{informationen-spieletests}
+
+\section{Einverständniserklärung}\label{Einverständniskeitserklärung}
 \includepdf[page=-]{einverstaendniserklaerung}
+
+\section{Testprotokoll}\label{Testprotokoll}
 \includepdf[page=-]{testprotokoll}
+
+\section{Transkription Spieletests}\label{Transkription}
 \includepdf[page=-]{transkription-spieletest}
 
 
@@ -665,12 +687,10 @@ Brugg, 20.08.2021
 
 \section{Readme}
 \label{readme}
+\includepdf[page=-]{README}
 
 \section{Sequenzdiagramme}
 \label{Sequenzdiagramme}
-
-\includepdf[page=-]{README}
-
 \begin{landscape}
 \includepdf[page=-]{sequenzdiagram-einkaufskorb-ende}
 \includepdf[page=-]{sequenzdiagram-interaktion}
@@ -679,9 +699,9 @@ Brugg, 20.08.2021
 \chapter{Administratives}
 
 \section{Projektklärung}
-\section{Projektänderungsantrag}
-
 \includepdf[page=-]{projektklaerung}
+
+\section{Projektänderungsantrag}
 \includepdf[page=-]{projektaenderungsantrag}
 
 \end{document}
